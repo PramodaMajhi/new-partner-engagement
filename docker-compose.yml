@@ -1,0 +1,53 @@
+version: '3.3'
+services:
+    rabbitmq:
+        image: rabbitmq        
+        expose:
+            - 5672
+    mongo:
+        image: mongo                
+        ports:
+            - "27017:27017"
+        volumes:
+            - ./data:/data/db
+        restart: always
+    producer-mq:
+        build: 
+            context: ./producer-mq
+            dockerfile: Dockerfile.local
+        environment:
+            - MQ_URL=amqp://rabbitmq
+        volumes:
+            - ./inbound:/usr/src/apps/producer/inbound
+        restart: always
+        links:
+            - rabbitmq
+    consumer-mq:
+        build: 
+            context: ./consumer-mq
+            dockerfile: Dockerfile.local
+        environment:
+            - MQ_URL=amqp://rabbitmq            
+            - API_URL=http://server-api:3001/api
+        restart: always
+        links:
+            - rabbitmq
+    server-api:
+        build: 
+            context: ./server-api
+            dockerfile: Dockerfile.local
+        expose: 
+            - 3001
+        environment:
+             - DATABASE_URL=mongodb://mongo:27017/aidemo-db
+        restart: always
+        links:
+            - mongo  
+    client-app:
+        build: 
+            context: ./client-app
+            dockerfile: Dockerfile.local
+        ports:
+            - 3000:3000
+        environment:
+            - REACT_APP_API_URL=http://server-api:3001/api

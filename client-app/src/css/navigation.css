@@ -1,0 +1,21 @@
+.navbar {
+    border-bottom: 1px solid var(--border-blue);
+    padding-bottom: 0rem;
+    padding-top: 0rem;
+    font-size: 14px;
+    color: var(--dark-grey);
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    padding: 1rem 2rem 1rem 2rem;
+    color: var(--dark-grey);
+    font-size: 1em;
+  }
+  
+  .navbar-light .navbar-nav .nav-link.selected {
+    border-bottom: 6px solid var(--blue);
+    background-color: var(--bg-blue);    
+  }
+  .navbar-light .navbar-toggler {
+    border: none;
+  }

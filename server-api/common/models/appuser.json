@@ -1,0 +1,48 @@
+{
+  "name": "appuser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "userType": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "profileId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "updatedDate": {
+      "type": "date"
+    },
+    "termsAccepted": {
+      "type": "boolean"
+    },
+    "inviteLink": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

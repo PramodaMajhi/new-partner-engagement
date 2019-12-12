@@ -1,0 +1,14 @@
+[
+    {
+        "id": "5cd208f5e4c057af4d1a5d84",
+        "firstName": "Admin",
+        "lastName": "Admin",
+        "userType": "admin",
+        "realm": "string",
+        "username": "admin",
+        "password" : "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
+        "email": "admin@bsc.com",
+        "emailVerified": true,
+        "termsAccepted": true
+    }
+]

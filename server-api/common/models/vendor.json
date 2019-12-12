@@ -1,0 +1,22 @@
+{
+  "name": "vendor",
+  "plural": "vendors",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "vendorName": {
+      "type": "string"
+    },
+    "businessType": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

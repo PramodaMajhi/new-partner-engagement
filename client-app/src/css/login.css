@@ -1,0 +1,180 @@
+#loginForm {
+    text-align: center;
+}
+#loginPageLogo {
+    margin-top: 8.0rem !important;
+}
+
+#loginPageTitle {
+  margin-top: 4.0rem !important;
+  text-align: center;
+}
+
+.control-label {
+    font-size: 20px;
+    width: 70%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#loginForm label[for="root_email"] {
+    font-size: 20px;
+    width: 70%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#loginForm label[for="root_password"] {
+    font-size: 20px;
+    width: 70%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group .form-control {
+    width: 70%;
+    margin: auto;
+}
+
+.btn-log-in {
+    color: #fff;
+    background-color: #3480c7;
+    border-color: #3480c7;
+    border-radius: 15px;    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.login-error {
+    text-align: left;
+    width: 70%;
+    margin: auto;
+    color: red;
+}
+
+.btn-log-out {
+    font-size: 0.8rem;
+}
+.patientList .patientRow {
+    background: #ffffff;   
+    border-radius: 6px;
+    box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);
+  }
+  
+  .patientList .patientCol {
+    padding: 20px 0px 20px 12px;
+    text-align: left;
+    /* border-left: 1px solid var(--border-blue);
+    border-right: 1px solid var(--border-blue);
+    border-bottom: 1px solid var(--border-blue); */
+    /* height: 15px;
+   */
+    color: #4E5063;
+    font-family: "Century Gothic";
+    font-size: 12px;
+    line-height: 15px;
+    width: 14%; 
+    
+  }
+  .MuiTable-root .patientTable  {
+    height: 12px;
+    /* width: 69px; */
+    color: #4E5063;
+    font-family: "Century Gothic";
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 12px;
+  }
+  .riskOfReadmissionHigh {
+    border-radius: 4px;	
+    background-color: #DD0932;
+    padding: 6px 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  .riskOfReadmissionMed {
+    border-radius: 4px;	
+    background-color: rgba(245,166,35,0.08); 
+    padding: 6px 12px;
+    color: #F5A623;
+    font-weight: bold;
+  }
+  .riskOfReadmissionLow {
+    border-radius: 4px;	
+    background-color: rgba(245,166,35,0.08); 
+    padding: 6px 12px;
+    color: #13B652;
+    font-weight: bold;
+  }
+  .MuiTableCell-root {
+    border-bottom: none !important;
+  }
+  /* @media (min-width: 1200px) {
+    .container {
+        max-width: 1550px;
+    }
+} */
+.ai-ml-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.MuiTableCell-head {
+  width: 14%;
+}
+tr { 
+  margin: 12px 0;;
+  display: flex !important;
+  
+}
+.icon-cricle{
+  height: 48px;	
+  width: 48px;	 
+}
+.hello-adam-welcome {	
+  height: 17px;	
+  width: 210px;	
+  color: #4E5063;	
+  font-size: 14px;	
+  font-weight: bold;	
+  letter-spacing: 0.08px;	
+  line-height: 17px;
+}
+.care-management-dash {
+  height: 29px;	
+  width: 357px;	
+  color: #4E5063;	
+  font-size: 24px;	
+  font-weight: bold;	
+  letter-spacing: -0.05px;	
+  line-height: 29px;
+}
+
+.icon-circle-care-section {	
+  margin: 30px auto;
+}
+.hello-adam-welcome-section {
+  margin-left: -40px;
+}
+.rectangle-list {	  
+  height: 64px;
+  background-color: #4E5063;
+  width: 100%;
+}
+.patient-name-spec {	  
+  color: #4E5063;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  text-decoration: none;
+}
+.patient-name-spec:hover {
+ cursor:pointer;
+ text-decoration: none;
+}
+
+.searchBar {
+  margin-top: 50px;
+}

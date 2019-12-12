@@ -1,0 +1,15 @@
+#Base image
+FROM node:10 
+
+#Create app directory
+WORKDIR /usr/src/apps/server-api
+
+COPY package*.json ./
+
+RUN npm config set strict-ssl false
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "start"]
