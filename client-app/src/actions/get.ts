@@ -15,12 +15,7 @@ export const startGet = (entityName: string, filter?: object, replace=true) => {
       dispatch({ type: GET_SUCCESS, entityName, response, replace })        
     }).catch(error => {
       dispatch({type: GET_FAILURE, entityName, error})
-
-     // const err = `startGet: get for ${entityName} failed with ${error.message}`      
-     // throw new Error(err)
     })
-
-     // return promise
     }
   }
 

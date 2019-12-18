@@ -27,5 +27,7 @@ const store = createStore(
   export interface IValues {   
     // current user
     currentUser?: currentUserModel.CurrentUser,
+    // idea status filter
+    vendorFilter?: String,
     
   }

@@ -80,7 +80,7 @@
   }
   .MuiTable-root .patientTable  {
     height: 12px;
-    /* width: 69px; */
+    width: 100%;
     color: #4E5063;
     font-family: "Century Gothic";
     font-size: 10px;
@@ -170,11 +170,36 @@ tr {
   line-height: 20px;
   text-decoration: none;
 }
-.patient-name-spec:hover {
+/* .patient-name-spec:hover {
  cursor:pointer;
  text-decoration: none;
-}
+} */
 
 .searchBar {
   margin-top: 50px;
+}
+.search-result-section {
+  width: 1200px;
+  margin: 25px auto;
+}
+.search_option {
+  background: #e8eef4;;
+  border-radius: 6px;
+  box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);
+  margin-right: 12px;
+  padding: 12px;
+  width: 250px;
+  text-align: center;
+  height: 100px;
+  font-weight: bold;
+  font-size: 22px;
+}
+.browse-text {
+  font-weight: bold;
+}
+.browse {
+  color: #6c757d;
+}
+.browse-search-text {
+  color: #3480c7;
 }

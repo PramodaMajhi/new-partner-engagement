@@ -13,6 +13,18 @@
     },
     "businessType": {
       "type": "string"
+    },
+    "businessUnit":{
+      "type":"string"
+    },
+    "vendorContact": {
+      "type":"object"
+    },
+    "bscContact": {
+      "type":"object"
+    },
+    "engagementLevel": {
+      "type":"object"
     }
   },
   "validations": [],

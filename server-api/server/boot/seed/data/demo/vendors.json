@@ -1,7 +1,106 @@
 [
   {
-    "vendorName": "Rapidminer",
-    "businessType": "Software"   
-    }    
-  
+    "vendorName": "RapidMiner",
+    "businessType": "AI/ML Software",
+    "businessUnit" : "Health Innovation Technology",    
+    "vendorContact" : {
+      "name":"Robert Hans",
+      "phone": "(559) 224-9870",
+      "email":"test@test.com",
+      "street": "1437 East Shields Avenue",
+      "city": "Fresno",
+      "state": "CA",
+      "zipCode": "93704"
+    },
+    "bscContact" : {
+      "name":"Test",
+      "phone": "(559) 224-9870",
+      "email":"test@bsc.com",
+      "street": "1437 East Shields Avenue",
+      "city": "Fresno",
+      "state": "CA",
+      "zipCode": "93704"
+    },
+    "engagementLevel": {
+      "name":"Initial Engagement"
+    }
+  },
+  {
+    "vendorName": "IBM",
+    "businessType": "Software",
+    "businessUnit" : "Dev Ops",    
+    "vendorContact" : {
+      "name":"Robert Hans",
+      "phone": "(559) 224-9870",
+      "email":"test@test.com",
+      "street": "1437 East Shields Avenue",
+      "city": "Fresno",
+      "state": "CA",
+      "zipCode": "93704"
+    },
+    "bscContact" : {
+      "name":"Test",
+      "phone": "(559) 224-9870",
+      "email":"test@bsc.com",
+      "street": "1437 East Shields Avenue",
+      "city": "Fresno",
+      "state": "CA",
+      "zipCode": "93704"
+    },
+    "engagementLevel": {
+      "name":"Exploration"
+    }
+  },
+  {
+    "vendorName": "Google",
+    "businessType": "Software",
+    "businessUnit" : "User Experience",    
+    "vendorContact" : {
+      "name":"Robert Hans",
+      "phone": "(559) 224-9870",
+      "email":"test@test.com",
+      "street": "1437 East Shields Avenue",
+      "city": "Fresno",
+      "state": "CA",
+      "zipCode": "93704"
+    },
+    "bscContact" : {
+      "name":"Test",
+      "phone": "(559) 224-9870",
+      "email":"test@bsc.com",
+      "street": "1437 East Shields Avenue",
+      "city": "Fresno",
+      "state": "CA",
+      "zipCode": "93704"
+    },
+    "engagementLevel": {
+      "name":"Pilot"
+    }
+  },
+  {
+    "vendorName": "Microsoft",
+    "businessType": "Robotics",
+    "businessUnit" : "Business Process",    
+    "vendorContact" : {
+      "name":"Robert Hans",
+      "phone": "(559) 224-9870",
+      "email":"test@test.com",
+      "street": "1437 East Shields Avenue",
+      "city": "Fresno",
+      "state": "CA",
+      "zipCode": "93704"
+    },
+    "bscContact" : {
+      "name":"Test",
+      "phone": "(559) 224-9870",
+      "email":"test@bsc.com",
+      "street": "1437 East Shields Avenue",
+      "city": "Fresno",
+      "state": "CA",
+      "zipCode": "93704"
+    },
+    "engagementLevel": {
+      "name":"Production"
+    }
+  }
 ]
