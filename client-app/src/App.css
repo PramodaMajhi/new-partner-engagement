@@ -40,5 +40,8 @@ body {
   .searchBar {
     width: 90%;
   }
+  .search-result-section {
+    width: 90%;
+  }
   
 }

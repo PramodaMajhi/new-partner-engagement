@@ -179,8 +179,8 @@ tr {
   margin-top: 50px;
 }
 .search-result-section {
-  width: 1200px;
-  margin: 25px auto;
+  /* max-width: 1200px; */
+  margin: 0px auto;
 }
 .search_option {
   background: #e8eef4;;
@@ -188,7 +188,7 @@ tr {
   box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);
   margin-right: 12px;
   padding: 12px;
-  width: 250px;
+  width: 265px;
   text-align: center;
   height: 100px;
   font-weight: bold;
@@ -197,6 +197,7 @@ tr {
 }
 .browse-text {
   font-weight: bold;
+  margin: 25px auto;
 }
 .browse {
   color: #6c757d;

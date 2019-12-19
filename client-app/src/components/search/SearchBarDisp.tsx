@@ -99,7 +99,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       });
     }
     return (
-      <div>
+      <div className="container">
        
         <div className="searchBar">
           <SearchBar
@@ -196,7 +196,6 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
                   Health Innovation Technology
                 </div>
               </div>
-
             </div>
 
           </> : <>
