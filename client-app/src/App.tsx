@@ -11,6 +11,9 @@ const App: React.FC = () => {
     <MuiThemeProvider>
     <Provider store={store}>
       <div className="topMargin">
+      <div className="rectangle">
+                {/* <img src={searchBar} className="rectangle" /> */}
+      </div>
       <Router basename={'/'}>         
             <Routes/>
         </Router>

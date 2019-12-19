@@ -60,7 +60,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                 return (
 
                                     <TableRow className="patientRow" key={i}>
-                                        <Link to={`/vendor-details/`} >
+                                        <Link to={`/vendor-details/${vendor.id}`} >
                                             <TableCell align="right" className="patientCol ">
                                                 <div className="patient-name-spec">
                                                     <Highlighter

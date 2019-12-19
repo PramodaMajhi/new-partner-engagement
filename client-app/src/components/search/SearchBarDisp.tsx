@@ -12,12 +12,14 @@ import { startGet } from '../../actions/get'
 import { setValues } from '../../actions/values'
 import { VendorSearchList } from './VendorsSearchList'
 import Highlighter from "react-highlight-words";
+import {VendorDetails} from './VendorDetails'
 
 import '../../css/login.css';
 
 interface ISearchProps {
   vendors?: any,
   vendorFilter?: string,
+  displayVendor?: boolean,
   dispatch?: (name: any) => any,
 }
 interface ISearchState {
@@ -100,7 +102,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     }
     return (
       <div className="container">
-       
+        
         <div className="searchBar">
           <SearchBar
             value={this.state.searchString}
@@ -111,25 +113,8 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
               maxWidth: 1200
             }} />
         </div>
-        {/* <div className="search-result-section">
-          <ul>
-            {_vendors.map((l, i) => {
-              return (
-                <li key={i}>
-                  {l.vendorName} <a href="#">{l.businessType}</a>
-                  <Highlighter
-                    highlightClassName="YourHighlightClass"
-                    searchWords={[search]}
-                    autoEscape={true}
-                    textToHighlight={l.vendorName}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-
-        </div> */}
-
+        
+      
         {vendorFilter == '' ?
           <>
             <div className="search-result-section browse-text">Browse recommended categories...</div>

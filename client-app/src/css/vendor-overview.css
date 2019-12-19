@@ -1,0 +1,338 @@
+.leftSec{
+
+}
+.midSec {
+
+}
+.rightSec {
+    width: 153px;
+}
+.demography {
+    height: 380px;
+    width: 212px;    
+    padding: 15px 10px 10px 10px;
+    margin-bottom: 10px;
+}
+.contact {
+    height: 221px;
+    width: 212px;
+    border: 1px solid #C8CDD5;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);
+    padding: 15px 10px 10px 10px;
+   
+}
+.care-detail {
+    height: 321px;
+    width: 212px;    
+    padding: 15px 10px 10px 10px;
+    margin-bottom: 10px;
+}
+.risk-factor {
+    height: auto;    
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);
+    padding: 25px ;
+}
+.plan {
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);    
+    margin-bottom: 10px;
+    padding: 25px;
+}
+.margin-zero {
+    margin: auto 0px;
+}
+.page-header {
+    border-bottom: 1px solid #C8CDD5;
+}
+.demography-detail {
+    height: 94px;
+    width: 150px;            
+    color: rgba(78,80,99,0.65);
+    font-family: "Century Gothic";
+    font-size: 12px;
+    line-height: 20px;
+}
+.risk-level{    
+    color: #4E5063;    
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    margin-bottom: 10px;
+}
+.risk-level2 {   	
+    color: #4E5063;	
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 26px;
+}
+.risk-title {
+    margin-top: 14px;    
+    /* width: 90%; */
+    color: #4E5063;    
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    text-align: center;
+   
+}
+.title {    
+    color: #4E5063;	
+    font-size: 14px;	
+    font-weight: bold;	
+    line-height: 17px;
+}
+.select-plan {
+    color: #4E5063;    
+    font-size: 14px;
+    font-weight: bold;
+    margin: 16px auto;
+}
+.risk-rider {
+    margin: 3px auto;
+}
+.care-transition {   
+    color: #4E5063;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;   
+    margin-bottom: 20px;
+}
+.padding-left-zero {
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
+.clinical-interventio {    
+    color: #4E5063;    
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    margin: 10px auto;
+}
+.MuiTypography-body1 {
+    font-size: 12px !important;
+    color: #4E5063 !important;	
+    font-family: "Century Gothic" !important;	    
+    line-height: 26px !important;
+}
+.save-button {
+        text-align: right;
+        justify-content: flex-end;
+        margin-top: 20px;
+       
+}
+.btn-primary {  
+    border: 1px solid #0095DA;
+    border-radius: 21.5px;
+    background-color: #0095DA;
+    font-size: 12px;
+    font-weight: bold;
+}
+.btn-link {
+    color: #0095DA;    
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    text-align: center;
+}
+.save-plan-button {
+    box-sizing: border-box;
+    height: 36px;	
+    width: 118px;
+}
+.assign-care-manager {    
+    color: #FFFFFF;    
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+.reset-plan {
+    margin-right: -60px;
+    text-align: right;
+}
+.MuiCheckbox-colorPrimary.Mui-checked {
+    color: #0095DB !important;
+}
+.contact-info {
+    margin: 20px auto;
+}
+.profileImg {
+    height: 48px;
+    width: 48px;
+    margin-bottom: 10px;
+}
+.icon-high {
+    height: 13px;	
+    width: 12px;	    
+    margin-right: 6px;
+}
+.icon-clinic {
+    height: 13px;	
+    width: 9px;
+    margin-right: 6px;
+}
+.patient-name {
+    color: #4E5063;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: 6px;
+}
+.memberId {
+    color: #4E5063;	
+    font-size: 12px;
+    line-height: 15px;
+}
+.readmission-likely-hood {
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 17px;    
+    margin-left: 0px;
+}
+.readmission-text {
+    color: rgba(78,80,99,0.65);	
+    font-size: 11px;
+    font-weight: bold;	
+    line-height: 14px;    
+    margin-right: 10px;
+    max-width: 90px;
+    
+}
+.readmission-level-high {
+    height: 23px;	
+    width: 48px;	
+    border-radius: 4px;	
+    background-color: #DD0932;    
+    color: #FFFFFF;	
+    font-size: 11px;	
+    font-weight: bold;	
+    line-height: 13px;	text-align: center;
+    padding: 4px;
+}
+.readmission-level-med {
+    height: 23px;	
+    width: 48px;
+    border-radius: 4px;	
+    background-color: rgba(245,166,35,0.08); 
+    color: #F5A623;
+    font-size: 11px;	
+    font-weight: bold;	
+    line-height: 13px;	text-align: center;
+    padding: 4px;
+  }
+  .readmission-level-low {
+    height: 23px;	
+    width: 48px;
+    border-radius: 4px;	
+    background-color: rgba(245,166,35,0.08); 
+    color: #13B652;
+    font-weight: bold;
+    font-size: 11px;	
+    font-weight: bold;	
+    line-height: 13px;	text-align: center;
+    padding: 4px;
+  }
+
+.demo-Info-sec {
+    color: rgba(78,80,99,0.65);	
+    font-size: 12px;	
+    line-height: 20px;
+}
+.demo-text {
+   font-weight: bold;
+   margin-right: 10px;
+}
+.pcp-sec {
+    color: rgba(78,80,99,0.65);
+    font-size: 12px;
+    line-height: 20px;
+    margin: 15px auto;
+}
+.assinged-pcp {
+    color: #0095DA;
+    margin: 5px auto;
+}
+.clinical-info-text {
+
+}
+.risk-level {
+    /* width: 80px; */
+}
+.admission-1-hour-ago {	
+    height: 48px;
+    width: 175px;
+    color: #4E5063;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+.admission {
+    color: #0095DA;    
+}
+.diabetes-initial-ass {	
+    height: 60px;	
+    width: 175px;	
+    color: #4E5063;	
+    font-size: 12px;	
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.view-all-activity {	
+    height: 15px;	
+    width: 91px;	
+    color: #0095DA;	
+    font-size: 12px;	
+    line-height: 15px;
+}
+.page-header {
+    margin-bottom: 20px;
+}
+.group-copy-text {
+
+}
+.rectangle {	  
+    height: 64px;
+    background-color: #4E5063;
+    width: 100%; 
+  }
+.ai-ml-container {
+    margin-top: 20px;
+}
+.CircularProgressbar {
+    width: 90%;
+}
+.progress-container {
+    width: 85%;
+    margin: 0 auto;
+    justify-content: center;
+}
+.light {
+    border: 1px solid #2E303C;
+    border-radius: 21.5px;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4E5063;
+}
+.iconSend {
+    width: 17px;
+    margin-right: 12px;
+  }
+  
+.iconSave {
+    width: 17px;
+    margin-right: 12px;
+  }
+.style-center {
+    text-align: center;
+}
