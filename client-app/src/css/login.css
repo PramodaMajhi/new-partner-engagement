@@ -232,3 +232,39 @@ tr {
   }
   
 }
+.recentNotes{
+  font-size: 18px;
+  color: #1c2d41;
+  font-weight: 800;
+}
+.vendorName {
+  font-size: 28px;
+  font-weight: 800;
+}
+.headingItem {
+  font-size: 12px;
+  color: #8392A5;
+  font-weight: 800;
+}
+.businessType {
+  font-size: 18px;
+  color: #1c2d41;
+  font-weight: 800;
+}
+.row-margin {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+.row-padding {
+  padding: 60px; 
+}
+.nav {
+
+}
+.logo {
+
+}
+.user {
+  
+}
