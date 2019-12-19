@@ -63,7 +63,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
         console.log(vendor)
         console.log(vendor[0].vendorName);
         return (<div className="ai-ml-container">
-            <div className="vendor-result"> <Link to={`/`}>Vendor Results</Link></div>
+            <div className="vendor-result"> <Link to={`/`}><span className="carrot">&lt;</span>Vendor Results</Link></div>
             <Tabs defaultActiveKey="detail" id="uncontrolled-tab-example">
                 <Tab eventKey="detail" title="Details">
                     <Row className="row-padding">
