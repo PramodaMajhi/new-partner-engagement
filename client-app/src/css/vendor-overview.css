@@ -306,7 +306,7 @@
     width: 100%; 
   }
 .ai-ml-container {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .CircularProgressbar {
     width: 90%;
@@ -335,4 +335,8 @@
   }
 .style-center {
     text-align: center;
+}
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+    padding-top: 30px !important;
 }

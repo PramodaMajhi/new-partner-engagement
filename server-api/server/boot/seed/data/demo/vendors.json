@@ -21,7 +21,34 @@
       "state": "CA",
       "zipCode": "93704"
     },
-    "engagementLevel": "Initial Engagement"
+    "engagementLevel": "Initial Engagement",
+    "events": [
+      {
+        "name":"Judith Daniels",  
+        "date": "2019-05-24T04:06:04.843Z",
+        "text": "Made initial contact with Schoen, Fisher and McGlynn at HIMMS. Spoke with Lawrence Will II regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "name":"Jeffery Briggs",
+          "date": "2019-07-10T08:01:45.749Z",
+          "text": "Followed up with Lawrence Will II and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "name":"Judith Daniels",
+          "date": "2019-08-31T11:23:47.025Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "name":"Jeffery Briggs",
+          "date": "2019-11-23T21:32:15.096Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 12:06:27 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+         "name":"Jeffery Briggs",
+          "date": "2019-12-07T14:09:18.702Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
     
   },
   {
