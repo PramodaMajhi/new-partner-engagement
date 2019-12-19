@@ -1,12 +1,5 @@
 version: '3.3'
-services:    
-    elasticsearch:
-        image: elasticsearch:7.5.1                
-        ports:
-            - "9200:9200"
-        environment:
-            - discovery.type=single-node
-        restart: always
+services:        
     mongo:
         image: mongo                
         ports:
@@ -18,8 +11,8 @@ services:
         build: 
             context: ./server-api
             dockerfile: Dockerfile.local
-        expose: 
-            - 3001
+        ports:
+            - "3001:3001"
         environment:
              - DATABASE_URL=mongodb://mongo:27017/vendor-db
         restart: always
@@ -30,8 +23,8 @@ services:
             context: ./client-app
             dockerfile: Dockerfile.local
         ports:
-            - 3000:3000
+            - "3000:3000"
         environment:
-            - REACT_APP_API_URL=http://server-api:3001/api
+            - REACT_APP_API_URL=http://localhost:3001/api
         links:
-            - elasticsearch  
+            - server-api  
