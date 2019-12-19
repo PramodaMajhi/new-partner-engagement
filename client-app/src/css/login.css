@@ -184,6 +184,18 @@ tr {
 .searchBar {
   margin-top: 50px;
 }
+
+.searchBar > div {
+  height: 80px !important;
+  border-radius: 8px !important;
+  box-shadow: 0px 4px 16px -1px rgba(131,146,165,.18) !important;
+  padding-left:20px !important;
+}
+
+.searchBar button {
+  margin-top: 14px !important;
+  margin-left: 18px !important;
+}
 .search-result-section {
   /* max-width: 1200px; */
   margin: 0px auto;
@@ -205,10 +217,17 @@ tr {
   align-items: center;
   min-height: 130px;
   border-bottom: 5px solid #0095da;
+  transition: all 0.3s;
+}
+
+.search_option:hover {
+  box-shadow: 0 6px 24px -1px rgba(131,146,165,0.35);
+  transition: all 0.3s;
+  cursor: pointer;
 }
 .browse-text {
   font-weight: bold;
-  margin: 25px auto;
+  margin: 70px auto 30px;
 }
 .browse {
   color: #6c757d;

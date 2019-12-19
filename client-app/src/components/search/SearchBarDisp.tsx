@@ -109,7 +109,8 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
             style={{
               margin: '0 auto',
               maxWidth: 1200
-            }} />
+            }} 
+            hintText="Search vendor name or keyword"/>
         </div>
         {/* <div className="search-result-section">
           <ul>
