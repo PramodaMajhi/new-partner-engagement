@@ -1,100 +1,4200 @@
-[
-  {
-    "vendorName": "RapidMiner",
-    "businessType": "AI/ML Software",
-    "businessUnit" : "Health Innovation Technology",    
-    "vendorContact" : {
-      "name":"Robert Hans",
-      "phone": "(559) 224-9870",
-      "email":"test@test.com",
-      "street": "1437 East Shields Avenue",
-      "city": "Fresno",
-      "state": "CA",
-      "zipCode": "93704"
-    },
-    "bscContact" : {
-      "name":"Test",
-      "phone": "(559) 224-9870",
-      "email":"test@bsc.com",
-      "street": "1437 East Shields Avenue",
-      "city": "Fresno",
-      "state": "CA",
-      "zipCode": "93704"
-    },
-    "engagementLevel": "Initial Engagement"
-    
+[{
+  "vendorName": "Schoen, Fisher and McGlynn",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "gay.net",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Lawrence Will II",
+      "phone": "640-497-6560 x5290",
+      "email": "Fritz31@hotmail.com",
+      "street": "47878 Daisha Shoal",
+      "city": "Araport",
+      "state": "Alabama",
+      "zipCode": "25678-6538"
   },
-  {
-    "vendorName": "IBM",
-    "businessType": "Software",
-    "businessUnit" : "Dev Ops",    
-    "vendorContact" : {
-      "name":"Robert Hans",
-      "phone": "(559) 224-9870",
-      "email":"test@test.com",
-      "street": "1437 East Shields Avenue",
-      "city": "Fresno",
-      "state": "CA",
-      "zipCode": "93704"
-    },
-    "bscContact" : {
-      "name":"Test",
-      "phone": "(559) 224-9870",
-      "email":"test@bsc.com",
-      "street": "1437 East Shields Avenue",
-      "city": "Fresno",
-      "state": "CA",
-      "zipCode": "93704"
-    },
-    "engagementLevel":"Exploration"
+  "bscContact": {
+      "name": "Garrett Gislason",
+      "phone": "(555) 690-2306",
+      "email": "Eudora1@hotmail.com",
+      "street": "2472 Stamm Rest",
+      "city": "Leilaniborough",
+      "state": "Maine",
+      "zipCode": "96615-3617"
   },
-  {
-    "vendorName": "Google",
-    "businessType": "Software",
-    "businessUnit" : "User Experience",    
-    "vendorContact" : {
-      "name":"Robert Hans",
-      "phone": "(559) 224-9870",
-      "email":"test@test.com",
-      "street": "1437 East Shields Avenue",
-      "city": "Fresno",
-      "state": "CA",
-      "zipCode": "93704"
-    },
-    "bscContact" : {
-      "name":"Test",
-      "phone": "(559) 224-9870",
-      "email":"test@bsc.com",
-      "street": "1437 East Shields Avenue",
-      "city": "Fresno",
-      "state": "CA",
-      "zipCode": "93704"
-    },
-    "engagementLevel": "Pilot"
-    
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-05-24T04:06:04.843Z",
+          "text": "Made initial contact with Schoen, Fisher and McGlynn at HIMMS. Spoke with Lawrence Will II regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-07-10T08:01:45.749Z",
+          "text": "Followed up with Lawrence Will II and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-31T11:23:47.025Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-23T21:32:15.096Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 12:06:27 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-07T14:09:18.702Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Hane - Stamm",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "giovanni.com",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Jillian Hessel",
+      "phone": "509-489-6325",
+      "email": "Noemy33@hotmail.com",
+      "street": "7291 Travis Walk",
+      "city": "Kovacekhaven",
+      "state": "Nevada",
+      "zipCode": "87934"
   },
-  {
-    "vendorName": "Microsoft",
-    "businessType": "Robotics",
-    "businessUnit" : "Business Process",    
-    "vendorContact" : {
-      "name":"Robert Hans",
-      "phone": "(559) 224-9870",
-      "email":"test@test.com",
-      "street": "1437 East Shields Avenue",
-      "city": "Fresno",
-      "state": "CA",
-      "zipCode": "93704"
-    },
-    "bscContact" : {
-      "name":"Test",
-      "phone": "(559) 224-9870",
-      "email":"test@bsc.com",
-      "street": "1437 East Shields Avenue",
-      "city": "Fresno",
-      "state": "CA",
-      "zipCode": "93704"
-    },
-    "engagementLevel": "Production"    
-  }
-]
+  "bscContact": {
+      "name": "Cielo Kihn",
+      "phone": "791-737-5419",
+      "email": "Kelvin_Ritchie2@hotmail.com",
+      "street": "9391 Myrtle Summit",
+      "city": "Moshefurt",
+      "state": "Kentucky",
+      "zipCode": "66600"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-06-08T05:23:07.895Z",
+          "text": "Made initial contact with Hane - Stamm at HIMMS. Spoke with Jillian Hessel regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-07-19T06:30:15.603Z",
+          "text": "Followed up with Jillian Hessel and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-19T03:50:53.534Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-12T02:10:09.271Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 12:35:10 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-16T08:25:44.110Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Medhurst, Flatley and Rau",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "mariana.org",
+  "businessType": "Diagnostics: Pathology",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Kory Prosacco",
+      "phone": "347.692.0881 x6727",
+      "email": "Desmond.Rath@yahoo.com",
+      "street": "5579 Lowe Heights",
+      "city": "Port Novellahaven",
+      "state": "Louisiana",
+      "zipCode": "85744-1503"
+  },
+  "bscContact": {
+      "name": "Leo Hackett",
+      "phone": "047.513.2239",
+      "email": "Leonard13@gmail.com",
+      "street": "663 Koelpin Lakes",
+      "city": "Daijaland",
+      "state": "Arkansas",
+      "zipCode": "91457"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-09-08T16:30:21.035Z",
+          "text": "Made initial contact with Medhurst, Flatley and Rau at HIMMS. Spoke with Kory Prosacco regarding their offering in Diagnostics: Pathology."
+      },
+      {
+          "date": "2019-12-06T22:44:10.270Z",
+          "text": "Followed up with Kory Prosacco and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Rice - West",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "delaney.net",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Arnaldo Crist",
+      "phone": "331-557-3582 x0990",
+      "email": "Lacy27@hotmail.com",
+      "street": "161 Balistreri Lodge",
+      "city": "Alyshaview",
+      "state": "Pennsylvania",
+      "zipCode": "73253-5482"
+  },
+  "bscContact": {
+      "name": "Ramon Yundt",
+      "phone": "1-926-241-5346",
+      "email": "Brooke66@hotmail.com",
+      "street": "5157 Frankie Shoal",
+      "city": "Presleyburgh",
+      "state": "Delaware",
+      "zipCode": "53492"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-01-17T14:35:01.827Z",
+          "text": "Made initial contact with Rice - West at HIMMS. Spoke with Arnaldo Crist regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-07-17T16:48:31.256Z",
+          "text": "Followed up with Arnaldo Crist and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-27T08:59:23.206Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-26T16:48:52.036Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 10:01:07 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-09T22:45:07.001Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Rosenbaum and Sons",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "carlo.net",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Vivienne Kuhlman",
+      "phone": "1-213-911-0913 x8335",
+      "email": "Marlen_Kuphal@hotmail.com",
+      "street": "90393 Kreiger Roads",
+      "city": "Wernerton",
+      "state": "Ohio",
+      "zipCode": "84592-6858"
+  },
+  "bscContact": {
+      "name": "Britney Hartmann",
+      "phone": "(138) 230-1145",
+      "email": "Geovany92@hotmail.com",
+      "street": "746 Brant Pass",
+      "city": "Jakubowskiville",
+      "state": "Colorado",
+      "zipCode": "32230"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-06-16T00:21:51.498Z",
+          "text": "Made initial contact with Rosenbaum and Sons at HIMMS. Spoke with Vivienne Kuhlman regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-07-22T02:53:38.033Z",
+          "text": "Followed up with Vivienne Kuhlman and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-10T11:47:50.595Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-03T18:19:53.981Z",
+          "text": "PoC is in flight. Expected to be completed by Wed Dec 18 2019 19:06:38 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-07T09:21:49.479Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Kshlerin, Kutch and DuBuque",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "abigail.name",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Monty Schuppe",
+      "phone": "(393) 477-4512",
+      "email": "Taurean63@gmail.com",
+      "street": "447 Marquis Mills",
+      "city": "New Christian",
+      "state": "North Dakota",
+      "zipCode": "60529"
+  },
+  "bscContact": {
+      "name": "Mr. Hardy Nolan",
+      "phone": "116-640-7631",
+      "email": "Dejon.Abshire57@yahoo.com",
+      "street": "7205 Mraz Drives",
+      "city": "Lake Patstad",
+      "state": "Minnesota",
+      "zipCode": "83241"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-02-17T08:41:29.907Z",
+          "text": "Made initial contact with Kshlerin, Kutch and DuBuque at HIMMS. Spoke with Monty Schuppe regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-07-24T08:00:03.967Z",
+          "text": "Followed up with Monty Schuppe and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-28T07:31:16.408Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-30T06:52:11.950Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Kovacek, Wehner and Langworth",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "avery.net",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Zander Prohaska",
+      "phone": "1-996-109-7530",
+      "email": "Dawson.Lesch@gmail.com",
+      "street": "8545 Enrico Land",
+      "city": "Pricehaven",
+      "state": "Arkansas",
+      "zipCode": "40863-5401"
+  },
+  "bscContact": {
+      "name": "London Oberbrunner",
+      "phone": "012.251.8342 x857",
+      "email": "Gilbert3@gmail.com",
+      "street": "893 Corkery Village",
+      "city": "Bernhardton",
+      "state": "New York",
+      "zipCode": "51840-1654"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-01-19T17:46:03.778Z",
+          "text": "Made initial contact with Kovacek, Wehner and Langworth at HIMMS. Spoke with Zander Prohaska regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-08-11T16:16:31.557Z",
+          "text": "Followed up with Zander Prohaska and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-12T14:04:13.981Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-10T17:46:11.978Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Gislason and Sons",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "reymundo.net",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Mireille Hickle",
+      "phone": "(862) 967-8173 x51574",
+      "email": "Zella.Reichel45@yahoo.com",
+      "street": "3433 Gottlieb Mountain",
+      "city": "Port Kalliefurt",
+      "state": "Oregon",
+      "zipCode": "37745"
+  },
+  "bscContact": {
+      "name": "Mateo Howe",
+      "phone": "(535) 082-7546",
+      "email": "Yasmeen78@gmail.com",
+      "street": "12688 Emmerich Junctions",
+      "city": "Obieborough",
+      "state": "Louisiana",
+      "zipCode": "17511"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-07-30T14:13:06.904Z",
+          "text": "Made initial contact with Gislason and Sons at HIMMS. Spoke with Mireille Hickle regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-12-07T18:45:18.548Z",
+          "text": "Followed up with Mireille Hickle and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Wehner Group",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "maude.net",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Maud Mosciski Sr.",
+      "phone": "1-701-438-5976 x5295",
+      "email": "Vito_Swift@hotmail.com",
+      "street": "01488 Amaya Radial",
+      "city": "New Edyth",
+      "state": "Nevada",
+      "zipCode": "83868-4914"
+  },
+  "bscContact": {
+      "name": "Harley Krajcik",
+      "phone": "238.465.3289 x151",
+      "email": "Felicita_Gulgowski50@gmail.com",
+      "street": "941 Hills Shore",
+      "city": "East Reneville",
+      "state": "Alaska",
+      "zipCode": "36886-6093"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-01-17T06:04:29.219Z",
+          "text": "Made initial contact with Wehner Group at HIMMS. Spoke with Maud Mosciski Sr. regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-07-18T02:29:24.476Z",
+          "text": "Followed up with Maud Mosciski Sr. and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-10T03:17:00.539Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-06T00:58:50.909Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 08:30:50 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-18T04:03:44.379Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Quitzon - Harber",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "georgette.name",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Jack Harber",
+      "phone": "780-287-0867",
+      "email": "Deon94@yahoo.com",
+      "street": "28997 Stiedemann Lane",
+      "city": "West Bentonfurt",
+      "state": "Missouri",
+      "zipCode": "76319"
+  },
+  "bscContact": {
+      "name": "Mr. Manuela Bradtke",
+      "phone": "449-655-0045 x538",
+      "email": "Hank.Towne@hotmail.com",
+      "street": "0161 Schulist Tunnel",
+      "city": "South Lorenzotown",
+      "state": "Connecticut",
+      "zipCode": "17737"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-07-20T16:06:33.767Z",
+          "text": "Made initial contact with Quitzon - Harber at HIMMS. Spoke with Jack Harber regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-12-16T18:19:37.246Z",
+          "text": "Followed up with Jack Harber and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Jerde - Mosciski",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "maureen.org",
+  "businessType": "Genomics",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Sharon Jacobs",
+      "phone": "266-847-8111",
+      "email": "Effie.Zemlak@gmail.com",
+      "street": "951 Arlie Loaf",
+      "city": "New Christinechester",
+      "state": "Minnesota",
+      "zipCode": "42847"
+  },
+  "bscContact": {
+      "name": "Baron McCullough",
+      "phone": "1-189-744-2566",
+      "email": "Rosanna.Hodkiewicz@hotmail.com",
+      "street": "758 Isabell Parks",
+      "city": "East Verdie",
+      "state": "Michigan",
+      "zipCode": "20048-6389"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-05-26T08:23:56.414Z",
+          "text": "Made initial contact with Jerde - Mosciski at HIMMS. Spoke with Sharon Jacobs regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-09-21T19:32:43.455Z",
+          "text": "Followed up with Sharon Jacobs and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-04T20:56:56.778Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Price, Emmerich and Halvorson",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "jake.info",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Gaston Jast",
+      "phone": "(327) 928-6015 x2993",
+      "email": "Carissa.OHara84@hotmail.com",
+      "street": "983 Jovani Groves",
+      "city": "Rennerhaven",
+      "state": "Maryland",
+      "zipCode": "27078"
+  },
+  "bscContact": {
+      "name": "Maurine Ernser II",
+      "phone": "(262) 984-3841",
+      "email": "Alvah.Dach@hotmail.com",
+      "street": "081 Grady Forges",
+      "city": "Gagemouth",
+      "state": "Connecticut",
+      "zipCode": "72636-5782"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-07-18T02:10:54.610Z",
+          "text": "Made initial contact with Price, Emmerich and Halvorson at HIMMS. Spoke with Gaston Jast regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-12-05T03:17:51.609Z",
+          "text": "Followed up with Gaston Jast and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Schmitt - Smitham",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "merl.name",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Cyrus Ortiz",
+      "phone": "614-131-7919 x97497",
+      "email": "Annie_Turcotte@hotmail.com",
+      "street": "561 Abshire Place",
+      "city": "West Casimirville",
+      "state": "Tennessee",
+      "zipCode": "85017"
+  },
+  "bscContact": {
+      "name": "Maci Stokes",
+      "phone": "818.934.1019",
+      "email": "Kurt90@yahoo.com",
+      "street": "672 Kunde Roads",
+      "city": "Emardchester",
+      "state": "Minnesota",
+      "zipCode": "20102-0208"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-02-16T08:52:41.028Z",
+          "text": "Made initial contact with Schmitt - Smitham at HIMMS. Spoke with Cyrus Ortiz regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-09-20T16:01:34.369Z",
+          "text": "Followed up with Cyrus Ortiz and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-24T03:41:00.856Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-20T13:51:46.756Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Feeney - McDermott",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "libby.net",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Albert Jacobson",
+      "phone": "1-971-739-3551",
+      "email": "Jade.Stamm14@yahoo.com",
+      "street": "78268 Christiansen Lights",
+      "city": "West Tedton",
+      "state": "California",
+      "zipCode": "82467"
+  },
+  "bscContact": {
+      "name": "Joana Collins",
+      "phone": "(306) 559-7225",
+      "email": "Fiona_Frami@hotmail.com",
+      "street": "866 Eulah Land",
+      "city": "Smithberg",
+      "state": "Kansas",
+      "zipCode": "24624-1809"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-05-24T08:48:59.631Z",
+          "text": "Made initial contact with Feeney - McDermott at HIMMS. Spoke with Albert Jacobson regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-08-18T14:07:58.745Z",
+          "text": "Followed up with Albert Jacobson and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-27T13:47:11.072Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Homenick LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "patience.com",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "William Lynch",
+      "phone": "588.347.5074 x176",
+      "email": "Percy96@hotmail.com",
+      "street": "080 Toy Forest",
+      "city": "New Immanueltown",
+      "state": "Maryland",
+      "zipCode": "70453-6520"
+  },
+  "bscContact": {
+      "name": "Dr. Precious Waelchi",
+      "phone": "367-713-1732 x02546",
+      "email": "Jeanette88@hotmail.com",
+      "street": "78061 Jones Creek",
+      "city": "New Bernhard",
+      "state": "Indiana",
+      "zipCode": "70352-3458"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-03-17T01:20:23.826Z",
+          "text": "Made initial contact with Homenick LLC at HIMMS. Spoke with William Lynch regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-07-02T21:19:38.502Z",
+          "text": "Followed up with William Lynch and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-12T13:07:29.742Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-30T22:19:51.731Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 08:02:24 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-18T06:02:14.611Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "O'Conner - Swift",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "greg.org",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Ms. Junius Langworth",
+      "phone": "1-308-456-5605",
+      "email": "Arielle_Keeling28@yahoo.com",
+      "street": "1482 Jast Corner",
+      "city": "Schuppemouth",
+      "state": "Iowa",
+      "zipCode": "11134-7412"
+  },
+  "bscContact": {
+      "name": "Icie Mitchell",
+      "phone": "529.209.7182",
+      "email": "Ferne.Howell5@hotmail.com",
+      "street": "6775 Schiller Path",
+      "city": "West Libbyborough",
+      "state": "New Mexico",
+      "zipCode": "62170"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-06-04T14:46:59.197Z",
+          "text": "Made initial contact with O'Conner - Swift at HIMMS. Spoke with Ms. Junius Langworth regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-09-20T15:33:33.944Z",
+          "text": "Followed up with Ms. Junius Langworth and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-12-11T22:04:04.171Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Rutherford, Smith and Feest",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "anjali.name",
+  "businessType": "Drug R&D",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Elaina Stanton",
+      "phone": "1-620-314-3507 x1436",
+      "email": "Brenda_Nicolas@yahoo.com",
+      "street": "12472 Bins Centers",
+      "city": "East Raheemville",
+      "state": "Iowa",
+      "zipCode": "76513-8812"
+  },
+  "bscContact": {
+      "name": "Mafalda Lakin",
+      "phone": "(071) 280-1601 x97586",
+      "email": "Kurtis39@yahoo.com",
+      "street": "7318 Hansen Street",
+      "city": "Lake Xzaviertown",
+      "state": "Alaska",
+      "zipCode": "55288"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-03-18T05:43:06.746Z",
+          "text": "Made initial contact with Rutherford, Smith and Feest at HIMMS. Spoke with Elaina Stanton regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-09-09T07:20:28.849Z",
+          "text": "Followed up with Elaina Stanton and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-12-16T05:55:57.960Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Terry - Harris",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "jonathan.biz",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Miss Cale Krajcik",
+      "phone": "(924) 746-2226 x17302",
+      "email": "Erich.Rowe38@hotmail.com",
+      "street": "1205 McLaughlin Knolls",
+      "city": "Lake Jonathanhaven",
+      "state": "Alaska",
+      "zipCode": "21784-3399"
+  },
+  "bscContact": {
+      "name": "Jessyca Erdman PhD",
+      "phone": "(652) 948-0397 x31591",
+      "email": "Conner_Ratke@hotmail.com",
+      "street": "2843 Mosciski Row",
+      "city": "North Emmieport",
+      "state": "Pennsylvania",
+      "zipCode": "77943"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-10-27T01:28:14.769Z",
+          "text": "Made initial contact with Terry - Harris at HIMMS. Spoke with Miss Cale Krajcik regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-12-10T00:28:37.595Z",
+          "text": "Followed up with Miss Cale Krajcik and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Kutch and Sons",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "anthony.info",
+  "businessType": "Digital Therapeutics",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Dalton Kuhic",
+      "phone": "(212) 100-2165 x0702",
+      "email": "Ricardo_Wuckert23@gmail.com",
+      "street": "81853 Kuhn Curve",
+      "city": "Mrazview",
+      "state": "Georgia",
+      "zipCode": "04715"
+  },
+  "bscContact": {
+      "name": "Carrie Stracke",
+      "phone": "843.994.6140",
+      "email": "Merle.Gutmann@gmail.com",
+      "street": "26701 Grady Dam",
+      "city": "North Myramouth",
+      "state": "Ohio",
+      "zipCode": "98701-6602"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-06-24T18:31:16.265Z",
+          "text": "Made initial contact with Kutch and Sons at HIMMS. Spoke with Dalton Kuhic regarding their offering in Digital Therapeutics."
+      },
+      {
+          "date": "2019-09-05T01:25:16.771Z",
+          "text": "Followed up with Dalton Kuhic and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-24T07:17:25.892Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-23T22:40:41.961Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Anderson, Waters and McClure",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "ulices.net",
+  "businessType": "Diagnostics: Pathology",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Stacey Pollich",
+      "phone": "1-494-799-5991",
+      "email": "Shaniya3@hotmail.com",
+      "street": "3477 Jeffry Extension",
+      "city": "Vincenzoshire",
+      "state": "Illinois",
+      "zipCode": "87856"
+  },
+  "bscContact": {
+      "name": "Geovany Langworth III",
+      "phone": "(245) 284-0164 x628",
+      "email": "Wilford.Carter@yahoo.com",
+      "street": "12030 Rudolph Ford",
+      "city": "East Herminafort",
+      "state": "Arkansas",
+      "zipCode": "72265-3122"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-03-14T01:22:41.385Z",
+          "text": "Made initial contact with Anderson, Waters and McClure at HIMMS. Spoke with Stacey Pollich regarding their offering in Diagnostics: Pathology."
+      },
+      {
+          "date": "2019-08-28T19:24:07.946Z",
+          "text": "Followed up with Stacey Pollich and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-01T16:51:23.190Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-06T12:03:53.869Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Daniel Group",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "hardy.org",
+  "businessType": "Genomics",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Yvonne Kovacek",
+      "phone": "1-816-969-2337 x022",
+      "email": "Delores.Macejkovic75@yahoo.com",
+      "street": "4378 Bruen Land",
+      "city": "New Jarrod",
+      "state": "North Dakota",
+      "zipCode": "82402-1601"
+  },
+  "bscContact": {
+      "name": "Monica Stoltenberg",
+      "phone": "766-282-0722",
+      "email": "Camylle_Gibson@gmail.com",
+      "street": "32166 Yundt Path",
+      "city": "North Aylinland",
+      "state": "Alaska",
+      "zipCode": "01381-4821"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-03-19T21:44:30.120Z",
+          "text": "Made initial contact with Daniel Group at HIMMS. Spoke with Yvonne Kovacek regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-07-28T21:01:45.167Z",
+          "text": "Followed up with Yvonne Kovacek and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-23T10:22:00.861Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-08T09:05:55.060Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 09:59:47 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-12T21:02:09.678Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Roberts, Kertzmann and Fahey",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "roxanne.name",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Aiden Rosenbaum",
+      "phone": "1-414-809-3152 x939",
+      "email": "Oran.Braun@gmail.com",
+      "street": "457 Blanche Motorway",
+      "city": "Port Harmony",
+      "state": "Delaware",
+      "zipCode": "00301-1955"
+  },
+  "bscContact": {
+      "name": "Wilford Kreiger",
+      "phone": "058.895.9270 x74428",
+      "email": "Amparo_Volkman8@gmail.com",
+      "street": "5543 Hickle Inlet",
+      "city": "South Evanfort",
+      "state": "Indiana",
+      "zipCode": "41626-7216"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-04-03T10:09:17.046Z",
+          "text": "Made initial contact with Roberts, Kertzmann and Fahey at HIMMS. Spoke with Aiden Rosenbaum regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-07-04T12:27:27.348Z",
+          "text": "Followed up with Aiden Rosenbaum and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-16T05:04:03.117Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-31T03:36:05.221Z",
+          "text": "PoC is in flight. Expected to be completed by Wed Dec 18 2019 15:31:14 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-12T04:54:04.386Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Jerde Inc",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "maud.com",
+  "businessType": "Genomics",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Mariam Schmeler",
+      "phone": "(792) 978-1003 x762",
+      "email": "Petra.Osinski@hotmail.com",
+      "street": "073 Tyrel Divide",
+      "city": "Lake Chaz",
+      "state": "Ohio",
+      "zipCode": "51646-2117"
+  },
+  "bscContact": {
+      "name": "Waldo Hudson",
+      "phone": "192.980.3683",
+      "email": "Rodger_Lindgren80@gmail.com",
+      "street": "426 Gutkowski Circle",
+      "city": "Pfannerstillville",
+      "state": "West Virginia",
+      "zipCode": "25592-5658"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-02-26T10:33:57.119Z",
+          "text": "Made initial contact with Jerde Inc at HIMMS. Spoke with Mariam Schmeler regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-09-03T06:23:08.835Z",
+          "text": "Followed up with Mariam Schmeler and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-30T08:34:07.997Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-11T00:48:47.086Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Hayes - Lesch",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "genoveva.com",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Gilda White",
+      "phone": "723.236.5770",
+      "email": "Georgette_Haley32@hotmail.com",
+      "street": "7294 Wilhelmine Plain",
+      "city": "West Rogersport",
+      "state": "Illinois",
+      "zipCode": "32395"
+  },
+  "bscContact": {
+      "name": "Imelda Crona",
+      "phone": "1-614-403-4797 x112",
+      "email": "Hanna_Sanford@yahoo.com",
+      "street": "2060 Nikolas Squares",
+      "city": "Idaberg",
+      "state": "Maine",
+      "zipCode": "13609-5530"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-03-12T15:46:12.331Z",
+          "text": "Made initial contact with Hayes - Lesch at HIMMS. Spoke with Gilda White regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-07-01T09:29:44.007Z",
+          "text": "Followed up with Gilda White and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-09-14T19:34:05.640Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-19T13:33:52.042Z",
+          "text": "PoC is in flight. Expected to be completed by Wed Dec 18 2019 14:49:48 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-05T23:21:19.900Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Wuckert, Hyatt and Shields",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "patricia.info",
+  "businessType": "Genomics",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Sigurd McDermott",
+      "phone": "161-774-1402 x39956",
+      "email": "Andrew.Koepp18@yahoo.com",
+      "street": "873 Waters Meadow",
+      "city": "West Maurice",
+      "state": "Mississippi",
+      "zipCode": "83978-5923"
+  },
+  "bscContact": {
+      "name": "Verla Schaden",
+      "phone": "(856) 658-8268 x00284",
+      "email": "Sheridan_Mueller@gmail.com",
+      "street": "476 Keira Fork",
+      "city": "Schmittburgh",
+      "state": "Virginia",
+      "zipCode": "25213-3988"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-03-12T03:12:20.151Z",
+          "text": "Made initial contact with Wuckert, Hyatt and Shields at HIMMS. Spoke with Sigurd McDermott regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-09-10T06:56:44.930Z",
+          "text": "Followed up with Sigurd McDermott and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-20T01:09:52.776Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Murray, Bednar and Rutherford",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "mathew.com",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Dallas Moen",
+      "phone": "882-215-7637",
+      "email": "Zella.Pfannerstill93@gmail.com",
+      "street": "4179 Loyce Cliffs",
+      "city": "Port Othofurt",
+      "state": "Alaska",
+      "zipCode": "12071"
+  },
+  "bscContact": {
+      "name": "Candace Stroman",
+      "phone": "(416) 116-1498",
+      "email": "Vernon18@gmail.com",
+      "street": "5905 Loy Ridge",
+      "city": "North Burleyport",
+      "state": "Kansas",
+      "zipCode": "46012"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-04-05T14:19:41.555Z",
+          "text": "Made initial contact with Murray, Bednar and Rutherford at HIMMS. Spoke with Dallas Moen regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-07-07T10:26:38.395Z",
+          "text": "Followed up with Dallas Moen and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-24T21:45:43.182Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-14T05:26:00.532Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Abshire Group",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "hiram.info",
+  "businessType": "Drug R&D",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Dr. Ernesto Corwin",
+      "phone": "188.569.3319 x605",
+      "email": "Kyleigh_Von91@gmail.com",
+      "street": "548 Laisha Divide",
+      "city": "Oberbrunnershire",
+      "state": "Hawaii",
+      "zipCode": "81535-9330"
+  },
+  "bscContact": {
+      "name": "Anastacio Corwin",
+      "phone": "1-151-755-5245 x921",
+      "email": "Evert_Yost@hotmail.com",
+      "street": "1023 Runolfsson Park",
+      "city": "Milfordton",
+      "state": "Michigan",
+      "zipCode": "18337-6361"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-02-22T23:44:21.990Z",
+          "text": "Made initial contact with Abshire Group at HIMMS. Spoke with Dr. Ernesto Corwin regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-08-05T11:52:49.846Z",
+          "text": "Followed up with Dr. Ernesto Corwin and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-18T14:14:38.154Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-22T15:13:33.208Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Schaefer, Rempel and Wintheiser",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "rosella.name",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Verner Ondricka",
+      "phone": "415-922-3096 x09248",
+      "email": "Emma24@yahoo.com",
+      "street": "581 Wilfredo Roads",
+      "city": "Lake Laneyberg",
+      "state": "Mississippi",
+      "zipCode": "48806-8333"
+  },
+  "bscContact": {
+      "name": "Furman Stokes",
+      "phone": "578.101.6741",
+      "email": "Rozella_Lemke1@yahoo.com",
+      "street": "5221 Kautzer River",
+      "city": "South Ervin",
+      "state": "New York",
+      "zipCode": "03795"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-06-16T18:02:36.723Z",
+          "text": "Made initial contact with Schaefer, Rempel and Wintheiser at HIMMS. Spoke with Verner Ondricka regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-07-01T19:27:23.420Z",
+          "text": "Followed up with Verner Ondricka and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-25T15:40:17.840Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-26T03:25:05.463Z",
+          "text": "PoC is in flight. Expected to be completed by Wed Dec 18 2019 14:26:57 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-12T04:35:09.155Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Zboncak, Hamill and Dibbert",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "mack.net",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Kellie Mayert",
+      "phone": "(993) 144-8254",
+      "email": "Jackeline_Turcotte90@gmail.com",
+      "street": "03071 Schmeler Parks",
+      "city": "Emeryfort",
+      "state": "Florida",
+      "zipCode": "42665-3629"
+  },
+  "bscContact": {
+      "name": "Felicity Hoeger",
+      "phone": "1-794-769-1899",
+      "email": "Brock_Luettgen69@hotmail.com",
+      "street": "76722 Kulas Shoals",
+      "city": "Schmidtview",
+      "state": "New Mexico",
+      "zipCode": "42351"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-03-30T05:55:53.641Z",
+          "text": "Made initial contact with Zboncak, Hamill and Dibbert at HIMMS. Spoke with Kellie Mayert regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-07-17T12:51:20.578Z",
+          "text": "Followed up with Kellie Mayert and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-09T19:33:45.240Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-30T16:08:27.697Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 03:16:38 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-08T15:52:42.874Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Weber LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "omer.name",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Braeden Schiller",
+      "phone": "423-618-5350 x6556",
+      "email": "Celestine56@hotmail.com",
+      "street": "26226 Cooper Glen",
+      "city": "Smithamberg",
+      "state": "Louisiana",
+      "zipCode": "23902-9787"
+  },
+  "bscContact": {
+      "name": "Miss Rosa Satterfield",
+      "phone": "1-285-144-5887 x45010",
+      "email": "Bruce.Keeling@yahoo.com",
+      "street": "11208 Pollich Meadows",
+      "city": "Stephanialand",
+      "state": "Virginia",
+      "zipCode": "71448-1770"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-05-09T00:47:58.793Z",
+          "text": "Made initial contact with Weber LLC at HIMMS. Spoke with Braeden Schiller regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-07-18T20:52:53.872Z",
+          "text": "Followed up with Braeden Schiller and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-12T17:34:51.506Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-27T13:17:08.146Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 05:39:40 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-15T21:20:50.662Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Dietrich, Kuvalis and Fay",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "dandre.info",
+  "businessType": "Digital Therapeutics",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Art Franecki II",
+      "phone": "1-548-698-3668",
+      "email": "Lennie_Keeling@hotmail.com",
+      "street": "70976 Marilou Ridges",
+      "city": "West Venaport",
+      "state": "Georgia",
+      "zipCode": "53064"
+  },
+  "bscContact": {
+      "name": "Dora Fritsch",
+      "phone": "166.562.9788",
+      "email": "Silas_Schinner18@gmail.com",
+      "street": "32293 Marlin Forks",
+      "city": "Port Una",
+      "state": "Vermont",
+      "zipCode": "01864"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-01-20T07:23:34.834Z",
+          "text": "Made initial contact with Dietrich, Kuvalis and Fay at HIMMS. Spoke with Art Franecki II regarding their offering in Digital Therapeutics."
+      },
+      {
+          "date": "2019-08-30T18:51:50.128Z",
+          "text": "Followed up with Art Franecki II and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-13T21:45:44.234Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Johns, Hilll and Schmidt",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "archibald.info",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Richie D'Amore",
+      "phone": "780.154.4439",
+      "email": "Katlyn_Will86@gmail.com",
+      "street": "637 Annabel Ville",
+      "city": "Lake Aidan",
+      "state": "Louisiana",
+      "zipCode": "91936-4404"
+  },
+  "bscContact": {
+      "name": "Morris Berge",
+      "phone": "418.020.8073 x319",
+      "email": "Kennith.Reinger@gmail.com",
+      "street": "262 Alfonso Manor",
+      "city": "West Godfreyfurt",
+      "state": "Nevada",
+      "zipCode": "60746-3134"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-10-06T21:35:36.055Z",
+          "text": "Made initial contact with Johns, Hilll and Schmidt at HIMMS. Spoke with Richie D'Amore regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-12-16T16:05:32.749Z",
+          "text": "Followed up with Richie D'Amore and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Boehm - O'Reilly",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "aditya.org",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Damion Schneider",
+      "phone": "1-690-048-1551 x579",
+      "email": "Gage.Douglas@yahoo.com",
+      "street": "268 Demetrius Island",
+      "city": "Lake Helenview",
+      "state": "Washington",
+      "zipCode": "91016"
+  },
+  "bscContact": {
+      "name": "Ryan Bailey",
+      "phone": "(305) 529-5986 x79870",
+      "email": "Godfrey.Bins8@hotmail.com",
+      "street": "938 Hand Forks",
+      "city": "Lake Metabury",
+      "state": "California",
+      "zipCode": "09943"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-11-01T01:30:30.529Z",
+          "text": "Made initial contact with Boehm - O'Reilly at HIMMS. Spoke with Damion Schneider regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-12-05T03:35:57.404Z",
+          "text": "Followed up with Damion Schneider and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Cummerata - Prohaska",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "toby.info",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Mckenna Reynolds",
+      "phone": "(219) 305-9347",
+      "email": "Alvah55@yahoo.com",
+      "street": "06503 Conroy Bridge",
+      "city": "Wintheiserfort",
+      "state": "Idaho",
+      "zipCode": "99878"
+  },
+  "bscContact": {
+      "name": "Delbert Collins",
+      "phone": "539.738.3663 x812",
+      "email": "Carlotta41@hotmail.com",
+      "street": "5683 Easter Curve",
+      "city": "Ullrichfort",
+      "state": "Arizona",
+      "zipCode": "61984"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-07-15T00:24:04.884Z",
+          "text": "Made initial contact with Cummerata - Prohaska at HIMMS. Spoke with Mckenna Reynolds regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-12-14T06:32:14.941Z",
+          "text": "Followed up with Mckenna Reynolds and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Bernhard - Hilll",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "maya.info",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Micaela Cole",
+      "phone": "(017) 090-0114 x70146",
+      "email": "Brett_Shanahan84@yahoo.com",
+      "street": "87994 Jenifer Springs",
+      "city": "Metzchester",
+      "state": "Colorado",
+      "zipCode": "74327"
+  },
+  "bscContact": {
+      "name": "Marisol Lockman",
+      "phone": "823.861.5853",
+      "email": "Jarrett.Macejkovic73@hotmail.com",
+      "street": "3185 Rippin Burgs",
+      "city": "Lake Reubenton",
+      "state": "Vermont",
+      "zipCode": "50152-2133"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-01-31T03:21:59.798Z",
+          "text": "Made initial contact with Bernhard - Hilll at HIMMS. Spoke with Micaela Cole regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-07-14T20:43:27.725Z",
+          "text": "Followed up with Micaela Cole and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-27T04:46:00.669Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-20T12:12:17.990Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 08:00:11 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-16T09:51:08.811Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "O'Conner, Hagenes and Pagac",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "jedidiah.biz",
+  "businessType": "Drug R&D",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Dana Hills",
+      "phone": "788.912.5464 x546",
+      "email": "Letitia.Price63@gmail.com",
+      "street": "68644 Yasmeen Stravenue",
+      "city": "Handside",
+      "state": "South Dakota",
+      "zipCode": "35063-2548"
+  },
+  "bscContact": {
+      "name": "Reta Borer",
+      "phone": "(771) 653-8966",
+      "email": "Jaime41@yahoo.com",
+      "street": "001 Katlynn Light",
+      "city": "Port Hoytberg",
+      "state": "Washington",
+      "zipCode": "08486-9896"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-10-08T22:13:42.245Z",
+          "text": "Made initial contact with O'Conner, Hagenes and Pagac at HIMMS. Spoke with Dana Hills regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-12-13T02:34:18.343Z",
+          "text": "Followed up with Dana Hills and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "O'Keefe - Feil",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "tess.info",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Mohammed Hamill",
+      "phone": "(433) 225-6084 x87133",
+      "email": "Alycia27@hotmail.com",
+      "street": "28183 Brakus Freeway",
+      "city": "Ondrickaton",
+      "state": "Missouri",
+      "zipCode": "59470"
+  },
+  "bscContact": {
+      "name": "Josiah Rau DVM",
+      "phone": "(863) 691-3376 x6317",
+      "email": "Matteo65@hotmail.com",
+      "street": "103 Parisian Union",
+      "city": "New Jovany",
+      "state": "Missouri",
+      "zipCode": "30702"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-04-29T18:15:48.332Z",
+          "text": "Made initial contact with O'Keefe - Feil at HIMMS. Spoke with Mohammed Hamill regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-07-18T21:59:12.722Z",
+          "text": "Followed up with Mohammed Hamill and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-24T01:15:03.172Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Jacobson - Kuhn",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "dino.name",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Christelle Weimann",
+      "phone": "1-177-675-6841",
+      "email": "Carter.Mayer@yahoo.com",
+      "street": "879 Adeline Shores",
+      "city": "Hamillland",
+      "state": "Georgia",
+      "zipCode": "35463"
+  },
+  "bscContact": {
+      "name": "Hanna Schoen",
+      "phone": "719-951-0665",
+      "email": "Ubaldo_Schuster@hotmail.com",
+      "street": "8906 Schumm Ports",
+      "city": "East Emmaleetown",
+      "state": "Virginia",
+      "zipCode": "00712-3707"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-04-08T21:00:45.508Z",
+          "text": "Made initial contact with Jacobson - Kuhn at HIMMS. Spoke with Christelle Weimann regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-07-06T20:51:04.458Z",
+          "text": "Followed up with Christelle Weimann and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-25T08:18:56.108Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-08T19:22:06.300Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Lowe, Langosh and Bins",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "abigail.org",
+  "businessType": "Digital Therapeutics",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Winfield Wehner",
+      "phone": "036-881-8011 x423",
+      "email": "Milton65@yahoo.com",
+      "street": "328 Ole Avenue",
+      "city": "Lake Brooksborough",
+      "state": "Idaho",
+      "zipCode": "93742-0097"
+  },
+  "bscContact": {
+      "name": "Mallie Braun",
+      "phone": "352.703.2100 x574",
+      "email": "Juliana.Walter@yahoo.com",
+      "street": "9655 Parisian Fort",
+      "city": "New Caseyberg",
+      "state": "Wisconsin",
+      "zipCode": "62196-4302"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-01-03T18:21:58.001Z",
+          "text": "Made initial contact with Lowe, Langosh and Bins at HIMMS. Spoke with Winfield Wehner regarding their offering in Digital Therapeutics."
+      },
+      {
+          "date": "2019-07-17T01:36:56.724Z",
+          "text": "Followed up with Winfield Wehner and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-26T04:08:12.040Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-05T09:17:25.534Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Ritchie - Torphy",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "jesus.name",
+  "businessType": "Diagnostics: Pathology",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Cielo Reichel",
+      "phone": "(111) 403-5587",
+      "email": "Suzanne_Ernser@gmail.com",
+      "street": "2860 Cole Points",
+      "city": "West Greg",
+      "state": "Nebraska",
+      "zipCode": "56865-1967"
+  },
+  "bscContact": {
+      "name": "Rory Blanda",
+      "phone": "1-581-534-5108",
+      "email": "Princess49@yahoo.com",
+      "street": "144 Nienow Way",
+      "city": "Brakusmouth",
+      "state": "Vermont",
+      "zipCode": "47498-9227"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-01-06T21:08:40.833Z",
+          "text": "Made initial contact with Ritchie - Torphy at HIMMS. Spoke with Cielo Reichel regarding their offering in Diagnostics: Pathology."
+      },
+      {
+          "date": "2019-08-11T02:09:45.332Z",
+          "text": "Followed up with Cielo Reichel and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-16T01:27:41.800Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Lesch - Cummings",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "maurice.biz",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Mr. Luz Dickinson",
+      "phone": "1-807-845-5447 x81041",
+      "email": "Donald_Leannon@gmail.com",
+      "street": "192 King Field",
+      "city": "Bergnaumport",
+      "state": "Ohio",
+      "zipCode": "04415"
+  },
+  "bscContact": {
+      "name": "Jermey Bruen",
+      "phone": "1-252-998-0305",
+      "email": "Rachelle39@gmail.com",
+      "street": "3019 Cullen Track",
+      "city": "North Floydborough",
+      "state": "New Jersey",
+      "zipCode": "88759-6997"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-01-25T10:37:41.719Z",
+          "text": "Made initial contact with Lesch - Cummings at HIMMS. Spoke with Mr. Luz Dickinson regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-09-23T16:34:16.120Z",
+          "text": "Followed up with Mr. Luz Dickinson and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-24T13:40:35.987Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-20T20:35:35.044Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Heidenreich, Quitzon and Murphy",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "marietta.biz",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Mrs. Flo Russel",
+      "phone": "108-579-2205",
+      "email": "Noemie30@yahoo.com",
+      "street": "95657 Champlin Summit",
+      "city": "Port Gussieborough",
+      "state": "Arkansas",
+      "zipCode": "90843"
+  },
+  "bscContact": {
+      "name": "Trystan Waelchi",
+      "phone": "(708) 882-9645",
+      "email": "Nigel_Larkin@hotmail.com",
+      "street": "60061 Klein Harbors",
+      "city": "Loraineberg",
+      "state": "New Hampshire",
+      "zipCode": "58780"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-08-15T16:52:03.559Z",
+          "text": "Made initial contact with Heidenreich, Quitzon and Murphy at HIMMS. Spoke with Mrs. Flo Russel regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-12-17T09:14:14.894Z",
+          "text": "Followed up with Mrs. Flo Russel and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Schmidt LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "derick.org",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Abbigail Hahn",
+      "phone": "873.941.5745",
+      "email": "Lora_Huels@gmail.com",
+      "street": "842 Edd Plaza",
+      "city": "Gerhardside",
+      "state": "Maryland",
+      "zipCode": "37622-4996"
+  },
+  "bscContact": {
+      "name": "Avis Douglas",
+      "phone": "066-571-6048",
+      "email": "Santiago46@hotmail.com",
+      "street": "223 Beier Tunnel",
+      "city": "Zolaland",
+      "state": "New Mexico",
+      "zipCode": "57680"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-05-05T14:12:50.513Z",
+          "text": "Made initial contact with Schmidt LLC at HIMMS. Spoke with Abbigail Hahn regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-08-11T23:06:49.188Z",
+          "text": "Followed up with Abbigail Hahn and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-11T00:38:01.395Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-03T11:37:15.449Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Beer LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "stefan.info",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Augusta Conroy",
+      "phone": "199-974-7579 x48546",
+      "email": "Emelie39@gmail.com",
+      "street": "73976 Hermann Flat",
+      "city": "Axelland",
+      "state": "Arkansas",
+      "zipCode": "85640-3229"
+  },
+  "bscContact": {
+      "name": "Mr. Elliot Stamm",
+      "phone": "1-377-904-1429",
+      "email": "Maddison_Zboncak@yahoo.com",
+      "street": "7923 Schroeder Grove",
+      "city": "West Mitchel",
+      "state": "South Carolina",
+      "zipCode": "05486-2807"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-04-01T00:27:59.708Z",
+          "text": "Made initial contact with Beer LLC at HIMMS. Spoke with Augusta Conroy regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-07-17T07:11:45.344Z",
+          "text": "Followed up with Augusta Conroy and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-03T12:04:04.043Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-09-20T09:33:34.748Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 00:15:12 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-13T03:38:42.732Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Veum, Emmerich and Hackett",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "lindsey.biz",
+  "businessType": "Genomics",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Lukas Schmeler",
+      "phone": "(986) 270-9287 x514",
+      "email": "Jimmy_Leuschke35@hotmail.com",
+      "street": "6105 Mosciski Trace",
+      "city": "North Phyllis",
+      "state": "Florida",
+      "zipCode": "54818"
+  },
+  "bscContact": {
+      "name": "Mr. Jayme Grimes",
+      "phone": "059-972-5893",
+      "email": "Blair.Mayert90@yahoo.com",
+      "street": "79854 Koch Forges",
+      "city": "Philipmouth",
+      "state": "Nevada",
+      "zipCode": "78759-9818"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-06-19T19:31:43.573Z",
+          "text": "Made initial contact with Veum, Emmerich and Hackett at HIMMS. Spoke with Lukas Schmeler regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-09-11T13:19:27.551Z",
+          "text": "Followed up with Lukas Schmeler and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-12-02T05:02:31.524Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Hills Inc",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "joannie.com",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Caesar Stokes",
+      "phone": "1-607-197-4966",
+      "email": "Felicity28@hotmail.com",
+      "street": "9149 Miracle Cape",
+      "city": "West Danniehaven",
+      "state": "Illinois",
+      "zipCode": "89330-3927"
+  },
+  "bscContact": {
+      "name": "Jade Eichmann",
+      "phone": "029.695.6263 x090",
+      "email": "Sydnee18@gmail.com",
+      "street": "96741 Skylar Burg",
+      "city": "New Salvatoreland",
+      "state": "Florida",
+      "zipCode": "22372"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-05-13T10:38:20.386Z",
+          "text": "Made initial contact with Hills Inc at HIMMS. Spoke with Caesar Stokes regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-07-22T15:41:11.646Z",
+          "text": "Followed up with Caesar Stokes and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-30T09:17:40.297Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-25T09:18:15.547Z",
+          "text": "PoC is in flight. Expected to be completed by Wed Dec 18 2019 18:56:33 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-09T19:49:07.653Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Klein, Aufderhar and Streich",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "syble.name",
+  "businessType": "Genomics",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Delia Marvin",
+      "phone": "111-247-3714 x948",
+      "email": "Delbert99@gmail.com",
+      "street": "86722 Jaskolski Course",
+      "city": "Norbertohaven",
+      "state": "Oklahoma",
+      "zipCode": "90446-1742"
+  },
+  "bscContact": {
+      "name": "Ines Huels",
+      "phone": "(613) 181-0988 x5237",
+      "email": "Kendall79@hotmail.com",
+      "street": "3806 Mosciski Valley",
+      "city": "New Janelle",
+      "state": "Kentucky",
+      "zipCode": "72459"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-02-22T15:05:05.513Z",
+          "text": "Made initial contact with Klein, Aufderhar and Streich at HIMMS. Spoke with Delia Marvin regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-07-05T13:32:36.887Z",
+          "text": "Followed up with Delia Marvin and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-24T21:49:17.870Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-06T13:46:31.370Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 10:25:51 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-03T10:32:17.007Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Beer - Bahringer",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "johnson.biz",
+  "businessType": "Genomics",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Carley Haag",
+      "phone": "871.566.3497",
+      "email": "Mark.Dickens@gmail.com",
+      "street": "3350 King Mission",
+      "city": "East Natfort",
+      "state": "West Virginia",
+      "zipCode": "07310"
+  },
+  "bscContact": {
+      "name": "Lukas DuBuque",
+      "phone": "746-292-6911 x318",
+      "email": "Sunny.Hagenes41@gmail.com",
+      "street": "617 Greenholt Motorway",
+      "city": "Sporermouth",
+      "state": "Arizona",
+      "zipCode": "55264-3476"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-06-22T16:42:35.730Z",
+          "text": "Made initial contact with Beer - Bahringer at HIMMS. Spoke with Carley Haag regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-09-06T16:13:46.396Z",
+          "text": "Followed up with Carley Haag and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-17T21:48:03.639Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Stoltenberg, Heathcote and Graham",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "dimitri.com",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Ryan Greenfelder",
+      "phone": "1-280-759-6641",
+      "email": "Granville.Harris@gmail.com",
+      "street": "07559 Brekke Square",
+      "city": "Kautzerview",
+      "state": "Wyoming",
+      "zipCode": "06782"
+  },
+  "bscContact": {
+      "name": "Brant Donnelly",
+      "phone": "(698) 967-6333 x2739",
+      "email": "Columbus18@yahoo.com",
+      "street": "145 Keeling Lock",
+      "city": "Daynafort",
+      "state": "Ohio",
+      "zipCode": "07106-2717"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-08-28T18:25:38.293Z",
+          "text": "Made initial contact with Stoltenberg, Heathcote and Graham at HIMMS. Spoke with Ryan Greenfelder regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-12-06T13:47:45.089Z",
+          "text": "Followed up with Ryan Greenfelder and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Kutch - Paucek",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "makenzie.net",
+  "businessType": "Genomics",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Kayley Conroy",
+      "phone": "1-374-915-7262 x64587",
+      "email": "Myra1@hotmail.com",
+      "street": "79918 Mante Ferry",
+      "city": "Wizabury",
+      "state": "Utah",
+      "zipCode": "45440"
+  },
+  "bscContact": {
+      "name": "Carole Marvin",
+      "phone": "1-899-984-2897 x4425",
+      "email": "Brycen.Bayer39@yahoo.com",
+      "street": "58943 Jacobs Ridges",
+      "city": "Ardellaville",
+      "state": "New Mexico",
+      "zipCode": "36558-8450"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-11-16T06:49:07.733Z",
+          "text": "Made initial contact with Kutch - Paucek at HIMMS. Spoke with Kayley Conroy regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-12-09T00:42:13.986Z",
+          "text": "Followed up with Kayley Conroy and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Labadie - Marquardt",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "tre.org",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Madison Nitzsche",
+      "phone": "(352) 256-6807 x787",
+      "email": "Lazaro78@yahoo.com",
+      "street": "958 Kunze Inlet",
+      "city": "Port Abdul",
+      "state": "Delaware",
+      "zipCode": "83295"
+  },
+  "bscContact": {
+      "name": "Francisca Quigley",
+      "phone": "1-625-075-3543",
+      "email": "Jabari.Gutkowski@hotmail.com",
+      "street": "027 Deckow Ports",
+      "city": "Lorenzobury",
+      "state": "New Jersey",
+      "zipCode": "25413"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-10-27T21:10:07.944Z",
+          "text": "Made initial contact with Labadie - Marquardt at HIMMS. Spoke with Madison Nitzsche regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-12-01T01:43:49.302Z",
+          "text": "Followed up with Madison Nitzsche and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Haley, Ullrich and Trantow",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "autumn.info",
+  "businessType": "Drug R&D",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Ashton Anderson",
+      "phone": "(178) 310-8858 x325",
+      "email": "Mark81@yahoo.com",
+      "street": "3029 Bauch Knolls",
+      "city": "Brannonview",
+      "state": "New York",
+      "zipCode": "03725"
+  },
+  "bscContact": {
+      "name": "Petra Parker I",
+      "phone": "552-235-8629 x517",
+      "email": "Hettie95@hotmail.com",
+      "street": "2384 Rosenbaum Locks",
+      "city": "South Kiana",
+      "state": "Utah",
+      "zipCode": "20259"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-10-05T09:14:31.513Z",
+          "text": "Made initial contact with Haley, Ullrich and Trantow at HIMMS. Spoke with Ashton Anderson regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-12-15T19:27:53.198Z",
+          "text": "Followed up with Ashton Anderson and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Waelchi, Larson and Klein",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "valentin.org",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Mayra Hackett",
+      "phone": "1-959-669-6373 x8759",
+      "email": "Dana40@gmail.com",
+      "street": "8567 Hadley Burgs",
+      "city": "Stiedemannton",
+      "state": "New Hampshire",
+      "zipCode": "71021"
+  },
+  "bscContact": {
+      "name": "Helga Emard",
+      "phone": "244.053.6254 x70345",
+      "email": "Conrad_Paucek@hotmail.com",
+      "street": "1904 Ricky Junction",
+      "city": "Lake Elisefurt",
+      "state": "Alabama",
+      "zipCode": "39523"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-06-05T17:13:41.250Z",
+          "text": "Made initial contact with Waelchi, Larson and Klein at HIMMS. Spoke with Mayra Hackett regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-08-18T13:57:16.421Z",
+          "text": "Followed up with Mayra Hackett and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-10T06:32:33.491Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Marks, Stoltenberg and Jacobi",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "juliana.biz",
+  "businessType": "Drug R&D",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Miss Bryce Gottlieb",
+      "phone": "(518) 533-6153",
+      "email": "Johanna.Schaefer62@yahoo.com",
+      "street": "4642 Blanche Green",
+      "city": "South Asaport",
+      "state": "New Hampshire",
+      "zipCode": "84968-2192"
+  },
+  "bscContact": {
+      "name": "Pete McKenzie",
+      "phone": "787.206.1484 x9001",
+      "email": "Alysa.Hyatt@yahoo.com",
+      "street": "5968 O'Keefe Orchard",
+      "city": "Frederickside",
+      "state": "Georgia",
+      "zipCode": "86749-2922"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-04-08T04:31:00.013Z",
+          "text": "Made initial contact with Marks, Stoltenberg and Jacobi at HIMMS. Spoke with Miss Bryce Gottlieb regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-09-19T23:00:36.366Z",
+          "text": "Followed up with Miss Bryce Gottlieb and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-12-05T04:00:16.135Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Braun LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "alexandrine.name",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Pietro Glover",
+      "phone": "1-581-832-4014",
+      "email": "Gloria.Walsh67@yahoo.com",
+      "street": "402 Marks Dale",
+      "city": "New Trystan",
+      "state": "Colorado",
+      "zipCode": "66923-6413"
+  },
+  "bscContact": {
+      "name": "Colton Kemmer",
+      "phone": "735-928-9717 x62738",
+      "email": "Anna.Dickens62@yahoo.com",
+      "street": "6583 Joshuah Knolls",
+      "city": "West Maxwell",
+      "state": "Louisiana",
+      "zipCode": "68007-6380"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-03-03T17:29:42.959Z",
+          "text": "Made initial contact with Braun LLC at HIMMS. Spoke with Pietro Glover regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-08-22T04:25:17.605Z",
+          "text": "Followed up with Pietro Glover and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-12-13T09:27:46.637Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Hirthe, Runte and Weber",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "frankie.info",
+  "businessType": "Genomics",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Tobin Becker",
+      "phone": "1-810-265-4996",
+      "email": "Megane.Greenfelder62@yahoo.com",
+      "street": "97550 Ryan Pass",
+      "city": "Lake Gerhardfurt",
+      "state": "New Jersey",
+      "zipCode": "20078"
+  },
+  "bscContact": {
+      "name": "Jordyn Eichmann",
+      "phone": "264-879-3854 x849",
+      "email": "Archibald5@hotmail.com",
+      "street": "0100 Andy Mall",
+      "city": "New Dominique",
+      "state": "Wyoming",
+      "zipCode": "88967"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-05-17T03:16:29.565Z",
+          "text": "Made initial contact with Hirthe, Runte and Weber at HIMMS. Spoke with Tobin Becker regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-07-14T02:42:14.712Z",
+          "text": "Followed up with Tobin Becker and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-29T02:25:08.076Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Eichmann - Ruecker",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "jana.org",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Clarissa Padberg",
+      "phone": "416-098-1808 x155",
+      "email": "Ricardo25@gmail.com",
+      "street": "962 Kerluke Parkway",
+      "city": "Lake Mittiestad",
+      "state": "New Jersey",
+      "zipCode": "00214"
+  },
+  "bscContact": {
+      "name": "Veda Sauer DDS",
+      "phone": "046.881.2826 x07846",
+      "email": "Rodolfo81@hotmail.com",
+      "street": "39093 Ebert Overpass",
+      "city": "East Shannonhaven",
+      "state": "Colorado",
+      "zipCode": "99787"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-03-27T07:56:01.258Z",
+          "text": "Made initial contact with Eichmann - Ruecker at HIMMS. Spoke with Clarissa Padberg regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-08-11T06:30:47.958Z",
+          "text": "Followed up with Clarissa Padberg and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-09T12:29:54.434Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Feeney - Schroeder",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "zelda.com",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Holden Yost",
+      "phone": "060.715.7554",
+      "email": "Chloe84@yahoo.com",
+      "street": "134 Nikolaus Rue",
+      "city": "West Chandler",
+      "state": "New Jersey",
+      "zipCode": "14874-7709"
+  },
+  "bscContact": {
+      "name": "Lizzie Rempel",
+      "phone": "1-410-272-8059",
+      "email": "Buster.Friesen42@yahoo.com",
+      "street": "4573 Tromp Tunnel",
+      "city": "East Maiyaview",
+      "state": "Utah",
+      "zipCode": "15435"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-10-15T09:02:53.259Z",
+          "text": "Made initial contact with Feeney - Schroeder at HIMMS. Spoke with Holden Yost regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-12-10T19:57:28.491Z",
+          "text": "Followed up with Holden Yost and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Monahan Group",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "reid.com",
+  "businessType": "Drug R&D",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Dr. Lewis Fritsch",
+      "phone": "402-980-6445 x16917",
+      "email": "Agustina.OHara17@hotmail.com",
+      "street": "22984 Eryn River",
+      "city": "West Ubaldo",
+      "state": "Tennessee",
+      "zipCode": "81289-5140"
+  },
+  "bscContact": {
+      "name": "Catalina Bode",
+      "phone": "499-360-8309 x38832",
+      "email": "Jett.Thiel@yahoo.com",
+      "street": "265 Ezekiel Orchard",
+      "city": "New Vitochester",
+      "state": "Colorado",
+      "zipCode": "40845"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-11-11T09:52:47.324Z",
+          "text": "Made initial contact with Monahan Group at HIMMS. Spoke with Dr. Lewis Fritsch regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-12-17T22:46:22.514Z",
+          "text": "Followed up with Dr. Lewis Fritsch and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Koch LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "emery.org",
+  "businessType": "Drug R&D",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Jalen Langworth",
+      "phone": "1-924-899-8372 x51289",
+      "email": "Haylee.Barrows96@gmail.com",
+      "street": "0701 Dorian Path",
+      "city": "West Elisabethfurt",
+      "state": "Louisiana",
+      "zipCode": "61658"
+  },
+  "bscContact": {
+      "name": "Colten Dach",
+      "phone": "921.835.8044",
+      "email": "Turner_Klein@gmail.com",
+      "street": "315 Lebsack Bypass",
+      "city": "North Raeganbury",
+      "state": "Texas",
+      "zipCode": "98380"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-10-26T02:27:52.054Z",
+          "text": "Made initial contact with Koch LLC at HIMMS. Spoke with Jalen Langworth regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-12-13T15:42:04.687Z",
+          "text": "Followed up with Jalen Langworth and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "O'Reilly, Ruecker and Cruickshank",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "bernita.name",
+  "businessType": "Genomics",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Gertrude Upton",
+      "phone": "106-214-8846 x3200",
+      "email": "Elizabeth.Terry@hotmail.com",
+      "street": "219 Karli Hollow",
+      "city": "South Charityton",
+      "state": "New Hampshire",
+      "zipCode": "94789-2512"
+  },
+  "bscContact": {
+      "name": "Stone Harvey",
+      "phone": "833.287.4546 x28014",
+      "email": "Aryanna19@yahoo.com",
+      "street": "6997 Ebert Harbor",
+      "city": "Bayleechester",
+      "state": "New Jersey",
+      "zipCode": "50019"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-06-17T03:32:21.279Z",
+          "text": "Made initial contact with O'Reilly, Ruecker and Cruickshank at HIMMS. Spoke with Gertrude Upton regarding their offering in Genomics."
+      },
+      {
+          "date": "2019-08-22T19:22:00.614Z",
+          "text": "Followed up with Gertrude Upton and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-12-06T04:41:57.207Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Hayes - Boyer",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "tatyana.name",
+  "businessType": "Diagnostics: Pathology",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Damion Stokes",
+      "phone": "432.367.9928",
+      "email": "Joelle.Torphy@yahoo.com",
+      "street": "01834 Izaiah Ferry",
+      "city": "New Lurline",
+      "state": "Illinois",
+      "zipCode": "09635-3240"
+  },
+  "bscContact": {
+      "name": "Dahlia McLaughlin",
+      "phone": "1-290-791-6769 x260",
+      "email": "Dayne.Kunde35@yahoo.com",
+      "street": "414 Henry Union",
+      "city": "West Tate",
+      "state": "Oregon",
+      "zipCode": "49733-7565"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-02-21T21:00:29.331Z",
+          "text": "Made initial contact with Hayes - Boyer at HIMMS. Spoke with Damion Stokes regarding their offering in Diagnostics: Pathology."
+      },
+      {
+          "date": "2019-07-27T22:45:06.484Z",
+          "text": "Followed up with Damion Stokes and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-12T05:34:32.604Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Medhurst - Reichert",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "earline.com",
+  "businessType": "Drug R&D",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Vito Johnston",
+      "phone": "(032) 777-4503 x5049",
+      "email": "Adolf43@yahoo.com",
+      "street": "60849 Kris Forest",
+      "city": "Beierfort",
+      "state": "Massachusetts",
+      "zipCode": "95651"
+  },
+  "bscContact": {
+      "name": "Carleton Wintheiser",
+      "phone": "817.651.4896 x9454",
+      "email": "Angie_Treutel@yahoo.com",
+      "street": "17710 Mann Neck",
+      "city": "Naomiechester",
+      "state": "Michigan",
+      "zipCode": "87622-0770"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-05-21T01:51:05.468Z",
+          "text": "Made initial contact with Medhurst - Reichert at HIMMS. Spoke with Vito Johnston regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-07-08T08:20:36.719Z",
+          "text": "Followed up with Vito Johnston and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-11T09:20:06.086Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-20T12:01:52.879Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 05:21:30 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-08T22:25:56.031Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Tillman - Bogan",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "lempi.info",
+  "businessType": "Drug R&D",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Jovani Fisher",
+      "phone": "(112) 592-2647",
+      "email": "Judd.Murazik53@gmail.com",
+      "street": "8489 Lisette Fields",
+      "city": "Kerlukefurt",
+      "state": "Utah",
+      "zipCode": "14816-6672"
+  },
+  "bscContact": {
+      "name": "Kellie Bednar",
+      "phone": "943-153-8117 x114",
+      "email": "Randi.Kertzmann@hotmail.com",
+      "street": "15861 Hoeger Plaza",
+      "city": "New Nicholaschester",
+      "state": "Alaska",
+      "zipCode": "86867"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-01-17T13:47:32.483Z",
+          "text": "Made initial contact with Tillman - Bogan at HIMMS. Spoke with Jovani Fisher regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-09-22T05:33:32.953Z",
+          "text": "Followed up with Jovani Fisher and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-23T23:29:20.734Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Wiegand and Sons",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "celestine.net",
+  "businessType": "Drug R&D",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Isabella Jaskolski",
+      "phone": "298-941-5204",
+      "email": "Celestino.Collins89@hotmail.com",
+      "street": "9552 D'Amore Spring",
+      "city": "Paigemouth",
+      "state": "Wisconsin",
+      "zipCode": "36872-2614"
+  },
+  "bscContact": {
+      "name": "Sigurd Lindgren",
+      "phone": "259-120-9508 x247",
+      "email": "Mossie.Predovic4@yahoo.com",
+      "street": "7456 Buck Greens",
+      "city": "Kylebury",
+      "state": "Rhode Island",
+      "zipCode": "41013-4622"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-05-26T00:00:28.435Z",
+          "text": "Made initial contact with Wiegand and Sons at HIMMS. Spoke with Isabella Jaskolski regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-09-10T03:08:50.519Z",
+          "text": "Followed up with Isabella Jaskolski and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-02T12:18:38.056Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-18T16:55:19.873Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Romaguera, Gerhold and Beer",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "lindsey.net",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Linnea Hand",
+      "phone": "(140) 691-9041 x3549",
+      "email": "Ole_Spencer61@hotmail.com",
+      "street": "61743 Steuber Circle",
+      "city": "Cummingsshire",
+      "state": "Alaska",
+      "zipCode": "08606-1886"
+  },
+  "bscContact": {
+      "name": "Cristobal Hegmann",
+      "phone": "180-820-2215",
+      "email": "Niko_Hoeger@hotmail.com",
+      "street": "0053 Everett Point",
+      "city": "North Nigel",
+      "state": "Maryland",
+      "zipCode": "74460-2875"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-04-01T03:36:51.652Z",
+          "text": "Made initial contact with Romaguera, Gerhold and Beer at HIMMS. Spoke with Linnea Hand regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-08-29T03:03:27.858Z",
+          "text": "Followed up with Linnea Hand and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-16T06:09:35.118Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Wisozk - Aufderhar",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "rico.info",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Shirley Ebert V",
+      "phone": "542-598-3269",
+      "email": "Abbey_Konopelski44@yahoo.com",
+      "street": "6993 Medhurst Trafficway",
+      "city": "Alexandraland",
+      "state": "Arkansas",
+      "zipCode": "32567-6489"
+  },
+  "bscContact": {
+      "name": "Dale Gutkowski",
+      "phone": "800-542-2922",
+      "email": "Marjolaine_OConner47@hotmail.com",
+      "street": "37594 Runolfsson View",
+      "city": "Hellerchester",
+      "state": "Arkansas",
+      "zipCode": "45204"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-03-07T22:29:18.892Z",
+          "text": "Made initial contact with Wisozk - Aufderhar at HIMMS. Spoke with Shirley Ebert V regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-07-08T15:34:12.735Z",
+          "text": "Followed up with Shirley Ebert V and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-21T15:06:46.575Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-14T01:47:39.252Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 11:45:39 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-02T17:25:34.212Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Daugherty LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "matilde.biz",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Johanna O'Kon",
+      "phone": "278-690-7141 x93201",
+      "email": "Abbigail_Stiedemann38@gmail.com",
+      "street": "25006 Name Flats",
+      "city": "Curtischester",
+      "state": "Nevada",
+      "zipCode": "77127"
+  },
+  "bscContact": {
+      "name": "Mr. Rachel Sauer",
+      "phone": "481-384-4064 x946",
+      "email": "Cortez79@gmail.com",
+      "street": "072 Elmore Summit",
+      "city": "Schmidttown",
+      "state": "North Carolina",
+      "zipCode": "67127"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-06-04T08:57:12.499Z",
+          "text": "Made initial contact with Daugherty LLC at HIMMS. Spoke with Johanna O'Kon regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-07-12T07:53:15.668Z",
+          "text": "Followed up with Johanna O'Kon and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-03T19:44:36.765Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Zemlak Group",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "jayme.name",
+  "businessType": "Drug R&D",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Kobe Stanton",
+      "phone": "621.679.4469 x4793",
+      "email": "Patience56@yahoo.com",
+      "street": "5334 Jacinto Stravenue",
+      "city": "East Shaniya",
+      "state": "Minnesota",
+      "zipCode": "44480"
+  },
+  "bscContact": {
+      "name": "Luis Purdy",
+      "phone": "146.100.6673 x218",
+      "email": "Jettie69@yahoo.com",
+      "street": "698 Franecki Centers",
+      "city": "Feeneyborough",
+      "state": "South Carolina",
+      "zipCode": "34860-3633"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-10-26T06:41:48.964Z",
+          "text": "Made initial contact with Zemlak Group at HIMMS. Spoke with Kobe Stanton regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-12-09T09:41:00.991Z",
+          "text": "Followed up with Kobe Stanton and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Zemlak - Kemmer",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "josephine.biz",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Daija Kreiger",
+      "phone": "709-722-1511 x91494",
+      "email": "Halle_Bernhard@hotmail.com",
+      "street": "06777 Zachery Way",
+      "city": "Port Kenneth",
+      "state": "Oklahoma",
+      "zipCode": "82752-2696"
+  },
+  "bscContact": {
+      "name": "Selina Medhurst",
+      "phone": "074.088.4335 x4527",
+      "email": "Sandy_Marks@gmail.com",
+      "street": "653 Garett Turnpike",
+      "city": "New Margaretta",
+      "state": "New Mexico",
+      "zipCode": "41713-6790"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-02-11T13:37:59.305Z",
+          "text": "Made initial contact with Zemlak - Kemmer at HIMMS. Spoke with Daija Kreiger regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-08-15T22:28:23.560Z",
+          "text": "Followed up with Daija Kreiger and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-20T13:27:53.545Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-22T23:14:48.586Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Wehner Inc",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "bridgette.com",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Damien Wehner",
+      "phone": "(697) 267-6031 x4909",
+      "email": "Breanne.Kunze@gmail.com",
+      "street": "900 Mayert Island",
+      "city": "Jalynport",
+      "state": "Alaska",
+      "zipCode": "02207"
+  },
+  "bscContact": {
+      "name": "Elise Feil",
+      "phone": "1-776-599-5930",
+      "email": "Roel76@yahoo.com",
+      "street": "03931 Kreiger Drive",
+      "city": "Nolanstad",
+      "state": "Oregon",
+      "zipCode": "17233"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-04-29T21:49:27.916Z",
+          "text": "Made initial contact with Wehner Inc at HIMMS. Spoke with Damien Wehner regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-07-06T11:59:27.161Z",
+          "text": "Followed up with Damien Wehner and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-17T07:27:05.593Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Vandervort - Hirthe",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "antone.biz",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Eugene Hilpert",
+      "phone": "(922) 475-1578",
+      "email": "Clementine_Schamberger@yahoo.com",
+      "street": "4250 Chris Park",
+      "city": "Millerbury",
+      "state": "Nebraska",
+      "zipCode": "80538-6918"
+  },
+  "bscContact": {
+      "name": "Ruthie Spinka",
+      "phone": "1-071-554-1967",
+      "email": "Monique.Leffler@yahoo.com",
+      "street": "972 Breitenberg Knolls",
+      "city": "Jeniferland",
+      "state": "Nebraska",
+      "zipCode": "50869-9568"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-03-24T07:54:03.207Z",
+          "text": "Made initial contact with Vandervort - Hirthe at HIMMS. Spoke with Eugene Hilpert regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-07-25T07:24:46.740Z",
+          "text": "Followed up with Eugene Hilpert and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-12-10T16:57:52.882Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Wilkinson LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "boyd.biz",
+  "businessType": "Drug R&D",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Abelardo Hermann",
+      "phone": "304.691.0112 x9393",
+      "email": "Jacklyn_Grady@yahoo.com",
+      "street": "991 Dietrich Shores",
+      "city": "New Jaleelstad",
+      "state": "Pennsylvania",
+      "zipCode": "17349"
+  },
+  "bscContact": {
+      "name": "Eli Gleason",
+      "phone": "(640) 264-3849 x95770",
+      "email": "Fern_Braun@hotmail.com",
+      "street": "18375 Kub Prairie",
+      "city": "New Abagail",
+      "state": "New Hampshire",
+      "zipCode": "30864-1235"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-05-24T15:41:03.795Z",
+          "text": "Made initial contact with Wilkinson LLC at HIMMS. Spoke with Abelardo Hermann regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-09-12T03:54:47.474Z",
+          "text": "Followed up with Abelardo Hermann and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-12T10:05:51.302Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Terry - Predovic",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "rowland.com",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Alia Wisoky",
+      "phone": "522.003.4533 x692",
+      "email": "Onie_Hagenes18@gmail.com",
+      "street": "016 Huel Road",
+      "city": "South Anjali",
+      "state": "Wisconsin",
+      "zipCode": "87806-2888"
+  },
+  "bscContact": {
+      "name": "Lon Baumbach IV",
+      "phone": "(030) 229-7140 x68815",
+      "email": "Norbert55@gmail.com",
+      "street": "9537 Buckridge Club",
+      "city": "Port Madysonmouth",
+      "state": "Washington",
+      "zipCode": "23585"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-02-24T20:09:43.276Z",
+          "text": "Made initial contact with Terry - Predovic at HIMMS. Spoke with Alia Wisoky regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-07-09T01:26:19.922Z",
+          "text": "Followed up with Alia Wisoky and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-06T02:44:18.863Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-09-29T08:50:53.916Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 13:06:40 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-12T03:33:16.649Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Cremin, Hackett and Runte",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "adah.name",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Reymundo Howe III",
+      "phone": "553-709-2550 x19766",
+      "email": "Kurt.Gottlieb@gmail.com",
+      "street": "014 Katheryn Lock",
+      "city": "New Ashlynn",
+      "state": "Texas",
+      "zipCode": "69656"
+  },
+  "bscContact": {
+      "name": "Stefanie Schneider",
+      "phone": "1-152-861-1007 x65013",
+      "email": "Ines39@hotmail.com",
+      "street": "5542 Casandra Alley",
+      "city": "North Sigmundfort",
+      "state": "New York",
+      "zipCode": "15110"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-06-15T01:05:35.372Z",
+          "text": "Made initial contact with Cremin, Hackett and Runte at HIMMS. Spoke with Reymundo Howe III regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-09-13T15:42:30.842Z",
+          "text": "Followed up with Reymundo Howe III and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-11T16:47:16.777Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-29T12:35:12.598Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Morissette and Sons",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "omari.biz",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Erin Windler",
+      "phone": "095-534-0363 x362",
+      "email": "Helen.Dickinson@hotmail.com",
+      "street": "79182 Jerad Rapids",
+      "city": "West Brice",
+      "state": "Tennessee",
+      "zipCode": "24954"
+  },
+  "bscContact": {
+      "name": "Lorna Marquardt",
+      "phone": "706-736-0895 x41095",
+      "email": "Loraine52@gmail.com",
+      "street": "559 Lisa Mall",
+      "city": "Stacyfurt",
+      "state": "Alabama",
+      "zipCode": "35797-7520"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-04-19T05:47:14.282Z",
+          "text": "Made initial contact with Morissette and Sons at HIMMS. Spoke with Erin Windler regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-07-26T09:54:11.827Z",
+          "text": "Followed up with Erin Windler and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-04T17:39:59.497Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-23T10:22:36.175Z",
+          "text": "PoC is in flight. Expected to be completed by Wed Dec 18 2019 19:21:36 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-14T11:27:08.231Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Walker and Sons",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "jamel.biz",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Elisabeth Mitchell",
+      "phone": "1-017-728-5391 x575",
+      "email": "Lucie13@hotmail.com",
+      "street": "811 Beahan Rue",
+      "city": "Edgarborough",
+      "state": "South Dakota",
+      "zipCode": "34906-3017"
+  },
+  "bscContact": {
+      "name": "Xavier Osinski",
+      "phone": "190.286.5440",
+      "email": "Foster.Douglas@hotmail.com",
+      "street": "36396 Vidal Prairie",
+      "city": "Franeckimouth",
+      "state": "Iowa",
+      "zipCode": "38787"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-04-20T11:16:06.566Z",
+          "text": "Made initial contact with Walker and Sons at HIMMS. Spoke with Elisabeth Mitchell regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-09-13T15:58:33.330Z",
+          "text": "Followed up with Elisabeth Mitchell and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-12-18T23:44:01.717Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Ratke and Sons",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "ashlee.biz",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Carol Greenfelder",
+      "phone": "476-892-0313 x6173",
+      "email": "Darby_Blanda@gmail.com",
+      "street": "84029 Eldora Ports",
+      "city": "Lake Bernhardbury",
+      "state": "Massachusetts",
+      "zipCode": "13297"
+  },
+  "bscContact": {
+      "name": "Ladarius Ledner",
+      "phone": "424-907-3076 x01326",
+      "email": "Nikita36@gmail.com",
+      "street": "88493 Ally Drives",
+      "city": "Parisianland",
+      "state": "Delaware",
+      "zipCode": "97656"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-06-29T15:46:04.416Z",
+          "text": "Made initial contact with Ratke and Sons at HIMMS. Spoke with Carol Greenfelder regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-09-09T16:19:43.488Z",
+          "text": "Followed up with Carol Greenfelder and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-07T21:11:57.925Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-08T19:32:25.333Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Bergnaum, Gerhold and Kshlerin",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "lonnie.net",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Mrs. Clemens Green",
+      "phone": "148-060-7676",
+      "email": "Alan.Nicolas9@hotmail.com",
+      "street": "23848 Shanna Rapid",
+      "city": "Koeppfurt",
+      "state": "Minnesota",
+      "zipCode": "96051"
+  },
+  "bscContact": {
+      "name": "Vidal Mayer",
+      "phone": "646.968.8258 x84564",
+      "email": "Drew_Jaskolski71@gmail.com",
+      "street": "078 Audie Plain",
+      "city": "Brekkemouth",
+      "state": "Connecticut",
+      "zipCode": "35521"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-07-12T08:34:08.813Z",
+          "text": "Made initial contact with Bergnaum, Gerhold and Kshlerin at HIMMS. Spoke with Mrs. Clemens Green regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-12-08T19:52:23.787Z",
+          "text": "Followed up with Mrs. Clemens Green and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Moore Inc",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "juliet.org",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Edmund Kris",
+      "phone": "544.251.7396",
+      "email": "Lia.Schmitt@hotmail.com",
+      "street": "9136 Ines Springs",
+      "city": "Mosciskiborough",
+      "state": "Wisconsin",
+      "zipCode": "07135"
+  },
+  "bscContact": {
+      "name": "Mara Boehm",
+      "phone": "111-708-9458",
+      "email": "Peter_Turner@yahoo.com",
+      "street": "782 Elta Views",
+      "city": "Rollinshire",
+      "state": "Connecticut",
+      "zipCode": "09140"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-08-07T00:03:01.325Z",
+          "text": "Made initial contact with Moore Inc at HIMMS. Spoke with Edmund Kris regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-12-08T22:56:27.450Z",
+          "text": "Followed up with Edmund Kris and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Jaskolski - Howell",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "mohamed.org",
+  "businessType": "Drug R&D",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Leonor Schneider",
+      "phone": "915-603-7506",
+      "email": "Cecil32@gmail.com",
+      "street": "3102 Abernathy Courts",
+      "city": "Volkmanbury",
+      "state": "Maine",
+      "zipCode": "98799-2209"
+  },
+  "bscContact": {
+      "name": "Dr. Ernestine Anderson",
+      "phone": "(536) 503-8991",
+      "email": "Eileen.Hermiston6@hotmail.com",
+      "street": "972 Dicki Brook",
+      "city": "West Litzy",
+      "state": "Idaho",
+      "zipCode": "94395-9654"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-01-01T18:23:55.190Z",
+          "text": "Made initial contact with Jaskolski - Howell at HIMMS. Spoke with Leonor Schneider regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-07-28T00:10:29.013Z",
+          "text": "Followed up with Leonor Schneider and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-12T11:11:00.764Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-28T17:40:35.307Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 03:00:17 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-04T13:57:39.662Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Ryan LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "russ.com",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Samir Mueller",
+      "phone": "662.864.7547 x352",
+      "email": "Raven_Quigley@gmail.com",
+      "street": "37607 Johann Square",
+      "city": "Lake Jeanport",
+      "state": "Colorado",
+      "zipCode": "46342-2632"
+  },
+  "bscContact": {
+      "name": "Bernita Kilback V",
+      "phone": "1-854-412-4102",
+      "email": "Winnifred_Quitzon@gmail.com",
+      "street": "9462 Lind Ford",
+      "city": "Sanfordburgh",
+      "state": "California",
+      "zipCode": "79493"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-04-19T05:19:47.086Z",
+          "text": "Made initial contact with Ryan LLC at HIMMS. Spoke with Samir Mueller regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-07-11T16:44:32.083Z",
+          "text": "Followed up with Samir Mueller and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-11T01:37:12.321Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-09T07:08:39.348Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 09:02:31 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-02T10:37:26.571Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Rosenbaum LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "kailyn.info",
+  "businessType": "Diagnostics: Imaging",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Nella Rogahn DVM",
+      "phone": "252-683-4831",
+      "email": "Lacy.Crona@hotmail.com",
+      "street": "8013 Cole Shore",
+      "city": "Dietrichberg",
+      "state": "Arizona",
+      "zipCode": "80993-0604"
+  },
+  "bscContact": {
+      "name": "Mrs. Javier Luettgen",
+      "phone": "1-631-270-8720",
+      "email": "Jeff.Zemlak94@gmail.com",
+      "street": "899 Fisher Locks",
+      "city": "West Andy",
+      "state": "Nebraska",
+      "zipCode": "93156-7117"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-06-25T05:59:01.905Z",
+          "text": "Made initial contact with Rosenbaum LLC at HIMMS. Spoke with Nella Rogahn DVM regarding their offering in Diagnostics: Imaging."
+      },
+      {
+          "date": "2019-07-29T12:02:39.524Z",
+          "text": "Followed up with Nella Rogahn DVM and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-18T13:11:52.191Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-09-22T07:13:48.515Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 03:56:32 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-15T03:02:00.762Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Pacocha, Schinner and Howell",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "leonel.org",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Reynold Farrell",
+      "phone": "179-525-7539 x936",
+      "email": "Sienna_Carroll@yahoo.com",
+      "street": "40693 Monahan Bridge",
+      "city": "Marielafurt",
+      "state": "Illinois",
+      "zipCode": "37090-2049"
+  },
+  "bscContact": {
+      "name": "Lacey Ward",
+      "phone": "(940) 658-5717 x5035",
+      "email": "Yasmin.Kessler@gmail.com",
+      "street": "645 Wisoky Radial",
+      "city": "Port Lesleyborough",
+      "state": "Maryland",
+      "zipCode": "41892"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-05-12T20:32:20.897Z",
+          "text": "Made initial contact with Pacocha, Schinner and Howell at HIMMS. Spoke with Reynold Farrell regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-09-27T18:41:34.391Z",
+          "text": "Followed up with Reynold Farrell and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-08T21:45:38.407Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Boyer, Hand and Jones",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "astrid.biz",
+  "businessType": "Drug R&D",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Raoul Schmidt Jr.",
+      "phone": "033-455-2424 x16361",
+      "email": "Peyton.Von@gmail.com",
+      "street": "3574 Ariel Extension",
+      "city": "Lavadaborough",
+      "state": "Wyoming",
+      "zipCode": "11986"
+  },
+  "bscContact": {
+      "name": "Leonardo Cartwright",
+      "phone": "510-858-1476 x417",
+      "email": "Eleonore2@yahoo.com",
+      "street": "4256 Parker Lodge",
+      "city": "South Kariland",
+      "state": "Tennessee",
+      "zipCode": "62687"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-07-05T23:31:03.124Z",
+          "text": "Made initial contact with Boyer, Hand and Jones at HIMMS. Spoke with Raoul Schmidt Jr. regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-12-16T10:42:42.750Z",
+          "text": "Followed up with Raoul Schmidt Jr. and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Kovacek - Mraz",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "alfonso.biz",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Elisha Swaniawski",
+      "phone": "439-402-8812 x96236",
+      "email": "Judah.Rowe@yahoo.com",
+      "street": "63166 Stoltenberg Curve",
+      "city": "Lake Carybury",
+      "state": "Alabama",
+      "zipCode": "64871-6636"
+  },
+  "bscContact": {
+      "name": "Chadrick Oberbrunner",
+      "phone": "1-832-868-9268 x9397",
+      "email": "Manuel_Fritsch96@hotmail.com",
+      "street": "516 Otis Forest",
+      "city": "West Stephaniamouth",
+      "state": "Tennessee",
+      "zipCode": "60649"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-05-02T02:37:54.531Z",
+          "text": "Made initial contact with Kovacek - Mraz at HIMMS. Spoke with Elisha Swaniawski regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-07-10T04:42:19.988Z",
+          "text": "Followed up with Elisha Swaniawski and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-31T03:17:45.432Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Murray LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "urban.com",
+  "businessType": "Providers: Clinical Tools",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Seth Denesik",
+      "phone": "092.136.5229",
+      "email": "Coleman80@yahoo.com",
+      "street": "057 Toy Camp",
+      "city": "Lake Jay",
+      "state": "Louisiana",
+      "zipCode": "18969"
+  },
+  "bscContact": {
+      "name": "Jonas Moore",
+      "phone": "322.848.1397",
+      "email": "Greg92@hotmail.com",
+      "street": "34089 Kunde Ville",
+      "city": "East Luisview",
+      "state": "North Dakota",
+      "zipCode": "63475-6479"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-04-04T15:31:52.088Z",
+          "text": "Made initial contact with Murray LLC at HIMMS. Spoke with Seth Denesik regarding their offering in Providers: Clinical Tools."
+      },
+      {
+          "date": "2019-07-14T19:18:07.646Z",
+          "text": "Followed up with Seth Denesik and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-09-03T23:45:40.959Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-22T13:27:26.166Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 12:58:58 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-09T22:39:17.390Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Leuschke LLC",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "adriana.com",
+  "businessType": "Diagnostics: Pathology",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Brandon Wolf",
+      "phone": "055-280-4906",
+      "email": "Kristin.Russel94@hotmail.com",
+      "street": "13412 Boyle Islands",
+      "city": "Port Kelsimouth",
+      "state": "Hawaii",
+      "zipCode": "28016-3223"
+  },
+  "bscContact": {
+      "name": "Brown Mohr",
+      "phone": "972-478-2693 x182",
+      "email": "Tyree_Aufderhar58@yahoo.com",
+      "street": "76152 Oberbrunner Plains",
+      "city": "East Fletcherside",
+      "state": "Hawaii",
+      "zipCode": "60491-9484"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-06-23T02:40:18.690Z",
+          "text": "Made initial contact with Leuschke LLC at HIMMS. Spoke with Brandon Wolf regarding their offering in Diagnostics: Pathology."
+      },
+      {
+          "date": "2019-09-11T19:02:36.448Z",
+          "text": "Followed up with Brandon Wolf and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-04T23:42:51.982Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Carroll Group",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "anastacio.biz",
+  "businessType": "Digital Therapeutics",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Janet Borer",
+      "phone": "312-081-1316 x580",
+      "email": "Issac_Casper14@yahoo.com",
+      "street": "69637 Rau Crest",
+      "city": "Rosinashire",
+      "state": "Michigan",
+      "zipCode": "30608"
+  },
+  "bscContact": {
+      "name": "Kaia Bosco",
+      "phone": "(629) 601-3052 x195",
+      "email": "Arely_Schaden@gmail.com",
+      "street": "175 Bernier Ferry",
+      "city": "Runolfssonmouth",
+      "state": "Oregon",
+      "zipCode": "17128"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-05-14T00:08:13.047Z",
+          "text": "Made initial contact with Carroll Group at HIMMS. Spoke with Janet Borer regarding their offering in Digital Therapeutics."
+      },
+      {
+          "date": "2019-07-12T06:16:24.255Z",
+          "text": "Followed up with Janet Borer and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-29T15:00:49.539Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-19T01:11:00.786Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 10:24:32 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-03T01:00:05.408Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Jaskolski - Thompson",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "jacques.biz",
+  "businessType": "Drug R&D",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Antwon Franecki",
+      "phone": "(671) 967-7689 x99062",
+      "email": "Alf85@yahoo.com",
+      "street": "961 Mariana Manor",
+      "city": "Kayleighberg",
+      "state": "Oklahoma",
+      "zipCode": "09639-2732"
+  },
+  "bscContact": {
+      "name": "Everette Rice",
+      "phone": "1-560-613-9189 x53418",
+      "email": "Lucio.Wintheiser@gmail.com",
+      "street": "270 Ahmad Summit",
+      "city": "New Barbaraberg",
+      "state": "Maryland",
+      "zipCode": "52407"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-01-05T07:12:29.063Z",
+          "text": "Made initial contact with Jaskolski - Thompson at HIMMS. Spoke with Antwon Franecki regarding their offering in Drug R&D."
+      },
+      {
+          "date": "2019-07-16T18:36:12.545Z",
+          "text": "Followed up with Antwon Franecki and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-12T14:21:30.753Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-22T09:37:04.550Z",
+          "text": "PoC is in flight. Expected to be completed by Wed Dec 18 2019 16:02:35 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-08T22:28:56.901Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Hermiston Group",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "tyshawn.biz",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Angie Zulauf",
+      "phone": "112.476.7526 x6165",
+      "email": "Gerson_Metz23@yahoo.com",
+      "street": "21219 Jeanne Pine",
+      "city": "East Jerodmouth",
+      "state": "Delaware",
+      "zipCode": "54349"
+  },
+  "bscContact": {
+      "name": "Guiseppe Veum",
+      "phone": "704-765-5313 x5450",
+      "email": "Cornelius19@hotmail.com",
+      "street": "92527 O'Conner Square",
+      "city": "South Vernice",
+      "state": "Minnesota",
+      "zipCode": "01241"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-02-23T04:59:30.093Z",
+          "text": "Made initial contact with Hermiston Group at HIMMS. Spoke with Angie Zulauf regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-07-25T07:11:03.274Z",
+          "text": "Followed up with Angie Zulauf and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-08-04T10:10:30.580Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-11-20T09:17:45.496Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 01:30:49 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-08T13:42:59.213Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Keeling, Jenkins and Friesen",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "adolphus.com",
+  "businessType": "Diagnostics: Pathology",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Gussie Dietrich",
+      "phone": "1-419-212-1818 x6265",
+      "email": "Clementine.Greenholt@gmail.com",
+      "street": "5036 Gabriel Village",
+      "city": "Littelbury",
+      "state": "Iowa",
+      "zipCode": "56381"
+  },
+  "bscContact": {
+      "name": "Meghan Tillman",
+      "phone": "1-666-156-1264 x80527",
+      "email": "Haskell21@gmail.com",
+      "street": "83872 Brekke Plaza",
+      "city": "Colleenberg",
+      "state": "Alaska",
+      "zipCode": "06720-8976"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-03-07T06:08:12.338Z",
+          "text": "Made initial contact with Keeling, Jenkins and Friesen at HIMMS. Spoke with Gussie Dietrich regarding their offering in Diagnostics: Pathology."
+      },
+      {
+          "date": "2019-08-23T22:28:59.530Z",
+          "text": "Followed up with Gussie Dietrich and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-08T05:11:32.114Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Hintz Inc",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "heather.info",
+  "businessType": "Digital Therapeutics",
+  "businessUnit": "Health Innovation Technology",
+  "vendorContact": {
+      "name": "Dr. Reed Fadel",
+      "phone": "482.784.5232",
+      "email": "Dallin.Johnston@yahoo.com",
+      "street": "80379 Stoltenberg Haven",
+      "city": "North Yoshikoport",
+      "state": "Oregon",
+      "zipCode": "57193"
+  },
+  "bscContact": {
+      "name": "Benjamin Zboncak",
+      "phone": "(642) 793-3597 x45650",
+      "email": "Audie27@hotmail.com",
+      "street": "096 Russel Run",
+      "city": "North Juwanborough",
+      "state": "Oklahoma",
+      "zipCode": "76188-3215"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-07-19T23:34:12.491Z",
+          "text": "Made initial contact with Hintz Inc at HIMMS. Spoke with Dr. Reed Fadel regarding their offering in Digital Therapeutics."
+      },
+      {
+          "date": "2019-12-03T22:35:09.290Z",
+          "text": "Followed up with Dr. Reed Fadel and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Cronin - Heller",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "harley.com",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Damien Grady",
+      "phone": "738-970-0210",
+      "email": "Enrique50@gmail.com",
+      "street": "627 Adrien Junctions",
+      "city": "Langoshborough",
+      "state": "Washington",
+      "zipCode": "72434-4465"
+  },
+  "bscContact": {
+      "name": "Randy Nolan",
+      "phone": "690.330.7944 x47654",
+      "email": "Bryana_Nolan@yahoo.com",
+      "street": "17394 Wilderman Park",
+      "city": "New Jamarcusberg",
+      "state": "Missouri",
+      "zipCode": "25172-6103"
+  },
+  "engagementLevel": "Pilot",
+  "events": [
+      {
+          "date": "2019-02-24T19:14:22.357Z",
+          "text": "Made initial contact with Cronin - Heller at HIMMS. Spoke with Damien Grady regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-07-15T14:24:08.022Z",
+          "text": "Followed up with Damien Grady and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-09-14T23:52:15.624Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-10-26T06:11:55.470Z",
+          "text": "PoC is in flight. Expected to be completed by Thu Dec 19 2019 12:57:21 GMT-0800 (Pacific Standard Time)."
+      },
+      {
+          "date": "2019-12-16T12:16:27.638Z",
+          "text": "PoC was successfully completed. Planning to pilot go-live"
+      }
+  ]
+},
+{
+  "vendorName": "Mohr - Von",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "kyler.com",
+  "businessType": "Digital Therapeutics",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Otha Reilly",
+      "phone": "1-421-662-5252",
+      "email": "Clemens_OConner94@gmail.com",
+      "street": "73594 Simonis Passage",
+      "city": "New Kane",
+      "state": "Michigan",
+      "zipCode": "99622"
+  },
+  "bscContact": {
+      "name": "Phoebe Roob",
+      "phone": "(399) 695-0003 x012",
+      "email": "Rosie.Howell59@yahoo.com",
+      "street": "83981 Wilma Viaduct",
+      "city": "West Remington",
+      "state": "Alabama",
+      "zipCode": "97011"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-07-31T00:15:46.887Z",
+          "text": "Made initial contact with Mohr - Von at HIMMS. Spoke with Otha Reilly regarding their offering in Digital Therapeutics."
+      },
+      {
+          "date": "2019-12-14T11:43:33.997Z",
+          "text": "Followed up with Otha Reilly and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Gorczany Inc",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "josh.com",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Zoey Hilpert",
+      "phone": "911-743-5021 x3441",
+      "email": "Ashlynn35@gmail.com",
+      "street": "039 Taylor Tunnel",
+      "city": "Boganfurt",
+      "state": "Montana",
+      "zipCode": "58291-4095"
+  },
+  "bscContact": {
+      "name": "Myra Schaefer III",
+      "phone": "937-532-0978",
+      "email": "Eldridge.Schaefer82@yahoo.com",
+      "street": "285 Gretchen Oval",
+      "city": "Laurettaton",
+      "state": "Pennsylvania",
+      "zipCode": "20901"
+  },
+  "engagementLevel": "Initial Engagement",
+  "events": [
+      {
+          "date": "2019-08-26T03:50:29.854Z",
+          "text": "Made initial contact with Gorczany Inc at HIMMS. Spoke with Zoey Hilpert regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-12-10T14:59:46.300Z",
+          "text": "Followed up with Zoey Hilpert and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      }
+  ]
+},
+{
+  "vendorName": "Feil - Rodriguez",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "rosanna.com",
+  "businessType": "Providers: Primary Care",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Santiago Halvorson",
+      "phone": "(413) 704-8304 x062",
+      "email": "Samson_Lowe8@yahoo.com",
+      "street": "28373 Brain Ville",
+      "city": "West Haileyville",
+      "state": "Alaska",
+      "zipCode": "92574"
+  },
+  "bscContact": {
+      "name": "Horacio Mayert",
+      "phone": "(823) 339-2576",
+      "email": "Rollin.Barton7@hotmail.com",
+      "street": "789 Wilford Radial",
+      "city": "Satterfieldmouth",
+      "state": "Montana",
+      "zipCode": "80723"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-04-27T12:36:08.524Z",
+          "text": "Made initial contact with Feil - Rodriguez at HIMMS. Spoke with Santiago Halvorson regarding their offering in Providers: Primary Care."
+      },
+      {
+          "date": "2019-08-26T22:35:42.506Z",
+          "text": "Followed up with Santiago Halvorson and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-20T18:03:59.363Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Watsica, Huels and Hills",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "rhoda.net",
+  "businessType": "Insurance & Benefits",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Connie Lesch",
+      "phone": "1-562-687-9947",
+      "email": "Virginia.Rosenbaum67@hotmail.com",
+      "street": "4070 Williamson Drive",
+      "city": "Howehaven",
+      "state": "Connecticut",
+      "zipCode": "53054"
+  },
+  "bscContact": {
+      "name": "Kaci Mraz",
+      "phone": "1-608-639-5899 x920",
+      "email": "Susan38@gmail.com",
+      "street": "09309 Kshlerin Villages",
+      "city": "Ziemannhaven",
+      "state": "Maryland",
+      "zipCode": "39579"
+  },
+  "engagementLevel": "NDA signed",
+  "events": [
+      {
+          "date": "2019-01-02T12:52:09.045Z",
+          "text": "Made initial contact with Watsica, Huels and Hills at HIMMS. Spoke with Connie Lesch regarding their offering in Insurance & Benefits."
+      },
+      {
+          "date": "2019-09-16T09:48:06.560Z",
+          "text": "Followed up with Connie Lesch and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-26T17:58:53.138Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      }
+  ]
+},
+{
+  "vendorName": "Steuber, Fadel and Swaniawski",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "trevion.net",
+  "businessType": "Diagnostics: Pathology",
+  "businessUnit": "Business Process Management",
+  "vendorContact": {
+      "name": "Curtis Thiel",
+      "phone": "586-742-6148",
+      "email": "Noemi.Will0@hotmail.com",
+      "street": "42840 Weimann Lodge",
+      "city": "Croninberg",
+      "state": "Utah",
+      "zipCode": "05837-1048"
+  },
+  "bscContact": {
+      "name": "Dorthy Moore",
+      "phone": "1-398-612-0306 x84070",
+      "email": "Nedra_Heller@hotmail.com",
+      "street": "8615 Carrie Oval",
+      "city": "Lexiemouth",
+      "state": "South Carolina",
+      "zipCode": "21097"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-04-23T17:51:21.728Z",
+          "text": "Made initial contact with Steuber, Fadel and Swaniawski at HIMMS. Spoke with Curtis Thiel regarding their offering in Diagnostics: Pathology."
+      },
+      {
+          "date": "2019-08-27T17:57:08.330Z",
+          "text": "Followed up with Curtis Thiel and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-11-08T12:45:20.736Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-14T10:37:10.293Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+},
+{
+  "vendorName": "Zboncak Inc",
+  "imageUrl": "http://lorempixel.com/640/480/cats",
+  "website": "kallie.name",
+  "businessType": "Consumer Health & Wellness",
+  "businessUnit": "Innovation",
+  "vendorContact": {
+      "name": "Napoleon Jacobi",
+      "phone": "510.980.0158 x2668",
+      "email": "Bailee_Parisian13@yahoo.com",
+      "street": "950 Dorian Mountain",
+      "city": "Cordeliaview",
+      "state": "Iowa",
+      "zipCode": "77353"
+  },
+  "bscContact": {
+      "name": "Koby Jenkins",
+      "phone": "(016) 379-4831 x51101",
+      "email": "Evangeline.Farrell@yahoo.com",
+      "street": "771 Kuhic Valley",
+      "city": "Port Ronaldo",
+      "state": "Utah",
+      "zipCode": "59317"
+  },
+  "engagementLevel": "Proof of Concept",
+  "events": [
+      {
+          "date": "2019-03-10T10:27:44.502Z",
+          "text": "Made initial contact with Zboncak Inc at HIMMS. Spoke with Napoleon Jacobi regarding their offering in Consumer Health & Wellness."
+      },
+      {
+          "date": "2019-09-04T01:18:40.484Z",
+          "text": "Followed up with Napoleon Jacobi and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+      },
+      {
+          "date": "2019-10-13T09:32:37.701Z",
+          "text": "NDA is signed. Next step is to start planing for PoC."
+      },
+      {
+          "date": "2019-12-15T09:42:02.867Z",
+          "text": "PoC is in flight. Expected to be completed by undefined."
+      }
+  ]
+}]
