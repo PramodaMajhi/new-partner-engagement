@@ -210,6 +210,21 @@ tr {
   /* max-width: 1200px; */
   margin: 0px auto;
 }
+
+@media screen and (max-width:992px) {
+  .search-result-section .sm-2,
+  .search-result-section .sm-2 .search_option {
+    width: 100%;
+  }
+
+  .search-result-section .sm-2 {
+    padding-bottom: 0.5rem;
+  }
+
+  .searchBar {
+    margin: 2rem auto;
+  }
+}
 .search_option {
   background: #fff;
   border-radius: 10px;
@@ -233,6 +248,7 @@ tr {
 .search_option:hover {
   box-shadow: 0 6px 24px -1px rgba(131,146,165,0.35);
   transition: all 0.3s;
+  border-color: #0079D0;
   cursor: pointer;
 }
 .browse-text {
