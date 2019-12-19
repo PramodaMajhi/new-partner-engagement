@@ -296,5 +296,35 @@ tr {
 
 }
 .user {
-  
+
+}
+
+.page-header {
+  border-left: 1px solid #C8CDD5;
+}
+.notes-name {
+  font-size: 14px;
+  font-weight: 800;
+}
+.time-ago {
+  font-size: 12px;
+  TEXT-TRANSFORM: UPPERCASE;
+  font-weight: 800;
+  color: #8392A5;
+}
+.text-notes {
+  font-size: 14px;
+  padding-left: 14px;
+  margin-top: 12px;
+  margin-bottom: 35px;
+}
+.vendor-result {
+  font-size: 18px;
+  font-weight: 800;
+  color: #8392A5;
+}
+.vendor-result a {
+  color: #8392A5;
+  text-decoration: none;
+  background-color: transparent;
 }

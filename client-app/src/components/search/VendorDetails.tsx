@@ -14,6 +14,7 @@ import { Button } from 'react-bootstrap';
 import '../../css/vendor-overview.css';
 import { Tabs, Tab, Row, Col } from 'react-bootstrap';
 import { startGet } from '../../actions/get'
+import ReactTimeAgo from 'react-time-ago'
 
 interface IVendorDetailState {
     showButton?: boolean,
@@ -62,71 +63,88 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
         console.log(vendor)
         console.log(vendor[0].vendorName);
         return (<div className="ai-ml-container">
-            <div>Vendor Results</div>
+            <div className="vendor-result"> <Link to={`/`}>Vendor Results</Link></div>
             <Tabs defaultActiveKey="detail" id="uncontrolled-tab-example">
                 <Tab eventKey="detail" title="Details">
                     <Row className="row-padding">
-                        <Col md={10}>
+                        <Col md={8}>
                             <div className="vendorName">{vendor[0].vendorName}</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+                            <div>{vendor[0].description}</div>
                             <Row className="row-margin">
                                 <Col md={4}>
                                     <div className="headingItem">KEY FOCUS AREA</div>
                                     <div className="businessType">{vendor[0].businessType}</div>
                                 </Col>
                                 <Col md={4}>
-                                        <div className="headingItem">PRIMARY BUSINESS UNIT</div>
-                                        <div className="businessType">{vendor[0].businessUnit}</div>
+                                    <div className="headingItem">PRIMARY BUSINESS UNIT</div>
+                                    <div className="businessType">{vendor[0].businessUnit}</div>
                                 </Col>
                             </Row>
-                                <Row>
-                                    <Col md={4}>
-                                        <div className="headingItem"> PARTNERSHIP PROCESS STAGE</div>
-                                        <div className="businessType">{vendor[0].engagementLevel}</div>
-                                    </Col>
-                                    <Col md={4}>
-                                        <div className="headingItem" >PRIMARY BSC CONTACT</div>
-                                        <div className="businessType">{vendor[0].bscContact.name}</div>
-                                    </Col>
-                                </Row>
+                            <Row>
+                                <Col md={4}>
+                                    <div className="headingItem"> PARTNERSHIP PROCESS STAGE</div>
+                                    <div className="businessType">{vendor[0].engagementLevel}</div>
+                                </Col>
+                                <Col md={4}>
+                                    <div className="headingItem" >PRIMARY BSC CONTACT</div>
+                                    <div className="businessType">{vendor[0].bscContact.name}</div>
+                                </Col>
+                            </Row>
                         </Col>
-                        <div className="page-header"></div>
-                            <Col md={2}>
-                                <div className="recentNotes"> Recent Notes</div>
-                            </Col>
+                        {/* <div className="page-header"></div> */}
+                        <Col md={4}>
+                            <div className="recentNotes"> Recent Notes</div>
+                            {
+                                vendor[0].events.map(e => {
+                                    return (<Row>
+                                        <Col>
+                                            <div className="notes-name">{e.name}</div>
+                                        </Col>
+                                        <Col>
+                                            <div className="time-ago">
+                                                <ReactTimeAgo date={e.date} />
+                                            </div>
+                                        </Col>
+                                        <div className="text-notes">
+                                            {e.text}
+                                        </div>
+                                    </Row>)
+                                })
+                            }
+                        </Col>
                     </Row>
                 </Tab>
-                    <Tab eventKey="contact" title="Contacts">
-                        hello1
+                <Tab eventKey="contact" title="Contacts">
+                    hello1
                 </Tab>
-                    <Tab eventKey="notes" title="Notes">
-                        hello2
+                <Tab eventKey="notes" title="Notes">
+                    hello2
                 </Tab>
-                    <Tab eventKey="attachment" title="Attachments">
-                        hello2
+                <Tab eventKey="attachment" title="Attachments">
+                    hello2
                 </Tab>
             </Tabs>
 
         </div>)
-        }
-    
     }
-    
+
+}
+
 const mapStateToProps = (state: any, ownProps: IVendorDetailProps & RouteComponentProps) => {
     const vid = ownProps.match.params.vid;
-            let vendor = state.entitiesData.vendors ? state.entitiesData.vendors.data : [];
+    let vendor = state.entitiesData.vendors ? state.entitiesData.vendors.data : [];
     if (vendor.length) {
-                vendor = vendor.filter(v => {
-                    return v.id === vid
-                })
-            }
-            console.log(vid);
-    const result = {
-                vid: vid,
-            vendor: vendor
-    
-        }
-        return result;
+        vendor = vendor.filter(v => {
+            return v.id === vid
+        })
     }
-    
+    console.log(vid);
+    const result = {
+        vid: vid,
+        vendor: vendor
+
+    }
+    return result;
+}
+
 export const VendorDetails = connect(mapStateToProps)(vendorDetails);
