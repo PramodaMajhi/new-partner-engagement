@@ -97,7 +97,13 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
     if (search.length > 0) {
       _vendors = _vendors.filter((vendor) => {
-        return vendor.vendorName.toLowerCase().match(search) || vendor.businessType.toLowerCase().match(search) || vendor.businessUnit.toLowerCase().match(search);
+        return vendor.vendorName.toLowerCase().match(search) || 
+        vendor.businessType.toLowerCase().match(search) || 
+        vendor.businessUnit.toLowerCase().match(search) ||
+        vendor.bscContact.name.toLowerCase().match(search) ||
+        vendor.vendorContact.name.toLowerCase().match(search) || 
+        vendor.engagementLevel.toLowerCase().match(search)
+        ;
       });
     }
     return (
