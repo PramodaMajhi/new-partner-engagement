@@ -5,7 +5,7 @@ services:
         ports:
             - "9200:9200"
         environment:
-             - discovery.type=single-node
+            - discovery.type=single-node
         restart: always
     mongo:
         image: mongo                
