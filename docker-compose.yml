@@ -1,5 +1,10 @@
 version: '3.3'
 services:    
+    elasticsearch:
+        image: elasticsearch:7.5.1                
+        ports:
+            - "9200:9200"        
+        restart: always
     mongo:
         image: mongo                
         ports:
@@ -26,3 +31,5 @@ services:
             - 3000:3000
         environment:
             - REACT_APP_API_URL=http://server-api:3001/api
+        links:
+            - elasticsearch  
