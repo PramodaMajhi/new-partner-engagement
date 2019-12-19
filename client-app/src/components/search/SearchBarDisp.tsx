@@ -155,7 +155,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
               <div className="sm-2" onClick={() => { this.handlePushSearch('Production') }}>
                 <div className="search_option">
-                  Proof Of Concept
+                  Proof of Concept
                 </div>
               </div>
 
