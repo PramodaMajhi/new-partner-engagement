@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600i,700&display=swap');
+
+* {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
 #loginForm {
     text-align: center;
 }
@@ -184,17 +190,22 @@ tr {
   margin: 0px auto;
 }
 .search_option {
-  background: #e8eef4;;
-  border-radius: 6px;
-  box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 4px -1px rgba(131,146,165,0.2);
   margin-right: 12px;
   padding: 12px;
   width: 265px;
   text-align: center;
   height: 100px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 130px;
+  border-bottom: 5px solid #0095da;
 }
 .browse-text {
   font-weight: bold;
