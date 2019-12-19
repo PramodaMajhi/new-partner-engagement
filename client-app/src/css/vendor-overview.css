@@ -301,9 +301,11 @@
 
 }
 .rectangle {	  
-    height: 64px;
-    background-color: #4E5063;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px -1px rgba(163,175,191,.14);
     width: 100%; 
+    position: fixed;
   }
 .ai-ml-container {
     margin-top: 20px;

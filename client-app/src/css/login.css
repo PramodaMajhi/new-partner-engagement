@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600i,700&display=swap');
 
 * {
-  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif !important;
 }
 
 #loginForm {
@@ -94,6 +94,11 @@
     font-weight: bold;
     line-height: 12px;
   }
+
+  .MuiTableCell-root.patientTable {
+      color: #8392a5;
+  }
+
   .riskOfReadmissionHigh {
     border-radius: 4px;	
     background-color: #DD0932;
@@ -177,6 +182,10 @@ tr {
   line-height: 20px;
   text-decoration: none;
 }
+
+.patient-name-spec span {
+  font-size: 1rem;
+}
 /* .patient-name-spec:hover {
  cursor:pointer;
  text-decoration: none;
@@ -230,8 +239,8 @@ tr {
   font-weight: bold;
   margin: 70px auto 30px;
 }
-.browse {
-  color: #6c757d;
+.browse, .browse-text .arrow {
+  color: #8392a5;
 }
 .browse-search-text {
   color: #3480c7;
