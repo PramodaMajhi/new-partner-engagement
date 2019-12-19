@@ -12,7 +12,7 @@ import { Link, withRouter, RouteComponentProps } from 'react-router-dom'
 import { Line, Circle } from 'rc-progress';
 import { Button } from 'react-bootstrap';
 import '../../css/vendor-overview.css';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab, Row, Col } from 'react-bootstrap';
 import { startGet } from '../../actions/get'
 
 interface IVendorDetailState {
@@ -64,9 +64,14 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
             <div>Vendor Results</div>
             <Tabs defaultActiveKey="detail" id="uncontrolled-tab-example">
                 <Tab eventKey="detail" title="Details">
-                   <div>
-                       
-                   </div>
+                   <Row className="row">
+                   <Col md={10}>
+                       {vendor.name} Hello 
+                    </Col>
+                    <Col md={2}>
+                        Hello
+                    </Col>
+                   </Row>
                 </Tab>
                 <Tab eventKey="contact" title="Contacts">
                     hello1
