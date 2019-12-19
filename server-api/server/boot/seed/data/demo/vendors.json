@@ -46,9 +46,7 @@
       "state": "CA",
       "zipCode": "93704"
     },
-    "engagementLevel": {
-      "name":"Exploration"
-    }
+    "engagementLevel":"Exploration"
   },
   {
     "vendorName": "Google",

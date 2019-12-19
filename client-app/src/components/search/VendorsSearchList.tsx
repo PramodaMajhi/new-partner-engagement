@@ -40,9 +40,9 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
     }
 
     render() {
-        const { vendors,search } = this.props
+        const { vendors, search } = this.props
 
-        return <div className=" pt-3">
+        return <div className="container pt-3">
             <div className="patientList ai-ml-container">
                 <Row className="mt-4">
                     <Table className="patientTable">
@@ -60,20 +60,58 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                 return (
 
                                     <TableRow className="patientRow" key={i}>
-                                        <TableCell align="right" className="patientCol ">
-                                            <div className="patient-name-spec">
-                                                <Highlighter
-                                                    highlightClassName="YourHighlightClass"
-                                                    searchWords={[search]}
-                                                    autoEscape={true}
-                                                    textToHighlight={vendor.vendorName}
-                                                /></div>
+                                        <Link to={`/vendor-details/`} >
+                                            <TableCell align="right" className="patientCol ">
+                                                <div className="patient-name-spec">
+                                                    <Highlighter
+                                                        highlightClassName="YourHighlightClass"
+                                                        searchWords={[search]}
+                                                        autoEscape={true}
+                                                        textToHighlight={vendor.vendorName}
+                                                    /></div>
+                                                <div>
+                                                    {vendor.businessType}
+                                                </div>
+                                            </TableCell>
+                                        </Link>
+                                        <TableCell align="right" className="patientCol">
+                                            <Highlighter
+                                                highlightClassName="YourHighlightClass"
+                                                searchWords={[search]}
+                                                autoEscape={true}
+                                                textToHighlight={vendor.engagementLevel}
+                                            /></TableCell>
+                                        <TableCell align="right" className="patientCol">
+
+                                            <Highlighter
+                                                highlightClassName="YourHighlightClass"
+                                                searchWords={[search]}
+                                                autoEscape={true}
+                                                textToHighlight={vendor.businessUnit}
+                                            />
                                         </TableCell>
-                                        <TableCell align="right" className="patientCol"></TableCell>
+                                        <TableCell align="right" className="patientCol">
+                                            <Highlighter
+                                                highlightClassName="YourHighlightClass"
+                                                searchWords={[search]}
+                                                autoEscape={true}
+                                                textToHighlight={vendor.vendorContact.name}
+                                            />
+                                        </TableCell>
+                                        <TableCell align="right" className="patientCol">
+
+                                            <Highlighter
+                                                highlightClassName="YourHighlightClass"
+                                                searchWords={[search]}
+                                                autoEscape={true}
+                                                textToHighlight={vendor.bscContact.name}
+                                            />
+                                        </TableCell>
                                         {/* <TableCell align="right" className="patientCol">{this.createGlimpse(vendor.careDetails.facility, 20)}</TableCell>
-                                            <TableCell align="right" className="patientCol">{vendor.careDetails.assingedPcp}</TableCell>
-                                            <TableCell align="right" className="patientCol">{vendor.diagonosisAtAdmission}</TableCell>
-                                            <TableCell align="right" className="patientCol">{vendor.careDetails.admission}</TableCell>                                             */}
+                                            
+                                            
+                                               
+                                                  */}
                                     </TableRow>)
                             })}
 
