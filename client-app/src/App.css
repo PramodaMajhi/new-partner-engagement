@@ -28,3 +28,17 @@ body {
   background-color: #F6F7FB !important;
   color: #333333;
 }
+
+@media screen and (max-width: 992px) {
+  .desktop {
+      display: none;
+  }
+  .mobileList {
+      display: inherit;
+  }
+
+  .searchBar {
+    width: 90%;
+  }
+  
+}

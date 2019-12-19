@@ -83,6 +83,13 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       })
 
     }
+    let engagementLevel = vendorFilter;    
+    if (engagementLevel != '' && businessUnit != 'Health Innovation Technology' && businessUnit != 'All') {
+      filteredVendor = this.state.vendors.filter(v => {
+        return v.engagementLevel === engagementLevel;
+      })
+
+    }
     let _vendors = filteredVendor
     let search = this.state.searchString.trim().toLowerCase();
 
@@ -93,12 +100,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     }
     return (
       <div>
-        <Row className="justify-content-center" id="loginPageLogo">
-          <img src={iconBSCLogo} />
-        </Row>
-        <Row className="justify-content-center" id="loginPageTitle">
-          {/* <h3>Start Up/Vendor Assessment</h3> */}
-        </Row>
+       
         <div className="searchBar">
           <SearchBar
             value={this.state.searchString}
@@ -132,6 +134,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
           <>
             <div className="search-result-section browse-text">Browse recommended categories...</div>
             <div className="row search-result-section">
+              
               <div className="sm-2" onClick={() => { this.handlePushSearch('All') }}>
                 <div className="search_option" >
                   All Vendors
