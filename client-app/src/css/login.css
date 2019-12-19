@@ -236,6 +236,7 @@ tr {
   cursor: pointer;
 }
 .browse-text {
+  font-size: 18px;
   font-weight: bold;
   margin: 70px auto 30px;
 }
@@ -245,6 +246,7 @@ tr {
 .browse-search-text {
   color: #3480c7;
 }
+
 
 .YourHighlightClass {
   padding: 0.2em;
