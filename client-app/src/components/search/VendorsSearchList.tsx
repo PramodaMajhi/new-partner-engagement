@@ -11,7 +11,7 @@ import '../../css/login.css';
 import iconCirle from '../../img/icon-circle-care@2x.png';
 import searchBar from '../../img/search-bar.png';
 import apiClient from '../../util/api-client';
-
+import Highlighter from "react-highlight-words";
 // export enum RiskLevelEnum {
 //     LOW = 10,
 //     MEDIUM = 25
@@ -19,6 +19,7 @@ import apiClient from '../../util/api-client';
 
 interface IVendorListProps {
     vendors?: any,
+    search?: string
 }
 
 export class VendorSearchList extends React.Component<IVendorListProps & RouteComponentProps, {}> {
@@ -39,10 +40,10 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
     }
 
     render() {
-        const { vendors } = this.props
+        const { vendors,search } = this.props
 
         return <div className=" pt-3">
-            <div className="patientList ai-ml-container">               
+            <div className="patientList ai-ml-container">
                 <Row className="mt-4">
                     <Table className="patientTable">
                         <TableHead>
@@ -51,23 +52,29 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                 <TableCell className="patientTable">PROCESS STAGE</TableCell>
                                 <TableCell className="patientTable">BUSINESS UNIT</TableCell>
                                 <TableCell className="patientTable">VENDOR CONTACTS</TableCell>
-                                <TableCell className="patientTable">BSC CONTACTS</TableCell>                                
+                                <TableCell className="patientTable">BSC CONTACTS</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {vendors && vendors.map((vendor, i) => {                               
+                            {vendors && vendors.map((vendor, i) => {
                                 return (
-                                    
-                                        <TableRow className="patientRow" key={i}>
-                                            <TableCell align="right" className="patientCol ">
-                                                <div className="patient-name-spec">{vendor.vendorName}</div>
-                                            </TableCell>
-                                            <TableCell align="right" className="patientCol"></TableCell>
-                                            {/* <TableCell align="right" className="patientCol">{this.createGlimpse(vendor.careDetails.facility, 20)}</TableCell>
+
+                                    <TableRow className="patientRow" key={i}>
+                                        <TableCell align="right" className="patientCol ">
+                                            <div className="patient-name-spec">
+                                                <Highlighter
+                                                    highlightClassName="YourHighlightClass"
+                                                    searchWords={[search]}
+                                                    autoEscape={true}
+                                                    textToHighlight={vendor.vendorName}
+                                                /></div>
+                                        </TableCell>
+                                        <TableCell align="right" className="patientCol"></TableCell>
+                                        {/* <TableCell align="right" className="patientCol">{this.createGlimpse(vendor.careDetails.facility, 20)}</TableCell>
                                             <TableCell align="right" className="patientCol">{vendor.careDetails.assingedPcp}</TableCell>
                                             <TableCell align="right" className="patientCol">{vendor.diagonosisAtAdmission}</TableCell>
                                             <TableCell align="right" className="patientCol">{vendor.careDetails.admission}</TableCell>                                             */}
-                                        </TableRow>)
+                                    </TableRow>)
                             })}
 
                         </TableBody>

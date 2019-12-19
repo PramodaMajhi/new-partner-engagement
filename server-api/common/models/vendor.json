@@ -24,7 +24,7 @@
       "type":"object"
     },
     "engagementLevel": {
-      "type":"object"
+      "type":"string"
     }
   },
   "validations": [],

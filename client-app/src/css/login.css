@@ -193,6 +193,7 @@ tr {
   height: 100px;
   font-weight: bold;
   font-size: 22px;
+  margin-bottom: 12px;
 }
 .browse-text {
   font-weight: bold;
@@ -202,4 +203,9 @@ tr {
 }
 .browse-search-text {
   color: #3480c7;
+}
+
+.YourHighlightClass {
+  padding: 0.2em;
+  background-color: #76a380 !important;
 }

@@ -11,6 +11,7 @@ import { login } from '../../actions/login';
 import { startGet } from '../../actions/get'
 import { setValues } from '../../actions/values'
 import { VendorSearchList } from './VendorsSearchList'
+import Highlighter from "react-highlight-words";
 
 import '../../css/login.css';
 
@@ -76,11 +77,11 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
     let businessUnit = vendorFilter;
     let filteredVendor = this.state.vendors;
-    if (businessUnit != '' && businessUnit != 'All')  {
-       filteredVendor = this.state.vendors.filter(v => {
+    if (businessUnit != '' && businessUnit != 'All') {
+      filteredVendor = this.state.vendors.filter(v => {
         return v.businessUnit === businessUnit;
       })
-     
+
     }
     let _vendors = filteredVendor
     let search = this.state.searchString.trim().toLowerCase();
@@ -108,17 +109,24 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
               maxWidth: 1200
             }} />
         </div>
-        <div className="search-result-section">
+        {/* <div className="search-result-section">
           <ul>
             {_vendors.map((l, i) => {
               return (
                 <li key={i}>
                   {l.vendorName} <a href="#">{l.businessType}</a>
+                  <Highlighter
+                    highlightClassName="YourHighlightClass"
+                    searchWords={[search]}
+                    autoEscape={true}
+                    textToHighlight={l.vendorName}
+                  />
                 </li>
               );
             })}
           </ul>
-        </div>
+
+        </div> */}
 
         {vendorFilter == '' ?
           <>
@@ -127,24 +135,67 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
               <div className="sm-2" onClick={() => { this.handlePushSearch('All') }}>
                 <div className="search_option" >
                   All Vendors
+                </div>
               </div>
-              </div>
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Vendor Contacts') }}>
+
+              
+              
+              <div className="sm-2" onClick={() => { this.handlePushSearch('Initial Engagement') }}>
                 <div className="search_option">
-                  Vendor Contacts
-             </div>
+                  Initial Engagement
+                </div>
               </div>
-              <div className="sm-2" onClick={() => { this.handlePushSearch('BSC Contacts') }}>
+             
+
+              <div className="sm-2" onClick={() => { this.handlePushSearch('Exploration') }}>
                 <div className="search_option">
-                  BSC Contacts
+                  Exploration
+                </div>
               </div>
+
+              <div className="sm-2" onClick={() => { this.handlePushSearch('Production') }}>
+                <div className="search_option">
+                  Proof Of Concept
+                </div>
               </div>
+
+              <div className="sm-2" onClick={() => { this.handlePushSearch('Pilot') }}>
+                <div className="search_option">
+                  Pilot
+                </div>
+              </div>
+
+              <div className="sm-2" onClick={() => { this.handlePushSearch('Production') }}>
+                <div className="search_option">
+                  Production
+                </div>
+              </div>
+              
+
+              <div className="sm-2" onClick={() => { this.handlePushSearch('Exploration') }}>
+                <div className="search_option">
+                  User Experience
+                </div>
+              </div>
+              <div className="sm-2" onClick={() => { this.handlePushSearch('Exploration') }}>
+                <div className="search_option">
+                  Robotics
+                </div>
+              </div>
+              <div className="sm-2" onClick={() => { this.handlePushSearch('Exploration') }}>
+                <div className="search_option">
+                  AI/ML
+                </div>
+              </div>
+
               <div className="sm-2" onClick={() => { this.handlePushSearch('Health Innovation Technology') }}>
                 <div className="search_option">
                   Health Innovation Technology
+                </div>
               </div>
-              </div>
+
             </div>
+
           </> : <>
             <div className="search-result-section browse-text" >
               <span className="browse" onClick={this.handleBrowse}> Browse</span> <span className="arrow"> > </span>
@@ -157,7 +208,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
         }
         {vendorFilter != '' ?
-          <VendorSearchList vendors={_vendors} /> : ''
+          <VendorSearchList vendors={_vendors} search={search} /> : ''
         }
       </div>
     )

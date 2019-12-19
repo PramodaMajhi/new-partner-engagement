@@ -21,9 +21,8 @@
       "state": "CA",
       "zipCode": "93704"
     },
-    "engagementLevel": {
-      "name":"Initial Engagement"
-    }
+    "engagementLevel": "Initial Engagement"
+    
   },
   {
     "vendorName": "IBM",
@@ -73,9 +72,8 @@
       "state": "CA",
       "zipCode": "93704"
     },
-    "engagementLevel": {
-      "name":"Pilot"
-    }
+    "engagementLevel": "Pilot"
+    
   },
   {
     "vendorName": "Microsoft",
@@ -99,8 +97,6 @@
       "state": "CA",
       "zipCode": "93704"
     },
-    "engagementLevel": {
-      "name":"Production"
-    }
+    "engagementLevel": "Production"    
   }
 ]
