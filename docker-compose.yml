@@ -1,37 +1,17 @@
 version: '3.3'
-services:
-    rabbitmq:
-        image: rabbitmq        
-        expose:
-            - 5672
+services:    
+    elasticsearch:
+        image: elasticsearch:7.5.1                
+        ports:
+            - "9200:9200"        
+        restart: always
     mongo:
         image: mongo                
         ports:
             - "27017:27017"
         volumes:
             - ./data:/data/db
-        restart: always
-    producer-mq:
-        build: 
-            context: ./producer-mq
-            dockerfile: Dockerfile.local
-        environment:
-            - MQ_URL=amqp://rabbitmq
-        volumes:
-            - ./inbound:/usr/src/apps/producer/inbound
-        restart: always
-        links:
-            - rabbitmq
-    consumer-mq:
-        build: 
-            context: ./consumer-mq
-            dockerfile: Dockerfile.local
-        environment:
-            - MQ_URL=amqp://rabbitmq            
-            - API_URL=http://server-api:3001/api
-        restart: always
-        links:
-            - rabbitmq
+        restart: always    
     server-api:
         build: 
             context: ./server-api
@@ -39,7 +19,7 @@ services:
         expose: 
             - 3001
         environment:
-             - DATABASE_URL=mongodb://mongo:27017/aidemo-db
+             - DATABASE_URL=mongodb://mongo:27017/vendor-db
         restart: always
         links:
             - mongo  
@@ -51,3 +31,5 @@ services:
             - 3000:3000
         environment:
             - REACT_APP_API_URL=http://server-api:3001/api
+        links:
+            - elasticsearch  
