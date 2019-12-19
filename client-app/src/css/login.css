@@ -246,11 +246,13 @@ tr {
 .browse-search-text {
   color: #3480c7;
 }
-
+.browse:hover {
+  cursor: pointer;
+}
 
 .YourHighlightClass {
   padding: 0.2em;
-  background-color: #76a380 !important;
+  background-color: #d6ecfc !important;
 }
 
 @media screen and (max-width: 992px) {

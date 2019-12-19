@@ -70,6 +70,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
   handleBrowse = () => {
     this.props.dispatch(setValues({ vendorFilter: '' }))
+    this.props.history.push('/');
   }
 
   render() {
