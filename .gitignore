@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-
+/data
 # misc
 .vscode
 .DS_Store
