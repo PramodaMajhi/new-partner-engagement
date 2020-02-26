@@ -1,0 +1,85 @@
+.attachment {
+  min-height: 900px;
+}
+
+.list {   
+  font-size: 1.5rem; 
+  margin: 40px 0px 60px 0px;
+}
+
+.empty {
+  margin-left: 20px;
+}
+
+.fileDelete {
+  margin: 0px 0px 0px 20px;
+}
+
+.fileDelete:hover {
+  cursor: pointer;
+}
+
+.fileName {
+ margin-bottom: 10px
+}
+
+.attachButton {
+  padding: .5rem 1.5rem;
+  background-color: #fff;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid darkgray;
+}
+
+.attachButton:hover {
+  cursor: pointer;
+}
+
+.attachButton > span {
+  color: #297fca;
+  margin-left: .5em;
+}
+
+.warning {  
+  color: red;
+  margin-bottom: 15px;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.uploadFile {
+  display: flex;
+  align-items: center;
+}
+
+.uploadFile > svg {
+  margin: 10px;
+  height: 20px;
+  width: 300px;
+}
+
+.uploadName {
+
+}
+
+.uploadError {
+  margin: 10px;
+  color: red;
+}
+.uploadList {
+  
+}
+
+.attachmentsDetail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.attachmentsDetail:hover {
+ background-color: #e8e7eb;
+ display: inline-flex;
+}

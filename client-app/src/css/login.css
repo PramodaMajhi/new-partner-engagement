@@ -305,7 +305,7 @@ tr {
 
 }
 .row-padding {
-  padding: 60px; 
+  padding: 60px 0px; 
 }
 .nav {
 
@@ -331,10 +331,8 @@ tr {
   color: #8392A5;
 }
 .text-notes {
-  font-size: 14px;
-  padding-left: 14px;
-  margin-top: 12px;
-  margin-bottom: 35px;
+  font-size: 16px;
+  padding: 14px 0px;
 }
 .vendor-result {
   font-size: 18px;
@@ -345,4 +343,15 @@ tr {
   color: #8392A5;
   text-decoration: none;
   background-color: transparent;
+}
+.addPartner {
+  color: #0079D0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 17px;
+  text-align: center;
+}
+.addPartner:hover {
+  cursor: pointer;
 }

@@ -48,15 +48,16 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                     <Table className="patientTable">
                         <TableHead>
                             <TableRow>
-                                <TableCell className="patientTable">VENDOR &amp; BUSINESS/PRODUCTS</TableCell>
+                                <TableCell className="patientTable">PARTNER NAME &amp; KEY FOCUS AREAS</TableCell>
                                 <TableCell className="patientTable">PROCESS STAGE</TableCell>
-                                <TableCell className="patientTable">BUSINESS UNIT</TableCell>
-                                <TableCell className="patientTable">VENDOR CONTACTS</TableCell>
-                                <TableCell className="patientTable">BSC CONTACTS</TableCell>
+                                <TableCell className="patientTable">FUNCTIONAL AREAS</TableCell>
+                                <TableCell className="patientTable">COMPANY CONTACTS</TableCell>
+                                {/* <TableCell className="patientTable">BSC CONTACTS</TableCell> */}
                             </TableRow>
                         </TableHead>
                         <TableBody>
                             {vendors && vendors.map((vendor, i) => {
+
                                 return (
 
                                     <TableRow className="patientRow" key={i}>
@@ -69,26 +70,31 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                                         autoEscape={true}
                                                         textToHighlight={vendor.vendorName}
                                                     /></div>
-                                                <div>
-                                                    {vendor.businessType}
-                                                </div>
+
+                                                {vendor.keyFocusArea}
                                             </TableCell>
                                         </Link>
                                         <TableCell align="right" className="patientCol">
-                                            <Highlighter
-                                                highlightClassName="YourHighlightClass"
-                                                searchWords={[search]}
-                                                autoEscape={true}
-                                                textToHighlight={vendor.engagementLevel}
-                                            /></TableCell>
+                                            { <Highlighter
+                                                    highlightClassName="YourHighlightClass"
+                                                    searchWords={[search]}
+                                                    autoEscape={true}
+                                                    textToHighlight={vendor.processStage ? vendor.processStage.label : null}
+                                                />                                       
+                                            }
+                                        </TableCell>
                                         <TableCell align="right" className="patientCol">
-
-                                            <Highlighter
-                                                highlightClassName="YourHighlightClass"
-                                                searchWords={[search]}
-                                                autoEscape={true}
-                                                textToHighlight={vendor.businessUnit}
-                                            />
+                                            {vendor.businessUnit ? vendor.businessUnit.map(b => {
+                                                return <div key= {b.value} className="mb-2">
+                                                    <Highlighter
+                                                    highlightClassName="YourHighlightClass"
+                                                    searchWords={[search]}
+                                                    autoEscape={true}
+                                                    textToHighlight={b.label}
+                                                    />
+                                                </div> 
+                                            }):null
+                                            }
                                         </TableCell>
                                         <TableCell align="right" className="patientCol">
                                             <Highlighter
@@ -98,7 +104,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                                 textToHighlight={vendor.vendorContact.name}
                                             />
                                         </TableCell>
-                                        <TableCell align="right" className="patientCol">
+                                        {/* <TableCell align="right" className="patientCol">
 
                                             <Highlighter
                                                 highlightClassName="YourHighlightClass"
@@ -106,7 +112,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                                 autoEscape={true}
                                                 textToHighlight={vendor.bscContact.name}
                                             />
-                                        </TableCell>
+                                        </TableCell> */}
                                         {/* <TableCell align="right" className="patientCol">{this.createGlimpse(vendor.careDetails.facility, 20)}</TableCell>
                                             
                                             
