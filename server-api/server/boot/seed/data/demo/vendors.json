@@ -1,49 +1,66 @@
-[{
-    "vendorName": "O'Keefe Inc",
-    "imageUrl": "http://lorempixel.com/640/480/cats",
-    "website": "marlin.biz",
-    "keyFocusArea": "Providers: Clinical Tools",
-    "businessUnit":[ 
-        {
-            "value" : "0",
-            "label" : "Health Innovation Technology"
-        }, 
-        {
-            "value" : "2",
-            "label" : "Finance"
-        }
-    ],
-    "vendorContact": {
-        "name": "Rogers Welch",
-        "phone": "546.610.8648 x081",
-        "email": "Amari_Kshlerin@yahoo.com",
-        "street": "5031 Kohler Station",
-        "city": "Schambergerfort",
-        "state": "Hawaii",
-        "zipCode": "25352"
-    },
-    "bscContact": {
-        "name": "Vidal Lynch",
-        "phone": "567.301.0617 x491",
-        "email": "Jadyn_Willms44@yahoo.com",
-        "title": "Sr.Manager, Product Strategy",
-        "street": "511 Runolfsdottir Cliffs",
-        "city": "Nealton",
-        "state": "Kansas",
-        "zipCode": "16550"
-    },
-    "maturityLevel": { "value": "0", "label": "Seed" },
-    "processStage": { "value": "0", "label": "Screening" },
-    "events": [
-        {
-            "name": "Sedrick Schaefer",
-            "date": "2019-07-17T18:58:25.856Z",
-            "text": "Made initial contact with O'Keefe Inc at HIMMS. Spoke with Rogers Welch regarding their offering in Providers: Clinical Tools."
+[
+    {
+        "id": "5e56e6b33e55fb72c46bb770",
+        "vendorName": "O'Keefe Inc",
+        "imageUrl": "http://lorempixel.com/640/480/cats",
+        "website": "marlin.biz",
+        "keyFocusArea": "Providers: Clinical Tools",
+        "profileLogo": "http://localhost:3001/api/attachments/5e56e6b33e55fb72c46bb770/download/keefelogo.png",
+        "hasAttachment": false,
+        "attachments": [
+            {
+                "fileName": "test.png",
+                "serverRelativeUrl": "http://localhost:3001/api/attachments/5e56e6b33e55fb72c46bb770/download/15-vi-cheat-sheet.pdf"
+            }
+        ],
+        "businessUnit": [
+            {
+                "value": "0",
+                "label": "Health Innovation Technology"
+            },
+            {
+                "value": "2",
+                "label": "Finance"
+            }
+        ],
+        "vendorContact": {
+            "name": "Rogers Welch",
+            "phone": "546.610.8648 x081",
+            "email": "Amari_Kshlerin@yahoo.com",
+            "street": "5031 Kohler Station",
+            "city": "Schambergerfort",
+            "state": "Hawaii",
+            "zipCode": "25352"
         },
-        {
-            "name": "Godfrey Fritsch",
-            "date": "2019-12-11T22:38:57.147Z",
-            "text": "Followed up with Rogers Welch and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
-        }
-    ]
-}]
+        "bscContact": {
+            "name": "Vidal Lynch",
+            "phone": "567.301.0617 x491",
+            "email": "Jadyn_Willms44@yahoo.com",
+            "title": "Sr.Manager, Product Strategy",
+            "street": "511 Runolfsdottir Cliffs",
+            "city": "Nealton",
+            "state": "Kansas",
+            "zipCode": "16550"
+        },
+        "maturityLevel": {
+            "value": "0",
+            "label": "Seed"
+        },
+        "processStage": {
+            "value": "0",
+            "label": "Screening"
+        },
+        "events": [
+            {
+                "name": "Sedrick Schaefer",
+                "date": "2019-07-17T18:58:25.856Z",
+                "text": "Made initial contact with O'Keefe Inc at HIMMS. Spoke with Rogers Welch regarding their offering in Providers: Clinical Tools."
+            },
+            {
+                "name": "Godfrey Fritsch",
+                "date": "2019-12-11T22:38:57.147Z",
+                "text": "Followed up with Rogers Welch and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
+            }
+        ]
+    }
+]

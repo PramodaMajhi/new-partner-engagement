@@ -7,7 +7,7 @@ import { Link, withRouter, RouteComponentProps } from 'react-router-dom'
 import { Line, Circle } from 'rc-progress';
 import '../../css/vendor-overview.css';
 import { Tabs, Tab, Row, Col, Form, Button } from 'react-bootstrap';
-import { startGet } from '../../actions/get'
+import { startGet, startGetAttachments } from '../../actions/get'
 import { IFile } from '../../models/types'
 import ReactTimeAgo from 'react-time-ago'
 import Select from 'react-select';
@@ -32,7 +32,7 @@ interface IVendorDetailState {
 interface IVendorDetailProps {
     vendor?: any,
     vid?: any,
-    events?: [],   
+    events?: [],
     dispatch?: (name: any) => any,
 }
 
@@ -51,11 +51,20 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
     }
     componentDidMount() {
         this.props.dispatch(startGet('vendors'))
+        let filter = {
+            id: this.props.vendor[0].id
+        }
+        this.props.dispatch(startGet("attachments", filter))
     }
 
     componentWillReceiveProps(nextProps: IVendorDetailProps) {
         if ((this.props.vendor.id !== nextProps.vendor.id)) {
             this.props.dispatch(startGet('vendors'))
+            let filter = {
+                id: this.props.vendor[0].id
+            }
+            this.props.dispatch(startGet("attachments", filter))
+
         }
     }
 
@@ -66,7 +75,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
     addNotes = (e) => {
         e.preventDefault();
         let note = {
-            "name": "Sedrick Schaefer",
+            "name": "TestAdmin TestAdmin",
             "date": new Date(),
             "text": e.currentTarget.notes.value
         }
@@ -91,13 +100,13 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
     }
 
     openAttach = () => {
-        this.setState({ phase: 1})
-      }
+        this.setState({ phase: 1 })
+    }
 
     render() {
         const { vendor, events } = this.props;
-      //  console.log(vendor)
-       // console.log(vendor[0].vendorName);
+        //  console.log(vendor)
+        // console.log(vendor[0].vendorName);
 
         return (<div className="ai-ml-container">
             <div className="vendor-result"> <Link to={`/`}><span className="carrot">&lt;</span>All Partners</Link></div>
@@ -133,7 +142,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                                         lassNamePrefix="assignSelect"
                                         name="stage"
                                         className="mb-4"
-                                        isDisabled ={true}
+                                        isDisabled={true}
                                     />
                                 </Col>
                                 <Col>
@@ -156,7 +165,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                             </Form>
 
                             {
-                                events ? events.map((e,i) => {
+                                events ? events.map((e, i) => {
                                     return (<Row key={i}>
                                         <Col xs={6}>
                                             <div className="notes-name">{e.name}</div>
@@ -177,7 +186,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                         </Col>
                     </Row>
                 </Tab>
-                <Tab eventKey="contact" title={<span  className="tabTextImg"><img src={contactIcon} /><span className="tabText">Contacts</span></span>}>
+                <Tab eventKey="contact" title={<span className="tabTextImg"><img src={contactIcon} /><span className="tabText">Contacts</span></span>}>
                     <Col className="mt-5">
                         <div className="businessType">{vendor[0].vendorContact.name}</div>
                         <div className="businessType">{vendor[0].bscContact.title}</div>
@@ -185,14 +194,14 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                         <div className="businessType">{vendor[0].bscContact.phone}</div>
                     </Col>
                 </Tab>
-                <Tab eventKey="activity" title={<span  className="tabTextImg"><img src={activityIcon} /><span className="tabText">Activity Feed</span></span>}>
+                <Tab eventKey="activity" title={<span className="tabTextImg"><img src={activityIcon} /><span className="tabText">Activity Feed</span></span>}>
                     <Col className="mt-5">
                         <div>TBD</div>
                     </Col>
                 </Tab>
-                <Tab eventKey="attachment" title={<span  className="tabTextImg"><img src={attachIcon} /><span className="tabText">Attachments</span></span>}>
+                <Tab eventKey="attachment" title={<span className="tabTextImg"><img src={attachIcon} /><span className="tabText">Attachments</span></span>}>
                     <Col className="mt-5">
-                        <Attachments />
+                        <Attachments vendor={vendor} />
                     </Col>
                 </Tab>
             </Tabs>
@@ -210,7 +219,7 @@ const mapStateToProps = (state: any, ownProps: IVendorDetailProps & RouteCompone
             return v.id === vid
         })
     }
-  //  console.log(vid);
+    //  console.log(vid);
     const result = {
         vid: vid,
         vendor: vendor,

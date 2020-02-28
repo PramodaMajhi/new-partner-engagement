@@ -37,6 +37,15 @@
     },
     "processStage": {
       "type":"object"
+    },
+    "profileLogo": {
+      "type":"string"
+    },
+    "hasAttachment":{
+      "type":"boolean"
+    },
+    "attachments":{
+      "type":"object"
     }
   },
   "validations": [],

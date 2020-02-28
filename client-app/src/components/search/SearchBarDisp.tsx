@@ -10,7 +10,9 @@ import * as currentUserModel from '../../models/currentUser';
 import { login } from '../../actions/login';
 import { startGet } from '../../actions/get'
 import { setValues } from '../../actions/values'
-import { startInsert } from "../../actions/insert"
+import { startInsert, createAttachment } from "../../actions/insert"
+import { startMerge } from "../../actions/merge"
+import { startUpload } from "../../actions/upload"
 import { VendorSearchList } from './VendorsSearchList'
 import Highlighter from "react-highlight-words";
 import { VendorDetails } from './VendorDetails'
@@ -22,13 +24,15 @@ interface ISearchProps {
   vendors?: any,
   vendorFilter?: string,
   displayVendor?: boolean,
+  upload?: any,
   dispatch?: (name: any) => any,
 }
 interface ISearchState {
   vendors?: any,
   searchString?: string,
   toggle?: boolean,
-  showModal?: boolean
+  showModal?: boolean,
+  profileImage?: []
 }
 
 
@@ -36,17 +40,25 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
   constructor(props) {
     super(props);
-    this.state = { searchString: "", vendors: [], toggle: false, showModal: false };
+    this.state = {
+      searchString: "",
+      vendors: [],
+      toggle: false,
+      showModal: false,
+      profileImage: []
+    };
   }
 
   componentDidMount() {
     this.props.dispatch(startGet('vendors'))
+    // this.props.dispatch(startGet('attachments'))
     this.setState({ vendors: this.props.vendors });
   }
   componentWillReceiveProps(nextProps: ISearchProps) {
     if ((this.props.vendors && nextProps.vendors &&
       (this.props.vendors.length !== nextProps.vendors.length))) {
       this.props.dispatch(startGet('vendors'))
+     // this.props.dispatch(startGet('attachments'))
       this.setState({ vendors: nextProps.vendors });
     }
   }
@@ -77,37 +89,56 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     this.setState({ showModal: false, })
   }
 
-  addVendor = (formData, businessUnit, maturityLevel, processStage) => {
+  addVendor = async (formData, businessUnit, maturityLevel, processStage, profileImg) => {
 
-    if(formData &&  businessUnit) {     
+    if (formData && businessUnit) {
       console.log(businessUnit)
-              
+
     }
     let urlObj = url.parse(formData.website.value);
-    let domain  = urlObj.hostname
+    let domain = urlObj.hostname
     let values = {
       vendorName: formData.name.value,
       businessUnit: businessUnit,
-      keyFocusArea:formData.keyfocus.value,
-      website:formData.website.value,
+      keyFocusArea: formData.keyfocus.value,
+      website: formData.website.value,      
       domain: domain.toLowerCase(),
       maturityLevel: maturityLevel,
-      processStage: processStage, 
+      processStage: processStage,
       vendorContact: {
         name: formData.contactName.value,
-        title:formData.title.value,
+        title: formData.title.value,
         phone: formData.phone.value,
-        email: formData.email.value        
+        email: formData.email.value
       },
-      bscContact: {        
+      bscContact: {
       },
+      attachments:[]
 
     }
-
-    startInsert('vendors', values)(this.props.dispatch)
-      .then(() => {
-        this.props.dispatch(startGet('vendors'))
+    let id
+    let fileAttachContainer = {}
+    await startInsert('vendors', values)(this.props.dispatch)
+      .then(_id => {
+        id = _id
+        console.log("generated", id);
+        fileAttachContainer["name"] = id
       })
+
+    await createAttachment('attachments', fileAttachContainer)(this.props.dispatch)
+    this.setState({ profileImage: profileImg })
+    this.fileUpload(fileAttachContainer, profileImg);
+  }
+
+  fileUpload = async (containerName, profileImg) => {
+    await startUpload(containerName.name, profileImg)(this.props.dispatch)
+    let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api'
+    let vendorObj = {
+      id: containerName.name,
+      profileLogo: `${imageLogoUrl}/attachments/${containerName.name}/download/${profileImg[0].name}`
+    }
+    await startMerge('vendors', vendorObj)
+    this.props.dispatch(startGet('vendors'));
   }
 
   openModal = () => {
@@ -146,12 +177,11 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
         //   vendor.vendorContact.name.toLowerCase().match(search) ||
         //   vendor.engagementLevel.toLowerCase().match(search)
         //   ;
-        return 
+        return
       });
     }
     return (
       <div className="container">
-
         <div className="searchBar">
           <SearchBar
             value={this.state.searchString}
@@ -163,98 +193,24 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
             }}
             hintText="Search vendor or keyword" />
         </div>
-
-
-        {vendorFilter == '' ?
-          <>
-            <div className="search-result-section browse-text">Browse recommended categories...</div>
-            <div className="row search-result-section">
-
-              <div className="sm-2" onClick={() => { this.handlePushSearch('All') }}>
-                <div className="search_option" >
-                  All Vendors
-                </div>
-              </div>
-
-
-
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Initial Engagement') }}>
-                <div className="search_option">
-                  Initial Engagement
-                </div>
-              </div>
-
-
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Exploration') }}>
-                <div className="search_option">
-                  Exploration
-                </div>
-              </div>
-
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Production') }}>
-                <div className="search_option">
-                  Proof of Concept
-                </div>
-              </div>
-
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Pilot') }}>
-                <div className="search_option">
-                  Pilot
-                </div>
-              </div>
-
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Production') }}>
-                <div className="search_option">
-                  Production
-                </div>
-              </div>
-
-
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Exploration') }}>
-                <div className="search_option">
-                  User Experience
-                </div>
-              </div>
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Exploration') }}>
-                <div className="search_option">
-                  Robotics
-                </div>
-              </div>
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Exploration') }}>
-                <div className="search_option">
-                  AI/ML
-                </div>
-              </div>
-
-              <div className="sm-2" onClick={() => { this.handlePushSearch('Health Innovation Technology') }}>
-                <div className="search_option">
-                  Health Innovation Technology
-                </div>
-              </div>
-            </div>
-
-          </> : <Row>
-            <Col className="search-result-section browse-text" >
-              <span className="browse" onClick={this.handleBrowse}> Browse</span> <span className="arrow"> > </span>
-              {
-                <span className="browse-search-text"> {businessUnit} {'(' + _vendors.length + ')'}</span>
-              }
-
-            </Col>
-            <Col className="search-result-section browse-text addPartner" onClick={this.openModal}>
-              + ADD NEW PARTNER
-            </Col>
+        <Row>
+          <Col className="search-result-section browse-text" >
+            <span className="browse">All Partners</span> <span className="arrow"> > </span>
             {
-              this.state.showModal &&
-              (<AddNewVendorModal close={this.closeModal}
-                addVendor={this.addVendor} options={businessUnitOptions} vendors={this.props.vendors} />)
+              <span className="browse-search-text"> {'(' + _vendors.length + ')'}</span>
             }
-          </Row>
+          </Col>
+          <Col className="search-result-section browse-text addPartner" onClick={this.openModal}>
+            + ADD NEW PARTNER
+            </Col>
+          {
+            this.state.showModal &&
+            (<AddNewVendorModal close={this.closeModal}
+              addVendor={this.addVendor} options={businessUnitOptions} vendors={this.props.vendors} />)
+          }
+        </Row>
+        <VendorSearchList vendors={_vendors} search={search} />
 
-        }
-        {vendorFilter != '' ?
-          <VendorSearchList vendors={_vendors} search={search} /> : ''
-        }
       </div>
     )
   }
@@ -263,10 +219,12 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 const mapStateToProps = (state: any, ownProps: ISearchProps) => {
 
   const vendors = state.entitiesData.vendors.data;
-  const vendorFilter = state.values.vendorFilter
+  let upload = state.upload
+  const vendorFilter = 'All'//state.values.vendorFilter // commented due to no department wise filter displayed all the vendors
   const result = {
     vendors: vendors,
-    vendorFilter: vendorFilter
+    vendorFilter: vendorFilter,
+    upload: upload
   }
   return result
 }

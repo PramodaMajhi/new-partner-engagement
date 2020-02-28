@@ -64,6 +64,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                         <Link to={`/vendor-details/${vendor.id}`} >
                                             <TableCell align="right" className="patientCol ">
                                                 <div className="patient-name-spec">
+                                                    <img src={vendor.profileLogo} style={{height:'50px', width:'100px'}}/>
                                                     <Highlighter
                                                         highlightClassName="YourHighlightClass"
                                                         searchWords={[search]}

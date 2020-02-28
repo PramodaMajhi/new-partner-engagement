@@ -14,7 +14,7 @@ import { throws } from 'assert';
 interface IAddNewVendorModalProps {
     options?: any[],
     vendors?: any,
-    addVendor?: (formData: any, businessUnit: any, maturityLevel: any, processStage: any) => any,
+    addVendor?: (formData: any, businessUnit: any, maturityLevel: any, processStage: any, profileImg:any) => any,
     close?: (name: any) => any,
     dispatch?: (name: any) => any,
 }
@@ -23,6 +23,7 @@ interface IAddNewVendorModalState {
     maturityLevel?: any,
     businessUnit?: any,
     processStage?: any,
+    selectedFile?:[],
     businessUnitError?:boolean,
     maturityError?:boolean,
     domainError?:boolean,
@@ -33,7 +34,13 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     constructor(props) {
         super(props)
         this.state = {
-            maturityLevel: null, businessUnit: null, processStage: null, businessUnitError: false, maturityError:false, domainError: false
+            maturityLevel: null, 
+            businessUnit: null, 
+            processStage: null, 
+            selectedFile:[],
+            businessUnitError: false, 
+            maturityError:false, 
+            domainError: false
         }
     }
     componentWillMount() {
@@ -59,7 +66,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
 
         if (this.state.businessUnitError || this.state.maturityError || domainExist.length === 0 ) {
             const form = event.currentTarget;
-            this.props.addVendor(form, this.state.businessUnit, this.state.maturityLevel, this.state.processStage);
+            this.props.addVendor(form, this.state.businessUnit, this.state.maturityLevel, this.state.processStage, this.state.selectedFile);
             this.props.close(false); // closing popup            
         }  
         if(this.state.businessUnit === null) {
@@ -89,6 +96,9 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
         }
     }
 
+    fileChangedHandler = (event) => {        
+        this.setState({selectedFile: event.target.files});        
+      }
  
     render() {
         const { close, options } = this.props
@@ -132,7 +142,12 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">UPLOAD PROFILE IMAGE*</Form.Label>
-                                <img src={uploadIcon} />
+                                <input style={{display:'none'}} 
+                                        type="file" 
+                                        onChange={this.fileChangedHandler}
+                                        ref={fileInput => this.fileInput = fileInput}
+                                        />
+                                <img src={uploadIcon} onClick={() => this.fileInput.click()}/>
                             </Col>
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">FUNCTIONAL AREAS*</Form.Label>
