@@ -58,7 +58,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     if ((this.props.vendors && nextProps.vendors &&
       (this.props.vendors.length !== nextProps.vendors.length))) {
       this.props.dispatch(startGet('vendors'))
-     // this.props.dispatch(startGet('attachments'))
+      // this.props.dispatch(startGet('attachments'))
       this.setState({ vendors: nextProps.vendors });
     }
   }
@@ -101,7 +101,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       vendorName: formData.name.value,
       businessUnit: businessUnit,
       keyFocusArea: formData.keyfocus.value,
-      website: formData.website.value,      
+      website: formData.website.value,
       domain: domain.toLowerCase(),
       maturityLevel: maturityLevel,
       processStage: processStage,
@@ -113,7 +113,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       },
       bscContact: {
       },
-      attachments:[]
+      attachments: []
 
     }
     let id
@@ -181,37 +181,42 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       });
     }
     return (
-      <div className="container">
-        <div className="searchBar">
-          <SearchBar
-            value={this.state.searchString}
-            onChange={(newValue) => this.handleChange(newValue)}
-            onRequestSearch={(newValue) => this.onRequestSearch(newValue)}
-            style={{
-              margin: '0 auto',
-              maxWidth: 1200
-            }}
-            hintText="Search vendor or keyword" />
+      <>
+        <div className="searchBarContainer">
+          <div className="searchBar">
+            <SearchBar
+              value={this.state.searchString}
+              onChange={(newValue) => this.handleChange(newValue)}
+              onRequestSearch={(newValue) => this.onRequestSearch(newValue)}
+              style={{
+                margin: '0 auto',
+                maxWidth: 1140,               
+              }}
+              hintText="Partner name, contact, or focus area" />
+          </div>
         </div>
-        <Row>
-          <Col className="search-result-section browse-text" >
-            <span className="browse">All Partners</span> <span className="arrow"> > </span>
-            {
-              <span className="browse-search-text"> {'(' + _vendors.length + ')'}</span>
-            }
-          </Col>
-          <Col className="search-result-section browse-text addPartner" onClick={this.openModal}>
-            + ADD NEW PARTNER
-            </Col>
-          {
-            this.state.showModal &&
-            (<AddNewVendorModal close={this.closeModal}
-              addVendor={this.addVendor} options={businessUnitOptions} vendors={this.props.vendors} />)
-          }
-        </Row>
-        <VendorSearchList vendors={_vendors} search={search} />
+        <div className="container">
 
-      </div>
+          <Row>
+            <Col className="search-result-section browse-text" >
+              <span className="browse">All Partners</span> <span className="arrow"> > </span>
+              {
+                <span className="browse-search-text"> {'(' + _vendors.length + ')'}</span>
+              }
+            </Col>
+            <Col className="search-result-section browse-text addPartner" onClick={this.openModal}>
+              + ADD NEW PARTNER
+            </Col>
+            {
+              this.state.showModal &&
+              (<AddNewVendorModal close={this.closeModal}
+                addVendor={this.addVendor} options={businessUnitOptions} vendors={this.props.vendors} />)
+            }
+          </Row>
+          <VendorSearchList vendors={_vendors} search={search} />
+
+        </div>
+      </>
     )
   }
 }

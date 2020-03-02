@@ -302,7 +302,7 @@
 }
 .rectangle {	  
     height: 80px;
-    background-color: #fff;
+    background-color:#FFFFFF;
     box-shadow: 0px 4px 12px -1px rgba(163,175,191,.14);
     width: 100%; 
     /* position: fixed;

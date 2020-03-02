@@ -63,11 +63,10 @@
 .btn-log-out {
     font-size: 0.8rem;
 }
-.patientList .patientRow {
-    background: #ffffff;   
-    border-radius: 6px;
-    box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);
-    justify-content: space-between;
+.patientList .patientRow {       
+  border-radius: 6px;       
+  justify-content: space-between;
+  border-bottom: 1px solid #E4E8F1
   }
   
   .patientList .patientCol {
@@ -85,8 +84,7 @@
     width: 14%; 
     
   }
-  .MuiTable-root .patientTable  {
-    height: 12px;
+  .MuiTable-root .patientTable  {    
     width: 100%;
     color: #4E5063;
     font-family: "Century Gothic";
@@ -96,7 +94,10 @@
   }
 
   .MuiTableCell-root.patientTable {
-      color: #8392a5;
+    color: #8392a5;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
   }
 
   .riskOfReadmissionHigh {
@@ -129,7 +130,7 @@
     }
 } */
 .ai-ml-container {
-  width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -191,8 +192,14 @@ tr {
  text-decoration: none;
 } */
 
-.searchBar {
-  margin-top: 50px;
+.searchBar {  
+  padding-top: 60px;
+}
+.searchBarContainer {
+  background-color: #F9FAFC;
+  border-bottom: 1px solid #E4E8F1;
+  height: 210px;
+  width: 100%;
 }
 
 .searchBar > div {
@@ -345,13 +352,17 @@ tr {
   background-color: transparent;
 }
 .addPartner {
-  color: #0079D0;
+  color: #0095DA;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 17px;
-  text-align: center;
+  text-align: right;
 }
 .addPartner:hover {
   cursor: pointer;
+}
+.tableHeader {  
+background: #F9FAFC;
+border-radius: 10px;
 }
