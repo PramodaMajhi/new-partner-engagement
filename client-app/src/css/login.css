@@ -12,36 +12,54 @@
 }
 
 #loginPageTitle {
-  margin-top: 4.0rem !important;
+  margin-top: 3.0rem !important;
   text-align: center;
 }
 
 .control-label {
     font-size: 20px;
-    width: 70%;
+    width: 459px;
     margin-bottom: 20px;
     text-align: left;
 }
 
 #loginForm label[for="root_email"] {
-    font-size: 20px;
-    width: 70%;
+    font-size: 12px;
+    width: 459px;
     margin-bottom: 20px;
     text-align: left;
+    font-weight: bold;    
+    line-height: 15px;
+    color: #5A6573;
 }
 
-#loginForm label[for="root_password"] {
-    font-size: 20px;
-    width: 70%;
+#loginForm label[for="root_password"] {    
+    width: 459px;
     margin-bottom: 20px;
     text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5A6573;
 }
 
 .form-group .form-control {
-    width: 70%;
+    width: 459px;
     margin: auto;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #A3AFBF;
+    box-sizing: border-box;
+    border-radius: 6px;
 }
 
+.heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #1C2D41;
+}
 .btn-log-in {
     color: #fff;
     background-color: #3480c7;
@@ -49,13 +67,22 @@
     border-radius: 15px;    
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn-block {
+  display: inline-block;
+  width: 459px;
 }
 
 .login-error {
     text-align: left;
-    width: 70%;
+    width: 459px;
     margin: auto;
     color: red;
 }

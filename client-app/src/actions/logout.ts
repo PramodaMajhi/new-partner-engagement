@@ -1,9 +1,10 @@
 import apiClient from '../util/api-client';
-
+import { LOGOUT, ACCESS_TOKEN } from './types';
 export const logout = (accessToken, cb:any = null) => {
   return (dispatch) => {
-    const promise = apiClient.post('/api/sdmusers/logout')
+    const promise = apiClient.post('/appusers/logout')
     .then(response => {
+      dispatch({ type: LOGOUT, payload: null });
       if (response.data.error) {
         return;
       }
@@ -27,7 +28,7 @@ export const updateTTL = () => {
       created: new Date()
   };
 
-  const accessTokenUrl = `/api/sdmusers/${userInfo.id}/accessTokens/${accessToken}`;
+  const accessTokenUrl = `/appusers/${userInfo.id}/accessTokens/${accessToken}`;
   apiClient.request({
       method: 'PUT',
       url: accessTokenUrl,

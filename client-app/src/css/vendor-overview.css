@@ -300,13 +300,12 @@
 .group-copy-text {
 
 }
-.rectangle {	  
-    height: 80px;
-    background-color:#FFFFFF;
+.rectangle {	        
+    background-color: #FFFFFF;
     box-shadow: 0px 4px 12px -1px rgba(163,175,191,.14);
-    width: 100%; 
-    /* position: fixed;
-    top: 0; */
+    justify-content: space-between;
+    padding: 0px 40px;
+    margin: 12px auto;
 }
 
 .rectangle .nav {
@@ -323,7 +322,7 @@
 }
 
 .logo {
-    width: 80%;
+    width: 70%;
 }
 
 @media screen and (max-width:992px) {
