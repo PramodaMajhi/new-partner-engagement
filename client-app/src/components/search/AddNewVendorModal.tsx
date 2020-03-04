@@ -7,7 +7,7 @@ import { businessUnitOptions, maturityLevelOptions, processStageOptions } from '
 import './AddNewVendorModal.css';
 import { connect } from 'react-redux';
 import uploadIcon from '../../img/Upload@2x.png'
-import PhoneInput, { formatPhoneNumber, formatPhoneNumberIntl, isValidPhoneNumber } from 'react-phone-number-input'
+import PhoneInput, { formatPhoneNumber, formatPhoneNumberIntl, isValidPhoneNumber , isPossiblePhoneNumber} from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 
 
@@ -28,7 +28,7 @@ interface IAddNewVendorModalState {
     maturityError?: boolean,
     domainError?: boolean,
     phone?: string,
-    phoneError?: string,
+    isValidPh?: boolean,
 
 
 }
@@ -45,7 +45,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
             maturityError: false,
             domainError: false,
             phone: '',
-            phoneError: '',
+            isValidPh: true,
         }
     }
     componentWillMount() {
@@ -56,11 +56,19 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     }
 
     addVendor = (event) => {
-        if (isValidPhoneNumber(this.state.phone)) {
-            this.setState({ phoneError: "Enter valid phone#" })
-        }
+        
 
         event.preventDefault();
+
+        if (this.state.phone !== '') {
+            let isValid = isPossiblePhoneNumber(this.state.phone)
+
+            if (!isValid) {
+                this.setState({ isValidPh: isValid })
+                return                
+            }
+
+        }
         let domainExist;
         if (this.props.vendors.length) {
             let urlObj = url.parse(event.currentTarget.website.value);
@@ -115,13 +123,6 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
 
     render() {
         const { close, options } = this.props
-        const { } = this.state;
-        let isValid 
-        if(this.state.phone!==null) { 
-             isValid = isValidPhoneNumber(this.state.phone)    
-        }
-        
-        console.log(isValid)
         const modal = (
             <Modal isOpen={true}
                 contentLabel="Modal"
@@ -232,9 +233,9 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     value={this.state.phone}
                                     onChange={this.setPhoneNumber} />
 
-                                    {
-                                        isValid ?  null : <span style={{color:'red'}}></span>
-                                    }
+                                {
+                                    this.state.isValidPh === true ? null : <span style={{ color: 'red' }}> Enter correct phone#</span>
+                                }
                             </Col>
                         </Row>
 
