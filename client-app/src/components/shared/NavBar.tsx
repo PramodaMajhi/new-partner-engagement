@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Button, Form, Nav, FormLabel, Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { RouteComponentProps, withRouter } from 'react-router';
+import { RouteComponentProps, withRouter, RouteProps } from 'react-router';
 import profile from '../../img/profile-clinician@2x.png'
 import logo from '../../img/logo_bsc@2x.png'
 import './navbar.css'
@@ -17,7 +17,7 @@ interface INavBarDispProps {
     dispatch?: (name: any) => any
 }
 
-class navBar extends React.Component<INavBarDispProps & RouteComponentProps, {}> {
+class navBar extends React.Component<INavBarDispProps & RouteComponentProps<any>, any> {
 
 
     handleLogout = async () => {
@@ -73,13 +73,13 @@ export const NavBar = connect(mapStateToProps)(withRouter(navBar));
 export const LogOut = (props) => {
     const { handleLogout, currentUser } = props
     console.log(currentUser);
-   let localStoreCurrUser = JSON.parse(localStorage.getItem("loggedinUser"))
-    
+    let localStoreCurrUser = JSON.parse(localStorage.getItem("loggedinUser"))
+
     return (
         <>
             <Button variant="outline-info" className="btn btn-outline-primary mr-sm-3" onClick={handleLogout}>LOGOUT</Button>
             <Col className="user-section">
-                <div className="userName">{localStoreCurrUser ? (localStoreCurrUser.firstName +' ' + localStoreCurrUser.lastName) :''}</div>
+                <div className="userName">{localStoreCurrUser ? (localStoreCurrUser.firstName + ' ' + localStoreCurrUser.lastName) : ''}</div>
                 <div className="designation">{localStoreCurrUser.username}</div>
             </Col>
         </>
