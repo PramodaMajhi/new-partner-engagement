@@ -11,7 +11,7 @@ import  {NavBar}  from './components/shared/NavBar'
 export const Routes = () =>
   (
     <div>
-       {<NavBar/>}
+       {<NavBar match={null} location={null} history={null} />}
       <Switch>
         <Route exact path="/" component={Login} />       
         <Route exact path="/login" component={Login} />   
