@@ -5,12 +5,12 @@ export const GET_SUCCESS = 'GET_SUCCESS'
 export const GET_FAILURE = 'GET_FAILURE'
 
 
-export const startGet = (entityName: string, filter?: object, replace = true) => {
+export const startGet = (entityName: string, filter?, replace = true) => {
   return (dispatch: any) => {
     dispatch({ type: GET_STARTED, entityName })
     let endpoint = `/${entityName}`
     if (filter) {
-      endpoint = `/${entityName}/${(filter as any).id}/files`
+      endpoint = `/${entityName}/${filter.id}/files`
     }
     apiClient.get(endpoint)
       .then(res => {

@@ -61,7 +61,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
         if ((this.props.vendor.id !== nextProps.vendor.id)) {
             this.props.dispatch(startGet('vendors'))
             let filter = {
-                id: this.props.vendor[0].id
+                id: this.props.vendor[0] ? this.props.vendor[0].id : null
             }
             this.props.dispatch(startGet("attachments", filter))
 
