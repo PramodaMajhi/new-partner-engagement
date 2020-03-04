@@ -89,7 +89,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     this.setState({ showModal: false, })
   }
 
-  addVendor = async (formData, businessUnit, maturityLevel, processStage, profileImg) => {
+  addVendor = async (formData, businessUnit, maturityLevel, processStage, profileImg, phone) => {
 
     if (formData && businessUnit) {
       console.log(businessUnit)
@@ -108,12 +108,13 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       vendorContact: {
         name: formData.contactName.value,
         title: formData.title.value,
-        phone: formData.phone.value,
+        phone: phone,
         email: formData.email.value
       },
       bscContact: {
       },
-      attachments: []
+      attachments: [],
+      events:[]
 
     }
     let id
@@ -133,11 +134,14 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
   fileUpload = async (containerName, profileImg) => {
     await startUpload(containerName.name, profileImg)(this.props.dispatch)
     let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api'
-    let vendorObj = {
-      id: containerName.name,
-      profileLogo: `${imageLogoUrl}/attachments/${containerName.name}/download/${profileImg[0].name}`
+
+    if (profileImg.length) {
+      let vendorObj = {
+        id: containerName.name,
+        profileLogo: `${imageLogoUrl}/attachments/${containerName.name}/download/${profileImg[0].name}`
+      }
+      await startMerge('vendors', vendorObj)
     }
-    await startMerge('vendors', vendorObj)
     this.props.dispatch(startGet('vendors'));
   }
 
@@ -190,7 +194,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
               onRequestSearch={(newValue) => this.onRequestSearch(newValue)}
               style={{
                 margin: '0 auto',
-                maxWidth: 1140,               
+                maxWidth: 1140,
               }}
               hintText="Partner name, contact, or focus area" />
           </div>

@@ -10,7 +10,7 @@ export const startGet = (entityName: string, filter?: object, replace = true) =>
     dispatch({ type: GET_STARTED, entityName })
     let endpoint = `/${entityName}`
     if (filter) {
-      endpoint = `/${entityName}/${filter.id}/files`
+      endpoint = `/${entityName}/${(filter as any).id}/files`
     }
     apiClient.get(endpoint)
       .then(res => {

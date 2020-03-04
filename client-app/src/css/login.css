@@ -82,7 +82,7 @@
 
 .login-error {
     text-align: left;
-    width: 459px;
+    width: 459px+;
     margin: auto;
     color: red;
 }
