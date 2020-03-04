@@ -2,7 +2,7 @@ import { GET_STARTED, GET_SUCCESS, INSERT_SUCCESS, GET_FAILURE } from '../action
 
 
 export const getDefaultEntities = () => {
-    const entities = ['vendors']
+    const entities = ['vendors','attachments']
     const def = {}
     entities.forEach(e => {
         def[e] = {

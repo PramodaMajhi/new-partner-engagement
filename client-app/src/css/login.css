@@ -12,36 +12,54 @@
 }
 
 #loginPageTitle {
-  margin-top: 4.0rem !important;
+  margin-top: 3.0rem !important;
   text-align: center;
 }
 
 .control-label {
     font-size: 20px;
-    width: 70%;
+    width: 459px;
     margin-bottom: 20px;
     text-align: left;
 }
 
 #loginForm label[for="root_email"] {
-    font-size: 20px;
-    width: 70%;
+    font-size: 12px;
+    width: 459px;
     margin-bottom: 20px;
     text-align: left;
+    font-weight: bold;    
+    line-height: 15px;
+    color: #5A6573;
 }
 
-#loginForm label[for="root_password"] {
-    font-size: 20px;
-    width: 70%;
+#loginForm label[for="root_password"] {    
+    width: 459px;
     margin-bottom: 20px;
     text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5A6573;
 }
 
 .form-group .form-control {
-    width: 70%;
+    width: 459px;
     margin: auto;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #A3AFBF;
+    box-sizing: border-box;
+    border-radius: 6px;
 }
 
+.heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #1C2D41;
+}
 .btn-log-in {
     color: #fff;
     background-color: #3480c7;
@@ -49,13 +67,22 @@
     border-radius: 15px;    
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn-block {
+  display: inline-block;
+  width: 459px;
 }
 
 .login-error {
     text-align: left;
-    width: 70%;
+    width: 459px;
     margin: auto;
     color: red;
 }
@@ -63,11 +90,10 @@
 .btn-log-out {
     font-size: 0.8rem;
 }
-.patientList .patientRow {
-    background: #ffffff;   
-    border-radius: 6px;
-    box-shadow: 0 2px 3px -1px rgba(0,0,0,0.12);
-    justify-content: space-between;
+.patientList .patientRow {       
+  border-radius: 6px;       
+  justify-content: space-between;
+  border-bottom: 1px solid #E4E8F1
   }
   
   .patientList .patientCol {
@@ -85,8 +111,7 @@
     width: 14%; 
     
   }
-  .MuiTable-root .patientTable  {
-    height: 12px;
+  .MuiTable-root .patientTable  {    
     width: 100%;
     color: #4E5063;
     font-family: "Century Gothic";
@@ -96,7 +121,10 @@
   }
 
   .MuiTableCell-root.patientTable {
-      color: #8392a5;
+    color: #8392a5;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
   }
 
   .riskOfReadmissionHigh {
@@ -129,7 +157,7 @@
     }
 } */
 .ai-ml-container {
-  width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -191,8 +219,14 @@ tr {
  text-decoration: none;
 } */
 
-.searchBar {
-  margin-top: 50px;
+.searchBar {  
+  padding-top: 60px;
+}
+.searchBarContainer {
+  background-color: #F9FAFC;
+  border-bottom: 1px solid #E4E8F1;
+  height: 210px;
+  width: 100%;
 }
 
 .searchBar > div {
@@ -305,7 +339,7 @@ tr {
 
 }
 .row-padding {
-  padding: 60px; 
+  padding: 60px 0px; 
 }
 .nav {
 
@@ -331,10 +365,8 @@ tr {
   color: #8392A5;
 }
 .text-notes {
-  font-size: 14px;
-  padding-left: 14px;
-  margin-top: 12px;
-  margin-bottom: 35px;
+  font-size: 16px;
+  padding: 14px 0px;
 }
 .vendor-result {
   font-size: 18px;
@@ -345,4 +377,19 @@ tr {
   color: #8392A5;
   text-decoration: none;
   background-color: transparent;
+}
+.addPartner {
+  color: #0095DA;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+}
+.addPartner:hover {
+  cursor: pointer;
+}
+.tableHeader {  
+background: #F9FAFC;
+border-radius: 10px;
 }

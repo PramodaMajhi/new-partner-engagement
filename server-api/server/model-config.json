@@ -16,6 +16,10 @@
     "dataSource": "db",
     "public": true
   },
+  "attachment": {
+    "dataSource": "storage",
+    "public": true
+  },
   "appuser": {
     "dataSource": "db",
     "public": true

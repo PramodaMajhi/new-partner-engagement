@@ -6,11 +6,11 @@ export const MERGE_FAILURE = 'MERGE_FAILURE'
 
 
 export const startMerge = (entityName: string, entity) => {
-  apiClient.put(`/${entityName}/${entity.id}`, entity)
+  let promise = apiClient.patch(`/${entityName}/${entity.id}`, entity)
     .then(response => {
       return response
     }).catch(err => {
-     // throw new Error(err);     
+      // throw new Error(err);     
     });
-
+  return promise
 }

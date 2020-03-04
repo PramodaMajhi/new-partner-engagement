@@ -11,11 +11,20 @@
     "vendorName": {
       "type": "string"
     },
-    "businessType": {
+    "imageUrl": {
+      "type":"string"
+    },
+    "website":{
+      "type":"string"
+    },
+    "domain":{
+      "type":"string"
+    }, 
+    "keyFocusArea": {
       "type": "string"
     },
     "businessUnit":{
-      "type":"string"
+      "type":"object"
     },
     "vendorContact": {
       "type":"object"
@@ -23,8 +32,20 @@
     "bscContact": {
       "type":"object"
     },
-    "engagementLevel": {
+    "maturityLevel": {
+      "type":"object"
+    },
+    "processStage": {
+      "type":"object"
+    },
+    "profileLogo": {
       "type":"string"
+    },
+    "hasAttachment":{
+      "type":"boolean"
+    },
+    "attachments":{
+      "type":"object"
     }
   },
   "validations": [],

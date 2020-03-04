@@ -300,13 +300,12 @@
 .group-copy-text {
 
 }
-.rectangle {	  
-    height: 80px;
-    background-color: #fff;
+.rectangle {	        
+    background-color: #FFFFFF;
     box-shadow: 0px 4px 12px -1px rgba(163,175,191,.14);
-    width: 100%; 
-    /* position: fixed;
-    top: 0; */
+    justify-content: space-between;
+    padding: 0px 40px;
+    margin: 12px auto;
 }
 
 .rectangle .nav {
@@ -323,7 +322,7 @@
 }
 
 .logo {
-    width: 80%;
+    width: 70%;
 }
 
 @media screen and (max-width:992px) {
@@ -390,4 +389,17 @@
 }
 .carrot {
     margin-right: 5px;
+}
+.tabText {
+    margin: 0px 12px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.tabTextImg {
+   
+}
+.tabTextImg img {
+    width: 14px;
+    height: auto;
 }

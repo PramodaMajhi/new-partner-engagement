@@ -1,0 +1,205 @@
+.submitGroup {
+    margin: 30px;
+    min-width: 500px;
+    max-width: 1000px;
+  }
+  
+  .tenantSelectAndLink {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .oneThird {
+    flex: 1 1 33%;
+  }
+  
+  .challengeLink {
+    flex: 1 0 auto;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    border-radius: 7px;
+    outline: none;
+    padding: 0 20px 20px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow:  0px 0px 55px 10px rgba(0,0,0,0.75);
+  }
+  
+  .attachModal {
+    composes: modal;
+    width: 35rem;
+    margin-top: 30px;
+  }
+  
+  .warning {  
+    color: red;
+    margin-bottom: 15px;
+    font-size: .8rem;
+    font-weight: bold;
+  }
+  
+  .dropZone {
+    border: 1px dashed black;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .dropZone:hover {
+    cursor: pointer;
+  }
+  
+  .dropMsg {
+    font-weight: 600;
+    color: #4e5063;
+  }
+  
+  .finePrint {
+    font-size: .7rem;
+    color: #4e5063;
+  }
+  
+  .stdButton {
+    composes: stdButton from '../../css/shared.css';
+  }
+  
+  .whiteButton { 
+    padding: .5rem 1.5rem;
+    background-color: white;
+    font-size: 1.2em;
+    border-radius: 7px;
+    color: grey;
+    text-decoration: none;
+    border: 1px solid #e0dede;
+    margin-right: 20px  
+  }
+  
+  .whiteButton:hover {
+    cursor: pointer;
+  }
+  
+  .attachButton {
+    composes: stdButton from '../../css/shared.css';
+    margin-top: 30px;
+  }
+  
+  .attachButton:hover {
+    cursor: pointer;
+  }
+  
+  .fileList {
+    margin-top: 30px;
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 7px;
+  }
+  
+  .fileList > div {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .file {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+  }
+  
+  .fileRemove {
+    font-size: .7em;
+  }
+  
+  .fileRemove:hover {
+    cursor: pointer;
+  }
+  
+  .fileName {
+    margin-left: 10px;
+  }
+  
+  .uploadError {
+    margin: 10px;
+    color: red;
+  }
+  
+  .uploadFile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .uploadFile > svg {
+    margin: 10px;
+    height: 20px;
+    width: 300px;
+  }
+  
+  .uploadName {
+  
+  }
+  
+  .uploadList {
+  
+  }
+  
+  .thankYou input {
+    margin-left: 40px;
+  }
+  
+  .horzCentered {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .thanksTitle {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  
+  .thanksText {
+    width: 25em;
+    text-align: center;
+    font-size: 2em;
+    color: #2e303c;;
+  }
+  
+  .submitModal {
+    composes: modal;
+    width: 50rem;
+    height: 35rem;  
+  }
+  
+  .title {
+    flex: 0 1 auto;
+    font-size: 3em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+  }
+  
+  .subTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2e303c;;
+    text-align: center;
+    margin-top: 20px;
+  }

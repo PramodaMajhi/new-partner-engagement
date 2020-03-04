@@ -2,8 +2,8 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import Form from "react-jsonschema-form";
 import { RouteComponentProps } from 'react-router';
-import { Row, Col } from 'react-bootstrap';
-import iconBSCLogo from '../../img/BSC-Logo-Lrg@2x.png';
+import { Row, Col, Button } from 'react-bootstrap';
+import iconBSCLogo from '../../img/logo_bsc@2x.png';
 import * as currentUserModel from '../../models/currentUser';
 import { login } from '../../actions/login';
 
@@ -84,7 +84,7 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
   }
 
   render() {
-    
+
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (this.props.loggedinUser) {
       localStorage.setItem("loggedinUser", JSON.stringify(this.props.loggedinUser))
@@ -95,17 +95,21 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
       const termsAccepted = (this.props.loggedinUser && this.props.loggedinUser.termsAccepted)
         || (sessionUser.termsAccepted);
       if (termsAccepted) {
-        this.props.history.push('/patients');
+        this.props.history.push('/search');
       }
     }
 
     return (
-      <div>
+      <div className="container">
         <Row className="justify-content-center" id="loginPageLogo">
-          <img src={iconBSCLogo} />
+          <img src={iconBSCLogo} style={{width: '147px', height: '57px'}}/>
         </Row>
         <Row className="justify-content-center" id="loginPageTitle">
-          <h1>Start Up/vendor Assessment</h1>
+          <h1 className="heading">Welcome to the Partner Transparency Tool</h1>
+         
+        </Row>
+        <Row className="justify-content-center">
+        <h6>Enter your details below</h6>
         </Row>
         {this.props.loginError &&
           <div className='login-error'>invalid email or password, please try again.</div>
@@ -118,14 +122,15 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
           formData={loginFormData}
           FieldTemplate={formFieldsTemplate}>
           <div>
-            <Row>
+            {/* <Row>
               <Col>
-                {/* <Link to="/accountrecovery"><span>Forgot your password?</span></Link> */}
+                <Link to="/accountrecovery"><span>Forgot your password?</span></Link> 
               </Col>
-              <Col>
-                <button className='btn-log-in' type="submit">Log In</button>
-              </Col>
-            </Row>
+               <Col> 
+                {/* <Button className='btn-log-in btn-block' type="submit">LOG IN</Button> 
+              {/* </Col> 
+            </Row> */}
+            <Button className='btn-log-in btn btn-primary btn-block' type="submit">LOG IN</Button>
           </div>
         </Form>
       </div>

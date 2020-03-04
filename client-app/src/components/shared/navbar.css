@@ -1,0 +1,16 @@
+.user-section {
+    text-align: end;
+}
+.userName {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;    
+    color: #1C2D41;
+}
+.designation {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: #A3AFBF;
+}
