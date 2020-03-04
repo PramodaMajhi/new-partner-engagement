@@ -154,7 +154,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                         </Col>
                         {/* <div className="page-header"></div> */}
                         <Col md={4}>
-                            <Form onSubmit={this.addNotes} id="noteform">
+                            <Form onSubmit={this.addNotes} id="noteform" style={{width:'459px'}}>
                                 <Form.Label className="formLabel custom-formLabel recentNotes">Recent Notes</Form.Label>
                                 <Form.Control required as="textarea" className="mb-4"
                                     name="notes" rows="3"
@@ -189,9 +189,9 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                 <Tab eventKey="contact" title={<span className="tabTextImg"><img src={contactIcon} /><span className="tabText">Contacts</span></span>}>
                     <Col className="mt-5">
                         <div className="businessType">{vendor[0].vendorContact.name}</div>
-                        <div className="businessType">{vendor[0].bscContact.title}</div>
-                        <div className="businessType">{vendor[0].bscContact.email}</div>
-                        <div className="businessType">{vendor[0].bscContact.phone}</div>
+                        <div className="businessType">{vendor[0].vendorContact.title}</div>
+                        <div className="businessType">{vendor[0].vendorContact.email}</div>
+                        <div className="businessType">{vendor[0].vendorContact.phone}</div>
                     </Col>
                 </Tab>
                 <Tab eventKey="activity" title={<span className="tabTextImg"><img src={activityIcon} /><span className="tabText">Activity Feed</span></span>}>

@@ -7,14 +7,14 @@ import { businessUnitOptions, maturityLevelOptions, processStageOptions } from '
 import './AddNewVendorModal.css';
 import { connect } from 'react-redux';
 import uploadIcon from '../../img/Upload@2x.png'
-import { userReducer } from '../../reducers/userReducer';
-import { throws } from 'assert';
+import PhoneInput, { formatPhoneNumber, formatPhoneNumberIntl, isValidPhoneNumber } from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 
 
 interface IAddNewVendorModalProps {
     options?: any[],
     vendors?: any,
-    addVendor?: (formData: any, businessUnit: any, maturityLevel: any, processStage: any, profileImg:any) => any,
+    addVendor?: (formData: any, businessUnit: any, maturityLevel: any, processStage: any, profileImg: any, phone: any) => any,
     close?: (name: any) => any,
     dispatch?: (name: any) => any,
 }
@@ -23,10 +23,13 @@ interface IAddNewVendorModalState {
     maturityLevel?: any,
     businessUnit?: any,
     processStage?: any,
-    selectedFile?:[],
-    businessUnitError?:boolean,
-    maturityError?:boolean,
-    domainError?:boolean,
+    selectedFile?: [],
+    businessUnitError?: boolean,
+    maturityError?: boolean,
+    domainError?: boolean,
+    phone?: string,
+    phoneError?: string,
+
 
 }
 
@@ -34,13 +37,15 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     constructor(props) {
         super(props)
         this.state = {
-            maturityLevel: null, 
-            businessUnit: null, 
-            processStage: null, 
-            selectedFile:[],
-            businessUnitError: false, 
-            maturityError:false, 
-            domainError: false
+            maturityLevel: null,
+            businessUnit: null,
+            processStage: null,
+            selectedFile: [],
+            businessUnitError: false,
+            maturityError: false,
+            domainError: false,
+            phone: '',
+            phoneError: '',
         }
     }
     componentWillMount() {
@@ -51,37 +56,41 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     }
 
     addVendor = (event) => {
-        event.preventDefault();        
+        if (isValidPhoneNumber(this.state.phone)) {
+            this.setState({ phoneError: "Enter valid phone#" })
+        }
+
+        event.preventDefault();
         let domainExist;
-        if(this.props.vendors.length){
+        if (this.props.vendors.length) {
             let urlObj = url.parse(event.currentTarget.website.value);
-            domainExist =  this.props.vendors.filter(v => {                
-               return  v.domain === urlObj.hostname.toLowerCase()
+            domainExist = this.props.vendors.filter(v => {
+                return v.domain === urlObj.hostname.toLowerCase()
             })
 
-            if(domainExist.length) {
-                this.setState({domainError:true})
+            if (domainExist.length) {
+                this.setState({ domainError: true })
             }
         }
 
-        if (this.state.businessUnitError || this.state.maturityError || domainExist.length === 0 ) {
+        if (this.state.businessUnitError || this.state.maturityError || domainExist.length === 0) {
             const form = event.currentTarget;
-            this.props.addVendor(form, this.state.businessUnit, this.state.maturityLevel, this.state.processStage, this.state.selectedFile);
+            this.props.addVendor(form, this.state.businessUnit, this.state.maturityLevel, this.state.processStage, this.state.selectedFile, this.state.phone);
             this.props.close(false); // closing popup            
-        }  
-        if(this.state.businessUnit === null) {
-            this.setState({businessUnitError:true})
         }
-        if(this.state.maturityLevel === null) {
-            this.setState({maturityError:true})
+        if (this.state.businessUnit === null) {
+            this.setState({ businessUnitError: true })
         }
-           
+        if (this.state.maturityLevel === null) {
+            this.setState({ maturityError: true })
+        }
+
     }
 
     handleChange = maturityLevel => {
         this.setState({ maturityLevel: maturityLevel });
-        if(maturityLevel===null) {
-            this.setState({maturityError:true})
+        if (maturityLevel === null) {
+            this.setState({ maturityError: true })
         }
     };
 
@@ -91,18 +100,28 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
 
     handleMultiChange = (businessUnit) => {
         this.setState({ businessUnit: businessUnit });
-        if(businessUnit===null) {
-            this.setState({businessUnitError:true})
+        if (businessUnit === null) {
+            this.setState({ businessUnitError: true })
         }
     }
 
-    fileChangedHandler = (event) => {        
-        this.setState({selectedFile: event.target.files});        
-      }
- 
+    fileChangedHandler = (event) => {
+        this.setState({ selectedFile: event.target.files });
+    }
+
+    setPhoneNumber = (phone) => {
+        this.setState({ phone: phone });
+    }
+
     render() {
         const { close, options } = this.props
         const { } = this.state;
+        let isValid 
+        if(this.state.phone!==null) { 
+             isValid = isValidPhoneNumber(this.state.phone)    
+        }
+        
+        console.log(isValid)
         const modal = (
             <Modal isOpen={true}
                 contentLabel="Modal"
@@ -137,17 +156,17 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     type="url"
                                     className="mb-4"
                                     name="website" placeholder="Site url" />
-                                     {this.state.domainError ? (<span className="duplicateDomain">Duplicate found. Please edit original entry</span>) : null}
+                                {this.state.domainError ? (<span className="duplicateDomain">Duplicate found. Please edit original entry</span>) : null}
                             </Col>
-                               
+
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">UPLOAD PROFILE IMAGE*</Form.Label>
-                                <input style={{display:'none'}} 
-                                        type="file" 
-                                        onChange={this.fileChangedHandler}
-                                        ref={fileInput => this.fileInput = fileInput}
-                                        />
-                                <img src={uploadIcon} onClick={() => this.fileInput.click()}/>
+                                <input style={{ display: 'none' }}
+                                    type="file"
+                                    onChange={this.fileChangedHandler}
+                                    ref={fileInput => this.fileInput = fileInput}
+                                />
+                                <img src={uploadIcon} onClick={() => this.fileInput.click()} />
                             </Col>
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">FUNCTIONAL AREAS*</Form.Label>
@@ -158,7 +177,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     lassNamePrefix="assignSelect"
                                     name="businessUnit"
                                     className="mb-4"
-                                    style={{ borderColor: this.state.businessUnitError ? "#b94a48" : "#aaa"}}
+                                    style={{ borderColor: this.state.businessUnitError ? "#b94a48" : "#aaa" }}
                                 />
                             </Col>
                             <Col xs={6}>
@@ -170,7 +189,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     lassNamePrefix="assignSelect"
                                     name="maturityLevel"
                                     className="mb-4"
-                                    style={{ borderColor: this.state.maturityError ? "#b94a48" : "#aaa"}}
+                                    style={{ borderColor: this.state.maturityError ? "#b94a48" : "#aaa" }}
                                 />
                             </Col>
 
@@ -181,7 +200,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
 
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">PARTNERSHIP PROCESS STAGE</Form.Label>
-                                <Select 
+                                <Select
                                     value={this.state.processStage}
                                     options={processStageOptions}
                                     onChange={this.handleProcessStage}
@@ -206,7 +225,16 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                             </Col>
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">PHONE</Form.Label>
-                                <Form.Control type="text" name="phone" className="mb-4" />
+                                {/* <Form.Control type="text" name="phone" className="mb-4" /> */}
+                                <PhoneInput
+                                    defaultCountry="US"
+                                    // className="PhoneInputInput"
+                                    value={this.state.phone}
+                                    onChange={this.setPhoneNumber} />
+
+                                    {
+                                        isValid ?  null : <span style={{color:'red'}}></span>
+                                    }
                             </Col>
                         </Row>
 

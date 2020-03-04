@@ -65,8 +65,8 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                             <TableCell align="right" className="patientCol ">
                                                 <Row className="patient-name-spec">
                                                     <Col xs={4}>
-                                                        <img src={vendor.profileLogo || 'http://via.placeholder.com/100x50'}
-                                                            style={{ height: '50px', width: '100px' }} />
+                                                        <img src={vendor.profileLogo || 'http://via.placeholder.com/50x50'}
+                                                            style={{ height: '50px', width: '50px' }} />
                                                     </Col>
                                                     <Col xs={8}>
                                                         <Highlighter

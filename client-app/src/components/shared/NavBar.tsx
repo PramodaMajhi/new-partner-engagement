@@ -73,13 +73,14 @@ export const NavBar = connect(mapStateToProps)(withRouter(navBar));
 export const LogOut = (props) => {
     const { handleLogout, currentUser } = props
     console.log(currentUser);
+   let localStoreCurrUser = JSON.parse(localStorage.getItem("loggedinUser"))
     
     return (
         <>
             <Button variant="outline-info" className="btn btn-outline-primary mr-sm-3" onClick={handleLogout}>LOGOUT</Button>
             <Col className="user-section">
-                <div className="userName">{currentUser.firstName +' ' + currentUser.lastName}</div>
-                <div className="designation">{currentUser.username}</div>
+                <div className="userName">{localStoreCurrUser ? (localStoreCurrUser.firstName +' ' + localStoreCurrUser.lastName) :''}</div>
+                <div className="designation">{localStoreCurrUser.username}</div>
             </Col>
         </>
     )
