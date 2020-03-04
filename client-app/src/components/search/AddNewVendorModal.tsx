@@ -34,6 +34,7 @@ interface IAddNewVendorModalState {
 }
 
 export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNewVendorModalState> {
+    fileInput: HTMLInputElement;
     constructor(props) {
         super(props)
         this.state = {
