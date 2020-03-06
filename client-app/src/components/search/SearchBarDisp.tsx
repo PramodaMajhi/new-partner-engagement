@@ -23,9 +23,7 @@ import '../../css/login.css';
 
 interface ISearchProps {
   vendors?: any,
-  searchVal?: string,
-  displayVendor?: boolean,
-  upload?: any,
+  searchVal?: string,  
   dispatch?: (name: any) => any,
 }
 interface ISearchState {
@@ -145,8 +143,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
   }
 
   render() {
-    const { vendors, searchVal } = this.props
-    console.log("Rendered");
+    const { vendors, searchVal } = this.props    
 
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (Object.entries(sessionUser).length === 0) {
@@ -197,7 +194,6 @@ const mapStateToProps = (state: any, ownProps: ISearchProps) => {
   const result = {
     vendors: sel.searchPartnersSel(state),
     searchVal: sel.searchFilterSel(state),
-    upload: sel.upload(state)
   }
   return result
 }
