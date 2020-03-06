@@ -18,17 +18,15 @@ import Highlighter from "react-highlight-words";
 import { VendorDetails } from './VendorDetails'
 import { businessUnitOptions } from '.././shared'
 import { AddNewVendorModal } from './AddNewVendorModal'
+import * as sel from '../shared/Selectors'
 import '../../css/login.css';
 
 interface ISearchProps {
   vendors?: any,
-  vendorFilter?: string,
-  displayVendor?: boolean,
-  upload?: any,
+  searchVal?: string,  
   dispatch?: (name: any) => any,
 }
 interface ISearchState {
-  vendors?: any,
   searchString?: string,
   toggle?: boolean,
   showModal?: boolean,
@@ -42,7 +40,6 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     super(props);
     this.state = {
       searchString: "",
-      vendors: [],
       toggle: false,
       showModal: false,
       profileImage: []
@@ -51,28 +48,24 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
   componentDidMount() {
     this.props.dispatch(startGet('vendors'))
-    // this.props.dispatch(startGet('attachments'))
-    this.setState({ vendors: this.props.vendors });
   }
   componentWillReceiveProps(nextProps: ISearchProps) {
     if ((this.props.vendors && nextProps.vendors &&
       (this.props.vendors.length !== nextProps.vendors.length))) {
       this.props.dispatch(startGet('vendors'))
-      // this.props.dispatch(startGet('attachments'))
-      this.setState({ vendors: nextProps.vendors });
     }
   }
 
   handleChange = (newValue: any) => {
     this.setState({ searchString: newValue, toggle: true });
-    this.props.dispatch(setValues({ vendorFilter: 'All' }))
+    this.props.dispatch(setValues({ searchVal: newValue }))
   }
   onRequestSearch = (newValue: any) => {
     console.log("on-search-requested" + newValue);
   }
 
   handlePushSearch = (search) => {
-    this.props.dispatch(setValues({ vendorFilter: search }))
+    this.props.dispatch(setValues({ searchVal: search }))
     // const filteredVendor = this.state.vendors.filter(v => {
     //   return v.businessUnit === search;
     // })
@@ -81,7 +74,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
   }
 
   handleBrowse = () => {
-    this.props.dispatch(setValues({ vendorFilter: '' }))
+    this.props.dispatch(setValues({ searchVal: '' }))
     this.props.history.push('/');
   }
 
@@ -114,7 +107,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       bscContact: {
       },
       attachments: [],
-      events:[]
+      events: []
 
     }
     let id
@@ -150,39 +143,11 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
   }
 
   render() {
-    const { vendors, vendorFilter } = this.props
-    // console.log("Vendor filter ==> " + vendorFilter);
-    // console.log(vendors);
+    const { vendors, searchVal } = this.props    
 
-    let businessUnit = vendorFilter;
-    let filteredVendor = this.state.vendors;
-    if (businessUnit != '' && businessUnit != 'All') {
-      filteredVendor = this.state.vendors.filter(v => {
-        return v.businessUnit === businessUnit;
-      })
-
-    }
-    let engagementLevel = vendorFilter;
-    if (engagementLevel != '' && businessUnit != 'Health Innovation Technology' && businessUnit != 'All') {
-      filteredVendor = this.state.vendors.filter(v => {
-        return v.engagementLevel === engagementLevel;
-      })
-
-    }
-    let _vendors = filteredVendor
-    let search = this.state.searchString.trim().toLowerCase();
-
-    if (search.length > 0) {
-      _vendors = _vendors.filter((vendor) => {
-        // return vendor.vendorName.toLowerCase().match(search) ||
-        //   vendor.businessType.toLowerCase().match(search) ||
-        //   vendor.businessUnit.toLowerCase().match(search) ||
-        //   vendor.bscContact.name.toLowerCase().match(search) ||
-        //   vendor.vendorContact.name.toLowerCase().match(search) ||
-        //   vendor.engagementLevel.toLowerCase().match(search)
-        //   ;
-        return
-      });
+    const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
+    if (Object.entries(sessionUser).length === 0) {
+      this.props.history.push('/login');
     }
     return (
       <>
@@ -205,7 +170,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
             <Col className="search-result-section browse-text" >
               <span className="browse">All Partners</span> <span className="arrow"> > </span>
               {
-                <span className="browse-search-text"> {'(' + _vendors.length + ')'}</span>
+                <span className="browse-search-text"> {'(' + vendors.length + ')'}</span>
               }
             </Col>
             <Col className="search-result-section browse-text addPartner" onClick={this.openModal}>
@@ -217,7 +182,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
                 addVendor={this.addVendor} options={businessUnitOptions} vendors={this.props.vendors} />)
             }
           </Row>
-          <VendorSearchList vendors={_vendors} search={search} />
+          <VendorSearchList vendors={vendors} search={searchVal} />
 
         </div>
       </>
@@ -226,14 +191,9 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 }
 
 const mapStateToProps = (state: any, ownProps: ISearchProps) => {
-
-  const vendors = state.entitiesData.vendors.data;
-  let upload = state.upload
-  const vendorFilter = 'All'//state.values.vendorFilter // commented due to no department wise filter displayed all the vendors
   const result = {
-    vendors: vendors,
-    vendorFilter: vendorFilter,
-    upload: upload
+    vendors: sel.searchPartnersSel(state),
+    searchVal: sel.searchFilterSel(state),
   }
   return result
 }

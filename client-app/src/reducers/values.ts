@@ -2,7 +2,7 @@ import { SET_VALUES } from '../actions/values'
 import {IValues, IOption} from '../store'
 
 const init : IValues = {   
-  vendorFilter: "",
+  searchVal: "",
     
 }
 
