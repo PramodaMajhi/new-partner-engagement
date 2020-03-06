@@ -86,6 +86,7 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
   render() {
 
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
+
     if (this.props.loggedinUser) {
       localStorage.setItem("loggedinUser", JSON.stringify(this.props.loggedinUser))
       localStorage.setItem("accessToken", JSON.stringify(this.props.accessToken))
@@ -102,14 +103,14 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
     return (
       <div className="container">
         <Row className="justify-content-center" id="loginPageLogo">
-          <img src={iconBSCLogo} style={{width: '147px', height: '57px'}}/>
+          <img src={iconBSCLogo} style={{ width: '147px', height: '57px' }} />
         </Row>
         <Row className="justify-content-center" id="loginPageTitle">
           <h1 className="heading">Welcome to the Partner Transparency Tool</h1>
-         
+
         </Row>
         <Row className="justify-content-center">
-        <h6>Enter your details below</h6>
+          <h6>Enter your details below</h6>
         </Row>
         {this.props.loginError &&
           <div className='login-error'>invalid email or password, please try again.</div>

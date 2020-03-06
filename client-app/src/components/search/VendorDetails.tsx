@@ -154,7 +154,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                         </Col>
                         {/* <div className="page-header"></div> */}
                         <Col md={4}>
-                            <Form onSubmit={this.addNotes} id="noteform" style={{width:'459px'}}>
+                            <Form onSubmit={this.addNotes} id="noteform" style={{ width: '459px' }}>
                                 <Form.Label className="formLabel custom-formLabel recentNotes">Recent Notes</Form.Label>
                                 <Form.Control required as="textarea" className="mb-4"
                                     name="notes" rows="3"
@@ -166,7 +166,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 
                             {
                                 events ? events.map((e, i) => {
-                                    return (<Row key={i}>
+                                    return (<Row key={i} className="mt-3">
                                         <Col xs={6}>
                                             <div className="notes-name">{e.name}</div>
                                         </Col>
