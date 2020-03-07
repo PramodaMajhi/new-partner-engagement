@@ -11,9 +11,11 @@ export const filterBySearch = (vendors, searchVal: string) => {
         normalize(v.vendorName).includes(search)
         || normalize(v.processStage.label).includes(search)
         || normalize(v.vendorContact.name).includes(search)
+        || normalize(v.keyFocusArea).includes(search)
         || v.businessUnit.find(b => {          
             return normalize(b.label).includes(search)
         })
+
 
     )  // note exact match, not partial
     return result
