@@ -74,8 +74,9 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 
     addNotes = (e) => {
         e.preventDefault();
+        let localStoreCurrUser = JSON.parse(localStorage.getItem("loggedinUser"))
         let note = {
-            "name": "TestAdmin TestAdmin",
+            "name": localStoreCurrUser ? (localStoreCurrUser.firstName + ' ' + localStoreCurrUser.lastName) : '',
             "date": new Date(),
             "text": e.currentTarget.notes.value
         }
@@ -91,8 +92,13 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 
     }
 
-    getAge = birthDate => {
-        return Math.floor((new Date().getTime() - new Date(birthDate).getTime()) / 3.15576e+10)
+    getTimeStamp = (date) => {
+        var time = new Date(date);
+        return time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
+    }
+    getDateAndYear = (date) => {
+        var time = new Date(date);
+        return time.toLocaleString('en-US', {month: 'short', day: '2-digit', year: 'numeric' })
     }
 
     notesOnChange = (e) => {
@@ -111,7 +117,8 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
         return (<div className="ai-ml-container">
             <div className="vendor-result"> <Link to={`/`}><span className="carrot">&lt;</span>All Partners</Link></div>
             <Tabs defaultActiveKey="profile" id="vendor-detail">
-                <Tab eventKey="profile" title={<span className="tabTextImg"><img src={profileIcon} /><span className="tabText">Profile</span></span>}>
+                <Tab eventKey="profile" title={<span className="tabTextImg">
+                    <img src={profileIcon} /><span className="tabText">Profile</span></span>}>
                     <Row className="row-padding">
                         <Col md={8}>
                             <div className="vendorName">{vendor[0].vendorName}</div>
@@ -154,39 +161,48 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                         </Col>
                         {/* <div className="page-header"></div> */}
                         <Col md={4}>
-                            <Form onSubmit={this.addNotes} id="noteform" style={{ width: '459px' }}>
+                            <Form onSubmit={this.addNotes} id="noteform">
                                 <Form.Label className="formLabel custom-formLabel recentNotes">Recent Notes</Form.Label>
                                 <Form.Control required as="textarea" className="mb-4"
                                     name="notes" rows="3"
                                     value={this.state.notes}
                                     onChange={this.notesOnChange}
                                     placeholder="Write a note..." />
-                                <Button type="submit" className="btn btn-primary btn-block mb-4">POST</Button>
+                                <Button type="submit" className="btn btn-primary mb-4" style={{ width: '100%' }}>POST</Button>
                             </Form>
 
                             {
                                 events ? events.map((e, i) => {
-                                    return (<Row key={i} className="mt-3">
-                                        <Col xs={6}>
-                                            <div className="notes-name">{e.name}</div>
-                                        </Col>
-                                        <Col xs={6}>
-                                            <div className="time-ago">
-                                                <ReactTimeAgo date={e.date} />
-                                            </div>
-                                        </Col>
-                                        <Col xs={12}>
-                                            <div className="text-notes">
-                                                {e.text}
-                                            </div>
-                                        </Col>
-                                    </Row>)
+                                    return (<div key={i} className="mt-3 mb-4 pb-4 notes-border-bottom">
+                                        <div className="notes-name">{e.name}</div>
+
+                                        <div className="text-notes">
+                                            {e.text}
+                                        </div>
+
+                                        <div className="time-ago">
+                                            <ReactTimeAgo date={e.date} style={{marginRight:'14px'}}/> 
+                                            <span>{this.getTimeStamp(e.date)}</span>
+                                            <span style={{marginLeft:'6px', marginRight:'6px'}}>&#xb7;</span>
+                                            <span>{this.getDateAndYear(e.date)}</span>
+                                        </div>
+
+                                    </div>)
                                 }) : null
                             }
                         </Col>
                     </Row>
                 </Tab>
-                <Tab eventKey="contact" title={<span className="tabTextImg"><img src={contactIcon} /><span className="tabText">Contacts</span></span>}>
+                <Tab eventKey="attachment" title={<span className="tabTextImg">
+                    <img src={attachIcon} />
+                    <span className="tabText">Attachments</span></span>}>
+                    <Col className="mt-5">
+                        <Attachments vendor={vendor} />
+                    </Col>
+                </Tab>
+                <Tab eventKey="contact" title={<span className="tabTextImg">
+                    <img src={contactIcon} />
+                    <span className="tabText">Contacts</span></span>}>
                     <Col className="mt-5">
                         <div className="businessType">{vendor[0].vendorContact.name}</div>
                         <div className="businessType">{vendor[0].vendorContact.title}</div>
@@ -194,14 +210,10 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                         <div className="businessType">{vendor[0].vendorContact.phone}</div>
                     </Col>
                 </Tab>
-                <Tab eventKey="activity" title={<span className="tabTextImg"><img src={activityIcon} /><span className="tabText">Activity Feed</span></span>}>
+                <Tab eventKey="activity" title={<span className="tabTextImg">
+                    <img src={activityIcon} /><span className="tabText">Activity Feed</span></span>}>
                     <Col className="mt-5">
                         <div>TBD</div>
-                    </Col>
-                </Tab>
-                <Tab eventKey="attachment" title={<span className="tabTextImg"><img src={attachIcon} /><span className="tabText">Attachments</span></span>}>
-                    <Col className="mt-5">
-                        <Attachments vendor={vendor} />
                     </Col>
                 </Tab>
             </Tabs>

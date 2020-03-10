@@ -9,7 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import '../../css/login.css';
 import iconCirle from '../../img/icon-circle-care@2x.png';
-import searchBar from '../../img/search-bar.png';
+import profileLarge from '../../img/profile-lg@2x.png';
 import apiClient from '../../util/api-client';
 import Highlighter from "react-highlight-words";
 // export enum RiskLevelEnum {
@@ -48,7 +48,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                     <Table className="patientTable">
                         <TableHead>
                             <TableRow className="tableHeader">
-                                <TableCell className="patientTable">PARTNER NAME &amp; KEY FOCUS AREAS</TableCell>
+                                <TableCell className="patientTable" style={{ minWidth: '360px' }}>PARTNER NAME &amp; KEY FOCUS AREAS</TableCell>
                                 <TableCell className="patientTable">PROCESS STAGE</TableCell>
                                 <TableCell className="patientTable">FUNCTIONAL AREAS</TableCell>
                                 <TableCell className="patientTable">COMPANY CONTACTS</TableCell>
@@ -62,11 +62,19 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
 
                                     <TableRow className="patientRow" key={i}>
                                         <Link to={`/vendor-details/${vendor.id}`} >
-                                            <TableCell align="right" className="patientCol ">
+                                            <TableCell align="right" className="patientCol " style={{ minWidth: '360px' }}>
                                                 <Row className="patient-name-spec">
                                                     <Col xs={4}>
-                                                        <img src={vendor.profileLogo || 'http://via.placeholder.com/50x50'}
-                                                            style={{ height: '50px', width: '50px' }} />
+                                                        {/* <img src={vendor.profileLogo || 'http://via.placeholder.com/50x50'}
+                                                            style={{ height: '50px', width: '50px' }} /> */}
+
+
+                                                        <div className="profile-Img" 
+                                                             style={{ background: `url(${vendor.profileLogo || profileLarge})` }}>
+                                                        </div>
+
+
+
                                                     </Col>
                                                     <Col xs={8}>
                                                         <Highlighter
@@ -75,11 +83,16 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                                             autoEscape={true}
                                                             textToHighlight={vendor.vendorName}
                                                         />
-                                                        <div>{vendor.keyFocusArea}</div>
+                                                        {/* <div>{vendor.keyFocusArea}</div> */}
+                                                        <div className="key-focus-area">
+                                                        <Highlighter
+                                                            highlightClassName="YourHighlightClass"
+                                                            searchWords={[search]}
+                                                            autoEscape={true}
+                                                            textToHighlight={vendor.keyFocusArea}
+                                                        /> </div>
                                                     </Col>
                                                 </Row>
-
-
                                             </TableCell>
                                         </Link>
                                         <TableCell align="right" className="patientCol">
@@ -112,20 +125,6 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                                 textToHighlight={vendor.vendorContact.name}
                                             />
                                         </TableCell>
-                                        {/* <TableCell align="right" className="patientCol">
-
-                                            <Highlighter
-                                                highlightClassName="YourHighlightClass"
-                                                searchWords={[search]}
-                                                autoEscape={true}
-                                                textToHighlight={vendor.bscContact.name}
-                                            />
-                                        </TableCell> */}
-                                        {/* <TableCell align="right" className="patientCol">{this.createGlimpse(vendor.careDetails.facility, 20)}</TableCell>
-                                            
-                                            
-                                               
-                                                  */}
                                     </TableRow>)
                             })}
 

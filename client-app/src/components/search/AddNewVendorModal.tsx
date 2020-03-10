@@ -7,7 +7,7 @@ import { businessUnitOptions, maturityLevelOptions, processStageOptions } from '
 import './AddNewVendorModal.css';
 import { connect } from 'react-redux';
 import uploadIcon from '../../img/Upload@2x.png'
-import PhoneInput, { formatPhoneNumber, formatPhoneNumberIntl, isValidPhoneNumber , isPossiblePhoneNumber} from 'react-phone-number-input'
+import PhoneInput, {isPossiblePhoneNumber} from 'react-phone-number-input/input'
 import 'react-phone-number-input/style.css'
 
 
@@ -40,7 +40,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
         this.state = {
             maturityLevel: null,
             businessUnit: null,
-            processStage: null,
+            processStage: {},
             selectedFile: [],
             businessUnitError: false,
             maturityError: false,
@@ -230,7 +230,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 {/* <Form.Control type="text" name="phone" className="mb-4" /> */}
                                 <PhoneInput
                                     defaultCountry="US"
-                                    // className="PhoneInputInput"
+                                    className="PhoneInputInput"
                                     value={this.state.phone}
                                     onChange={this.setPhoneNumber} />
 

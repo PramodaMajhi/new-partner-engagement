@@ -168,7 +168,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
           <Row>
             <Col className="search-result-section browse-text" >
-              <span className="browse">All Partners</span> <span className="arrow"> > </span>
+              <span className="browse">All Partners</span> <span className="arrow"></span>
               {
                 <span className="browse-search-text"> {'(' + vendors.length + ')'}</span>
               }
