@@ -403,3 +403,7 @@
     width: 14px;
     height: auto;
 }
+
+.notes-border-bottom {
+   border-bottom: 1px solid #E4E8F1;
+}
