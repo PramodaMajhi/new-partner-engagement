@@ -10,12 +10,11 @@ import uploadIcon from '../../img/Upload@2x.png'
 import PhoneInput, { isPossiblePhoneNumber } from 'react-phone-number-input/input'
 import 'react-phone-number-input/style.css'
 
-interface IAddNewVendorModalProps {
-    options?: any[],
+interface IAddNewVendorModalProps {    
     vendors?: any,
     singleVendor?: any,
     isEdit?: boolean,
-    addVendor?: (singleVendor, profileImg: any) => any,
+    addVendor?: (vendor, profileImg: any) => any,
     close?: (name: any) => any,
     dispatch?: (name: any) => any,
 }
@@ -30,7 +29,7 @@ interface IAddNewVendorModalState {
     domainError?: boolean,
     phone?: string,
     isValidPh?: boolean,
-    singleVendor?: any
+    vendor?: any
 
 
 }
@@ -49,7 +48,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
             domainError: false,
             phone: '',
             isValidPh: true,
-            singleVendor: this.props ? this.props.singleVendor : []
+            vendor: this.props ? this.props.singleVendor : []
 
         }
     }
@@ -86,10 +85,8 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
             }
         }
 
-        this.props.addVendor(this.state.singleVendor[0], this.state.selectedFile);
-        this.props.close(false); // closing popup            
-
-
+        this.props.addVendor(this.state.vendor[0], this.state.selectedFile);
+        this.props.close(false); // closing popup          
     }
 
     handleMaturityChange = maturityLevel => {
@@ -97,14 +94,14 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
         if (maturityLevel === null) {
             this.setState({ maturityError: true })
         }
-        this.state.singleVendor[0].maturityLevel = maturityLevel
-        this.setState({ singleVendor: this.state.singleVendor })
+        this.state.vendor[0].maturityLevel = maturityLevel
+        this.setState({ vendor: this.state.vendor })
     };
 
     handleProcessStage = processStage => {
         this.setState({ processStage: processStage });
-        this.state.singleVendor[0].processStage = processStage
-        this.setState({ singleVendor: this.state.singleVendor })
+        this.state.vendor[0].processStage = processStage
+        this.setState({ vendor: this.state.vendor })
     };
 
     handleFuncAreaChange = (businessUnit) => {
@@ -113,8 +110,8 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
             this.setState({ businessUnitError: true })
         }
 
-        this.state.singleVendor[0].businessUnit = businessUnit
-        this.setState({ singleVendor: this.state.singleVendor })
+        this.state.vendor[0].businessUnit = businessUnit
+        this.setState({ vendor: this.state.vendor })
     }
 
     fileChangedHandler = (event) => {
@@ -122,29 +119,29 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     }
 
     setPhoneNumber = (phone) => {
-        this.state.singleVendor[0].vendorContact.phone = phone
-        this.setState({ singleVendor: this.state.singleVendor })
+        this.state.vendor[0].vendorContact.phone = phone
+        this.setState({ vendor: this.state.vendor })
     }
 
     handleInputChange = (e, property) => {
         e.preventDefault()
-        this.setState({ singleVendor: [...this.state.singleVendor] })
-        const tempObj = this.state.singleVendor[0]
+        this.setState({ vendor: [...this.state.vendor] })
+        const tempObj = this.state.vendor[0]
         tempObj[property] = e.target.value
-        this.setState({ singleVendor: this.state.singleVendor })
+        this.setState({ vendor: this.state.vendor })
     }
 
     handleNestedInputChange = (e, property) => {
         e.preventDefault()
-        this.setState({ singleVendor: [...this.state.singleVendor] })
-        const tempObj = this.state.singleVendor[0].vendorContact
+        this.setState({ vendor: [...this.state.vendor] })
+        const tempObj = this.state.vendor[0].vendorContact
         tempObj[property] = e.target.value
-        this.setState({ singleVendor: this.state.singleVendor })
+        this.setState({ vendor: this.state.vendor })
     }
 
     render() {
-        const { close, options } = this.props
-        const singleVendor = this.state.singleVendor[0]
+        const { close } = this.props
+        const vendor = this.state.vendor[0]
         const modal = (
             <Modal isOpen={true}
                 contentLabel="Modal"
@@ -166,7 +163,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     required
                                     type="text"
                                     name="vendorName"
-                                    value={singleVendor.vendorName}
+                                    value={vendor.vendorName}
                                     className="mb-4"
                                     placeholder="Company Name"
                                     onChange={(e) => this.handleInputChange(e, 'vendorName')}
@@ -179,7 +176,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     name="description"
                                     rows="3"
                                     placeholder="Description"
-                                    value={singleVendor.description}
+                                    value={vendor.description}
                                     onChange={(e) => this.handleInputChange(e, 'description')}
                                 />
                             </Col>
@@ -190,7 +187,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     type="url"
                                     className="mb-4"
                                     name="website" placeholder="Site url"
-                                    value={singleVendor.website}
+                                    value={vendor.website}
                                     onChange={(e) => this.handleInputChange(e, 'website')}
                                 />
                                 {this.state.domainError ? (<span className="duplicateDomain">Duplicate found. Please edit original entry</span>) : null}
@@ -205,14 +202,14 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 // value={this.state.singleVendor[0].website}
                                 // onChange={(e) => this.handleInputChange(e, 'file')}
                                 />
-                                <img src={uploadIcon} onClick={() => this.fileInput.click()} 
-                                     style={{ height: '20px', width: '25px', marginTop: '-5px', marginLeft: '6px' }} />
+                                <img src={uploadIcon} onClick={() => this.fileInput.click()}
+                                    style={{ height: '20px', width: '25px', marginTop: '-5px', marginLeft: '6px' }} />
                             </Col>
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">FUNCTIONAL AREAS*</Form.Label>
                                 <Select required
                                     options={businessUnitOptions} isMulti={true}
-                                    value={singleVendor.businessUnit}
+                                    value={vendor.businessUnit}
                                     onChange={this.handleFuncAreaChange}
                                     lassNamePrefix="assignSelect"
                                     name="businessUnit"
@@ -224,7 +221,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 <Form.Label className="formLabel custom-formLabel">MATURITY LEVEL*</Form.Label>
                                 <Select required
                                     options={maturityLevelOptions}
-                                    value={singleVendor.maturityLevel}
+                                    value={vendor.maturityLevel}
                                     onChange={this.handleMaturityChange}
                                     lassNamePrefix="assignSelect"
                                     name="maturityLevel"
@@ -238,7 +235,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 <Form.Control type="text"
                                     name="keyFocusArea"
                                     className="mb-4"
-                                    value={singleVendor.keyFocusArea}
+                                    value={vendor.keyFocusArea}
                                     onChange={(e) => this.handleInputChange(e, 'keyFocusArea')}
                                 />
                             </Col>
@@ -247,7 +244,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 <Form.Label className="formLabel custom-formLabel">PARTNERSHIP PROCESS STAGE</Form.Label>
                                 <Select
                                     options={processStageOptions}
-                                    value={singleVendor.processStage}
+                                    value={vendor.processStage}
                                     onChange={this.handleProcessStage}
                                     lassNamePrefix="assignSelect"
                                     name="stage"
@@ -260,7 +257,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 <Form.Label className="formLabel custom-formLabel">COMPANY CONTACT PERSON</Form.Label>
                                 <Form.Control type="text"
                                     name="name"
-                                    value={singleVendor.vendorContact.name}
+                                    value={vendor.vendorContact.name}
                                     onChange={(e) => this.handleNestedInputChange(e, 'name')}
                                     className="mb-4" />
                             </Col>
@@ -268,7 +265,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 <Form.Label className="formLabel custom-formLabel">TITLE</Form.Label>
                                 <Form.Control type="text"
                                     name="title"
-                                    value={singleVendor.vendorContact.title}
+                                    value={vendor.vendorContact.title}
                                     onChange={(e) => this.handleNestedInputChange(e, 'title')}
                                     className="mb-4" />
                             </Col>
@@ -276,7 +273,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 <Form.Label className="formLabel custom-formLabel">EMAIL</Form.Label>
                                 <Form.Control type="email"
                                     name="email"
-                                    value={singleVendor.vendorContact.email}
+                                    value={vendor.vendorContact.email}
                                     onChange={(e) => this.handleNestedInputChange(e, 'email')}
                                     className="mb-4" />
                             </Col>
@@ -287,7 +284,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     defaultCountry="US"
                                     className="PhoneInputInput"
                                     name="phone"
-                                    value={singleVendor.vendorContact.phone}
+                                    value={vendor.vendorContact.phone}
                                     onChange={this.setPhoneNumber}
                                 />
 

@@ -20,11 +20,11 @@ import { businessUnitOptions } from '.././shared'
 import { AddNewVendorModal } from './AddNewVendorModal'
 import * as sel from '../shared/Selectors'
 import '../../css/login.css';
-import vendorEmptyObj from './vendor-template.json'
 
 interface ISearchProps {
   vendors?: any,
   searchVal?: string,
+  singleVendor?: any,
   dispatch?: (name: any) => any,
 }
 interface ISearchState {
@@ -123,7 +123,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
   }
 
   render() {
-    const { vendors, searchVal } = this.props
+    const { vendors, searchVal, singleVendor } = this.props
 
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (Object.entries(sessionUser).length === 0) {
@@ -162,9 +162,9 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
             {
               this.state.showModal &&
               (<AddNewVendorModal close={this.closeModal}
-                addVendor={this.addVendor}                
+                addVendor={this.addVendor}
                 vendors={this.props.vendors}
-                singleVendor={vendorEmptyObj}
+                singleVendor={singleVendor}
                 isEdit={false} />)
             }
           </Row>
@@ -177,9 +177,29 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 }
 
 const mapStateToProps = (state: any, ownProps: ISearchProps) => {
+
+  let singleVendor = [{
+    vendorName: "",
+    description: "",
+    imageUrl: "",
+    website: "",
+    domain: "",
+    keyFocusArea: "",
+    profileLogo: "",
+    hasAttachment: false,
+    attachments: [],
+    businessUnit: [],
+    vendorContact: {},
+    bscContact: {},
+    maturityLevel: {},
+    processStage: {},
+    events: []
+  }]
+
   const result = {
     vendors: sel.searchPartnersSel(state),
     searchVal: sel.searchFilterSel(state),
+    singleVendor: singleVendor
   }
   return result
 }
