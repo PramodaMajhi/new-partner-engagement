@@ -8,6 +8,8 @@ import { Line, Circle } from 'rc-progress';
 import '../../css/vendor-overview.css';
 import { Tabs, Tab, Row, Col, Form, Button } from 'react-bootstrap';
 import { startGet, startGetAttachments } from '../../actions/get'
+import { startMerge } from '../../actions/merge'
+import { startUpload } from "../../actions/upload"
 import { IFile } from '../../models/types'
 import ReactTimeAgo from 'react-time-ago'
 import Select from 'react-select';
@@ -18,7 +20,11 @@ import profileIcon from '../../img/icon-profile@2x.png'
 import contactIcon from '../../img/icon-contacts@2x.png'
 import activityIcon from '../../img/icon-activity@2x.png'
 import attachIcon from '../../img/icon-attachments@2x.png'
+import editIcon from '../../img/icon-edit@2x.png'
 import { Attachments } from './Attachments';
+import { AddNewVendorModal } from './AddNewVendorModal'
+import { businessUnitOptions } from '.././shared'
+import url from 'url'
 
 interface IVendorDetailState {
     showButton?: boolean,
@@ -27,10 +33,13 @@ interface IVendorDetailState {
     notes?: string,
     files?: Map<string, IFile>,
     phase?: any,
+    showModal?: boolean,
+    profileImage?: []
 }
 
 interface IVendorDetailProps {
     vendor?: any,
+    vendors?: any,
     vid?: any,
     events?: [],
     dispatch?: (name: any) => any,
@@ -46,7 +55,8 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
             processStage: this.props.vendor ? this.props.vendor[0].processStage : null,
             notes: '',
             phase: 0,
-            files: new Map()
+            files: new Map(),
+            profileImage: []
         }
     }
     componentDidMount() {
@@ -94,11 +104,11 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 
     getTimeStamp = (date) => {
         var time = new Date(date);
-        return time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
+        return time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
     }
     getDateAndYear = (date) => {
         var time = new Date(date);
-        return time.toLocaleString('en-US', {month: 'short', day: '2-digit', year: 'numeric' })
+        return time.toLocaleString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })
     }
 
     notesOnChange = (e) => {
@@ -108,6 +118,48 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
     openAttach = () => {
         this.setState({ phase: 1 })
     }
+
+
+    closeModal = () => {
+        this.setState({ showModal: false, })
+    }
+    openModal = () => {
+        this.setState({ showModal: true })
+    }
+
+
+
+    editVendor = async (singleVendor, profileImg) => {
+        let urlObj = url.parse(singleVendor.website);
+        let domain = urlObj.hostname
+        singleVendor['domain'] = domain;
+        //  singleVendor['id'] = this.props.vid;
+
+        let fileAttachContainer = {}
+        await startMerge('vendors', singleVendor)
+        // await this.props.dispatch(startGet('vendors'));
+        //  await createAttachment('attachments', fileAttachContainer)(this.props.dispatch)
+        this.setState({ profileImage: profileImg })
+        if (profileImg.length) {
+            this.fileUpload(singleVendor.id, profileImg);
+        }
+    }
+
+
+    fileUpload = async (containerName, profileImg) => {
+        await startUpload(containerName, profileImg)(this.props.dispatch)
+        let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api'
+
+        if (profileImg.length) {
+            let vendorObj = {
+                id: containerName,
+                profileLogo: `${imageLogoUrl}/attachments/${containerName}/download/${profileImg[0].name}`
+            }
+            await startMerge('vendors', vendorObj)
+        }
+        // this.props.dispatch(startGet('vendors'));
+    }
+
 
     render() {
         const { vendor, events } = this.props;
@@ -121,7 +173,17 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                     <img src={profileIcon} /><span className="tabText">Profile</span></span>}>
                     <Row className="row-padding">
                         <Col md={8}>
-                            <div className="vendorName">{vendor[0].vendorName}</div>
+                            <Row>
+                                <Col xs={4}>
+                                    <div className="vendorName">{vendor[0].vendorName}</div>
+                                </Col>
+                                <Col xs={4}>
+                                    <div onClick={this.openModal}>
+                                        <span><img src={editIcon} style={{ height: '18px', width: '18px', marginTop: '-5px' }} /></span>
+                                        <span className="edit-profile">EDIT PROFILE </span>
+                                    </div>
+                                </Col>
+                            </Row>
                             <div>{vendor[0].description}</div>
                             <Row className="row-margin">
                                 <Col>
@@ -181,9 +243,9 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                                         </div>
 
                                         <div className="time-ago">
-                                            <ReactTimeAgo date={e.date} style={{marginRight:'14px'}}/> 
+                                            {/* <ReactTimeAgo date={e.date} style={{ marginRight: '14px' }} /> */}
                                             <span>{this.getTimeStamp(e.date)}</span>
-                                            <span style={{marginLeft:'6px', marginRight:'6px'}}>&#xb7;</span>
+                                            <span style={{ marginLeft: '6px', marginRight: '6px' }}>&#xb7;</span>
                                             <span>{this.getDateAndYear(e.date)}</span>
                                         </div>
 
@@ -192,6 +254,14 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                             }
                         </Col>
                     </Row>
+                    {
+                        this.state.showModal &&
+                        (<AddNewVendorModal close={this.closeModal}
+                            addVendor={this.editVendor}
+                            vendors={this.props.vendors}
+                            singleVendor={this.props.vendor}
+                            isEdit={true} />)
+                    }
                 </Tab>
                 <Tab eventKey="attachment" title={<span className="tabTextImg">
                     <img src={attachIcon} />
@@ -226,6 +296,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 const mapStateToProps = (state: any, ownProps: IVendorDetailProps & RouteComponentProps) => {
     const vid = ownProps.match.params.vid;
     let vendor = state.entitiesData.vendors ? state.entitiesData.vendors.data : [];
+    let vendors = state.entitiesData.vendors ? state.entitiesData.vendors.data : [];
     if (vendor.length) {
         vendor = vendor.filter(v => {
             return v.id === vid
@@ -235,6 +306,7 @@ const mapStateToProps = (state: any, ownProps: IVendorDetailProps & RouteCompone
     const result = {
         vid: vid,
         vendor: vendor,
+        vendors: vendors,
         events: vendor[0].events ? vendor[0].events.sort((a, b) => {
             return (a.date < b.date ? 1 : a.date > b.date ? -1 : 0)
         }) : []

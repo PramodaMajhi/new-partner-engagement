@@ -2,8 +2,10 @@
     {
         "id": "5e56e6b33e55fb72c46bb770",
         "vendorName": "O'Keefe Inc",
+        "description": "This is a nice company so far",
         "imageUrl": "http://lorempixel.com/640/480/cats",
         "website": "marlin.biz",
+        "domain": "marlin.biz",
         "keyFocusArea": "Providers: Clinical Tools",
         "profileLogo": "http://localhost:3001/api/attachments/5e56e6b33e55fb72c46bb770/download/keefelogo.png",
         "hasAttachment": false,
@@ -25,8 +27,9 @@
         ],
         "vendorContact": {
             "name": "Rogers Welch",
-            "phone": "546.610.8648 x081",
+            "phone": "+15466108648",
             "email": "Amari_Kshlerin@yahoo.com",
+            "title":"Marketing professional",
             "street": "5031 Kohler Station",
             "city": "Schambergerfort",
             "state": "Hawaii",

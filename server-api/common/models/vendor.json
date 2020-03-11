@@ -11,6 +11,9 @@
     "vendorName": {
       "type": "string"
     },
+    "description": {
+      "type": "string"
+    },
     "imageUrl": {
       "type":"string"
     },

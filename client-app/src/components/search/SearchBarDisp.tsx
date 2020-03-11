@@ -20,10 +20,11 @@ import { businessUnitOptions } from '.././shared'
 import { AddNewVendorModal } from './AddNewVendorModal'
 import * as sel from '../shared/Selectors'
 import '../../css/login.css';
+import vendorEmptyObj from './vendor-template.json'
 
 interface ISearchProps {
   vendors?: any,
-  searchVal?: string,  
+  searchVal?: string,
   dispatch?: (name: any) => any,
 }
 interface ISearchState {
@@ -82,37 +83,16 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     this.setState({ showModal: false, })
   }
 
-  addVendor = async (formData, businessUnit, maturityLevel, processStage, profileImg, phone) => {
+  addVendor = async (singleVendor, profileImg) => {
 
-    if (formData && businessUnit) {
-      console.log(businessUnit)
 
-    }
-    let urlObj = url.parse(formData.website.value);
+    let urlObj = url.parse(singleVendor.website);
     let domain = urlObj.hostname
-    let values = {
-      vendorName: formData.name.value,
-      businessUnit: businessUnit,
-      keyFocusArea: formData.keyfocus.value,
-      website: formData.website.value,
-      domain: domain.toLowerCase(),
-      maturityLevel: maturityLevel,
-      processStage: processStage,
-      vendorContact: {
-        name: formData.contactName.value,
-        title: formData.title.value,
-        phone: phone,
-        email: formData.email.value
-      },
-      bscContact: {
-      },
-      attachments: [],
-      events: []
+    singleVendor['domain'] = domain;
 
-    }
     let id
     let fileAttachContainer = {}
-    await startInsert('vendors', values)(this.props.dispatch)
+    await startInsert('vendors', singleVendor)(this.props.dispatch)
       .then(_id => {
         id = _id
         console.log("generated", id);
@@ -143,12 +123,15 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
   }
 
   render() {
-    const { vendors, searchVal } = this.props    
+    const { vendors, searchVal } = this.props
 
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (Object.entries(sessionUser).length === 0) {
       this.props.history.push('/login');
     }
+
+
+
     return (
       <>
         <div className="searchBarContainer">
@@ -179,7 +162,10 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
             {
               this.state.showModal &&
               (<AddNewVendorModal close={this.closeModal}
-                addVendor={this.addVendor} options={businessUnitOptions} vendors={this.props.vendors} />)
+                addVendor={this.addVendor}                
+                vendors={this.props.vendors}
+                singleVendor={vendorEmptyObj}
+                isEdit={false} />)
             }
           </Row>
           <VendorSearchList vendors={vendors} search={searchVal} />

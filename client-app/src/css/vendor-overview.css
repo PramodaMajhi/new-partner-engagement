@@ -407,3 +407,10 @@
 .notes-border-bottom {
    border-bottom: 1px solid #E4E8F1;
 }
+.edit-profile {
+font-weight: bold;
+font-size: 14px;
+line-height: 17px;
+color: #0095DA;
+margin-left: 6px;
+}
