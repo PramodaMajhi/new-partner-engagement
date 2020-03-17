@@ -157,7 +157,9 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
               }
             </Col>
             <Col className="search-result-section browse-text addPartner" onClick={this.openModal}>
-              + ADD NEW PARTNER
+              {
+                sessionUser.userType !== 'limited' ? '+ ADD NEW PARTNER' : ''
+              }
             </Col>
             {
               this.state.showModal &&

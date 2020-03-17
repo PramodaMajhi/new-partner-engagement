@@ -163,6 +163,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 
     render() {
         const { vendor, events } = this.props;
+        const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
         //  console.log(vendor)
         // console.log(vendor[0].vendorName);
 
@@ -178,10 +179,14 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                                     <div className="vendorName">{vendor[0].vendorName}</div>
                                 </Col>
                                 <Col xs={4}>
-                                    <div onClick={this.openModal}>
-                                        <span><img src={editIcon} style={{ height: '18px', width: '18px', marginTop: '-5px' }} /></span>
-                                        <span className="edit-profile">EDIT PROFILE </span>
-                                    </div>
+                                    {
+                                        sessionUser.userType !== 'limited' ?
+                                            (<div onClick={this.openModal}>
+                                                <span><img src={editIcon} style={{ height: '18px', width: '18px', marginTop: '-5px' }} /></span>
+                                                <span className="edit-profile">EDIT PROFILE </span>
+                                            </div>) : null
+                                    }
+
                                 </Col>
                             </Row>
                             <div>{vendor[0].description}</div>
