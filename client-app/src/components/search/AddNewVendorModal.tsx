@@ -10,7 +10,7 @@ import uploadIcon from '../../img/Upload@2x.png'
 import PhoneInput, { isPossiblePhoneNumber } from 'react-phone-number-input/input'
 import 'react-phone-number-input/style.css'
 
-interface IAddNewVendorModalProps {    
+interface IAddNewVendorModalProps {
     vendors?: any,
     singleVendor?: any,
     isEdit?: boolean,
@@ -140,8 +140,10 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     }
 
     render() {
-        const { close } = this.props
+        const { close, isEdit } = this.props
         const vendor = this.state.vendor[0]
+
+        let buttonLabel = isEdit ? 'SAVE' : 'CREATE'
         const modal = (
             <Modal isOpen={true}
                 contentLabel="Modal"
@@ -157,36 +159,25 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                     </div>
                     <Form onSubmit={this.addVendor}>
                         <Row>
-                            <Col >
+                            <Col xs={12}>
                                 <Form.Label className="formLabel custom-formLabel">COMPANY NAME*</Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
                                     name="vendorName"
                                     value={vendor.vendorName}
-                                    className="mb-4"
-                                    placeholder="Company Name"
+                                    className="input-text-full mb-4"                                    
                                     onChange={(e) => this.handleInputChange(e, 'vendorName')}
                                 />
                             </Col>
-                            <Col xs={12}>
-                                <Form.Label className="formLabel custom-formLabel">DESCRIPTION*</Form.Label>
-                                <Form.Control required as="textarea"
-                                    className="mb-4"
-                                    name="description"
-                                    rows="3"
-                                    placeholder="Description"
-                                    value={vendor.description}
-                                    onChange={(e) => this.handleInputChange(e, 'description')}
-                                />
-                            </Col>
+
                             <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">WEBSITE*</Form.Label>
+                                <Form.Label className="formLabel custom-formLabel">COMPANY WEBSITE*</Form.Label>
                                 <Form.Control
                                     required
                                     type="url"
-                                    className="mb-4"
-                                    name="website" placeholder="Site url"
+                                    className="input-text-full mb-4"
+                                    name="website" 
                                     value={vendor.website}
                                     onChange={(e) => this.handleInputChange(e, 'website')}
                                 />
@@ -194,19 +185,44 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                             </Col>
 
                             <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">UPLOAD PROFILE IMAGE*</Form.Label>
-                                <input style={{ display: 'none' }}
-                                    type="file"
-                                    onChange={this.fileChangedHandler}
-                                    ref={fileInput => this.fileInput = fileInput}
-                                // value={this.state.singleVendor[0].website}
-                                // onChange={(e) => this.handleInputChange(e, 'file')}
-                                />
-                                <img src={uploadIcon} onClick={() => this.fileInput.click()}
-                                    style={{ height: '20px', width: '25px', marginTop: '-5px', marginLeft: '6px' }} />
+                                <div style={{padding: "40px 0px"}}>
+                                    <img src={uploadIcon} onClick={() => this.fileInput.click()}
+                                        style={{ height: '30px', width: '30px',  marginRight: '10px' }} />
+                                    <Form.Label className="formLabel custom-formLabel">UPLOAD LOGO</Form.Label >
+                                    <input style={{ display: 'none' }}
+                                        type="file"
+                                        onChange={this.fileChangedHandler}
+                                        className="input-text-full mb-4"
+                                        ref={fileInput => this.fileInput = fileInput}
+                                    // value={this.state.singleVendor[0].website}
+                                    // onChange={(e) => this.handleInputChange(e, 'file')}
+                                    />
+                                </div>
                             </Col>
-                            <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">FUNCTIONAL AREAS*</Form.Label>
+
+                            <Col xs={12}>
+                                <Form.Label className="formLabel custom-formLabel">COMPANY DESCRIPTION</Form.Label>
+                                <Form.Control required as="textarea"
+                                    className="mb-4"
+                                    name="description"
+                                    rows="3"
+                                    placeholder="Write a brief description of what the company does..."
+                                    value={vendor.description}
+                                    onChange={(e) => this.handleInputChange(e, 'description')}
+                                />
+                            </Col>
+                            <Col xs={12}>
+                                <Form.Label className="formLabel custom-formLabel">FOCUS AREAS*</Form.Label>
+                                <Form.Control type="text"
+                                    name="keyFocusArea"
+                                    className="input-text-full mb-4"
+                                    value={vendor.keyFocusArea}
+                                    placeholder="Example: AI, Maternity, Robotics..."
+                                    onChange={(e) => this.handleInputChange(e, 'keyFocusArea')}
+                                />
+                            </Col>
+                            <Col xs={12}>
+                                <Form.Label className="formLabel custom-formLabel">BSC BUSINESS UNITS - Who is working with this partner?</Form.Label>
                                 <Select required
                                     options={businessUnitOptions} isMulti={true}
                                     value={vendor.businessUnit}
@@ -217,88 +233,12 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     style={{ borderColor: this.state.businessUnitError ? "#b94a48" : "#aaa" }}
                                 />
                             </Col>
-                            <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">MATURITY LEVEL*</Form.Label>
-                                <Select required
-                                    options={maturityLevelOptions}
-                                    value={vendor.maturityLevel}
-                                    onChange={this.handleMaturityChange}
-                                    lassNamePrefix="assignSelect"
-                                    name="maturityLevel"
-                                    className="mb-4"
-                                    style={{ borderColor: this.state.maturityError ? "#b94a48" : "#aaa" }}
-                                />
-                            </Col>
-
-                            <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">KEY FOCUS AREA</Form.Label>
-                                <Form.Control type="text"
-                                    name="keyFocusArea"
-                                    className="mb-4"
-                                    value={vendor.keyFocusArea}
-                                    onChange={(e) => this.handleInputChange(e, 'keyFocusArea')}
-                                />
-                            </Col>
-
-                            <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">PARTNERSHIP PROCESS STAGE</Form.Label>
-                                <Select
-                                    options={processStageOptions}
-                                    value={vendor.processStage}
-                                    onChange={this.handleProcessStage}
-                                    lassNamePrefix="assignSelect"
-                                    name="stage"
-                                    className="mb-4"
-                                />
-                            </Col>
                         </Row>
-                        <Row>
-                            <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">COMPANY CONTACT PERSON</Form.Label>
-                                <Form.Control type="text"
-                                    name="name"
-                                    value={vendor.vendorContact.name}
-                                    onChange={(e) => this.handleNestedInputChange(e, 'name')}
-                                    className="mb-4" />
-                            </Col>
-                            <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">TITLE</Form.Label>
-                                <Form.Control type="text"
-                                    name="title"
-                                    value={vendor.vendorContact.title}
-                                    onChange={(e) => this.handleNestedInputChange(e, 'title')}
-                                    className="mb-4" />
-                            </Col>
-                            <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">EMAIL</Form.Label>
-                                <Form.Control type="email"
-                                    name="email"
-                                    value={vendor.vendorContact.email}
-                                    onChange={(e) => this.handleNestedInputChange(e, 'email')}
-                                    className="mb-4" />
-                            </Col>
-                            <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">PHONE</Form.Label>
-                                {/* <Form.Control type="text" name="phone" className="mb-4" /> */}
-                                <PhoneInput
-                                    defaultCountry="US"
-                                    className="PhoneInputInput"
-                                    name="phone"
-                                    value={vendor.vendorContact.phone}
-                                    onChange={this.setPhoneNumber}
-                                />
-
-                                {
-                                    this.state.isValidPh === true ? null : <span style={{ color: 'red' }}> Enter correct phone#</span>
-                                }
-                            </Col>
-                        </Row>
-
                         <br />
-                        <Row className="justify-content-end">
+                        <Row className="justify-content-end mb-5">
                             <Col className="col-12 save-cancel-button">
-                                <Button onClick={this.props.close} className="cancel-button">CANCEL</Button>
-                                <Button type="submit">SAVE</Button>
+                                <Button onClick={this.props.close} variant="light" className="cancel-button">CANCEL</Button>
+                                <Button type="submit" variant="primary" size="lg">{buttonLabel}</Button>
                             </Col>
                             <br />
                         </Row>

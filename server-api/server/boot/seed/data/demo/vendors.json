@@ -4,7 +4,7 @@
         "vendorName": "O'Keefe Inc",
         "description": "This is a nice company so far",
         "imageUrl": "http://lorempixel.com/640/480/cats",
-        "website": "marlin.biz",
+        "website": "https://marlin.biz",
         "domain": "marlin.biz",
         "keyFocusArea": "Providers: Clinical Tools",
         "businessUnit": [
@@ -49,8 +49,12 @@
         "hasAttachment": false,
         "attachments": [
             {
-                "fileName": "test.png",
-                "serverRelativeUrl": "http://localhost:3001/api/attachments/5e56e6b33e55fb72c46bb770/download/15-vi-cheat-sheet.pdf"
+                "fileName": "16-Emacs-Cheat-Sheet.pdf",
+                "serverRelativeUrl": "http://localhost:3001/api/attachments/5e56e6b33e55fb72c46bb770/download/16-Emacs-Cheat-Sheet.pdf",
+                "firstName": "Julian",
+                "lastName": "Buchanan",
+                "id": "5cd208f5e4c057af4d1a5d86",
+                "uploadDate": "2020-03-19T02:53:47.585Z"
             }
         ],
         "events": [
@@ -65,6 +69,20 @@
                 "text": "Followed up with Rogers Welch and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
             }
         ],
+        "createdBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
+        "modifiedBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
         "id": "5e56e6b33e55fb72c46bb770"
     },
     {
@@ -102,13 +120,22 @@
         },
         "profileLogo": "http://localhost:3001/api/attachments/5e692185d0c962677ca629dd/download/googlel.png",
         "hasAttachment": false,
-        "attachments": [
-            {
-                "fileName": "2016 401k AutoEnroll Guide (1).pdf",
-                "serverRelativeUrl": "http://localhost:3001/api/attachments/5e692185d0c962677ca629dd/download/2016 401k AutoEnroll Guide (1).pdf"
-            }
-        ],
+        "attachments": [],
         "events": [],
+        "createdBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
+        "modifiedBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
         "id": "5e692185d0c962677ca629dd"
     },
     {
@@ -144,6 +171,20 @@
         "hasAttachment": false,
         "attachments": [],
         "events": [],
+        "createdBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
+        "modifiedBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
         "id": "5e6927e3d0c962677ca629de"
     },
     {
@@ -179,6 +220,20 @@
         "hasAttachment": false,
         "attachments": [],
         "events": [],
+        "createdBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
+        "modifiedBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
         "id": "5e692963d0c962677ca629df"
     },
     {
@@ -214,6 +269,20 @@
         "hasAttachment": false,
         "attachments": [],
         "events": [],
+        "createdBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
+        "modifiedBy": {
+            "id": "5cd208f5e4c057af4d1a5d84",
+            "firstName": "Fabian",
+            "lastName": "Bond",
+            "userType": "admin",
+            "email": "admin@bsc.com"
+        },
         "id": "5e692ad0d0c962677ca629e0"
     }
 ]

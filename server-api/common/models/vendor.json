@@ -15,40 +15,54 @@
       "type": "string"
     },
     "imageUrl": {
-      "type":"string"
+      "type": "string"
     },
-    "website":{
-      "type":"string"
+    "website": {
+      "type": "string"
     },
-    "domain":{
-      "type":"string"
-    }, 
+    "domain": {
+      "type": "string"
+    },
     "keyFocusArea": {
       "type": "string"
     },
-    "businessUnit":{
-      "type":"object"
+    "businessUnit": {
+      "type": "object"
     },
     "vendorContact": {
-      "type":"object"
+      "type": "object"
     },
     "bscContact": {
-      "type":"object"
+      "type": "object"
     },
     "maturityLevel": {
-      "type":"object"
+      "type": "object"
     },
     "processStage": {
-      "type":"object"
+      "type": "object"
     },
     "profileLogo": {
-      "type":"string"
+      "type": "string"
     },
-    "hasAttachment":{
-      "type":"boolean"
+    "hasAttachment": {
+      "type": "boolean"
     },
-    "attachments":{
-      "type":"object"
+    "attachments": {
+      "type": "object"
+    },
+    "createdAt": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "createdBy": {
+      "type": "object"
+    },
+    "modifiedAt": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "modifiedBy": {
+      "type": "object"
     }
   },
   "validations": [],

@@ -8,6 +8,8 @@
         "username": "Admin",
         "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
         "email": "admin@bsc.com",
+        "businessUnit":"HIT",
+        "title":"Sr.Manager, Product Strategy",
         "emailVerified": true,
         "termsAccepted": true
     },
@@ -20,6 +22,8 @@
         "username": "Strategist",
         "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
         "email": "limited@bsc.com",
+        "businessUnit":"Human Resources",
+        "title":"Sr.Manager, Product Strategy",
         "emailVerified": true,
         "termsAccepted": true
     },
@@ -32,6 +36,8 @@
         "username": "Strategist",
         "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
         "email": "core@bsc.com",
+        "businessUnit":"HIT",
+        "title":"Manager, Product Strategy",
         "emailVerified": true,
         "termsAccepted": true
     },
@@ -44,6 +50,8 @@
         "username": "Champion",
         "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
         "email": "champion@bsc.com",
+        "businessUnit":"Human Resources",
+        "title":"Sr.Manager, Product Strategy",
         "emailVerified": true,
         "termsAccepted": true
     }

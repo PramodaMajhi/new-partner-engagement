@@ -388,12 +388,17 @@
     padding-top: 30px !important;
 }
 .carrot {
-    margin-right: 5px;
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #8392A5;
 }
 .tabText {
     margin: 0px 12px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 800;
     text-align: center;
 }
 .tabTextImg {
@@ -413,4 +418,136 @@ font-size: 14px;
 line-height: 17px;
 color: #0095DA;
 margin-left: 6px;
+}
+.edit-profile-Img  { 
+    width: 100px;
+    height: 100px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    margin-top: -30px;
+    background-position: center !important;
+}
+.row-padding {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 60px 0px;
+}
+.domain{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;    
+    color: #0095DA;
+}
+.lastUpdated {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8392A5;
+}
+.tab-content {
+    margin-top: 25px;
+}
+.notes-name {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .recentNotes{
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    color: #1C2D41 !important
+  }
+
+  .vendorName {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .headingItem {
+   font-style: normal;
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 15px;
+   color: #8392A5;
+  }
+  .businessType {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1C2D41;
+  }
+  .row-margin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  
+  }
+  .row-padding {
+    padding: 60px 0px; 
+  }
+  .description {    
+    font-size: 14px;
+    line-height: 23px;
+    color: #1C2D41;
+  }
+  svg {
+    fill: #8291A4;
+    transition: all 0.3s;    
+  }
+  
+  .tab-text {
+    display: inline-block;
+    font-family: 'Montserrat', Arial;
+    font-size: 18px;
+    font-weight: medium;
+    color: #8291A4;
+    transition: all 0.3s;
+  }
+  
+  .tab {
+    background: #fff;
+    padding: 24px 40px;
+    text-decoration:none;
+    display:inline-block;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+  }
+  
+  .tab:focus svg path,
+  .tab:focus .tab-text {
+    fill: #0095DA;
+    color: #0095DA;
+    transition: all 0.3s;
+  }
+  
+  .tab:focus{
+    border-bottom: 1px solid #0095DA;
+    transition: all 0.3s;
+  }
+  
+  .tab:hover {
+    background: #F9FAFC;
+  }
+  .nav-link {
+    display: block;
+    padding: 1rem 1.75rem;
+}
+
+  .nav-tabs .nav-link.active svg path {
+    fill: #0095DA;
+    color: #0095DA;
+    transition: all 0.3s;
+}
+.nav-tabs .nav-link.active {
+    color: #0095da;
+    background-color: #fff;
+    border-bottom: 1px solid #0095da !important;
+    border-color: transparent;
+}
+
+.nav-tabs .nav-link {
+    color: #8291A4;
+    fill: #8291A4;
+    transition: all 0.3s;  
+    border-bottom: 1px solid transparent;
 }

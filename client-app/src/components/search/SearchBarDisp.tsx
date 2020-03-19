@@ -89,6 +89,15 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     let urlObj = url.parse(singleVendor.website);
     let domain = urlObj.hostname
     singleVendor['domain'] = domain;
+    const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
+    if (Object.entries(sessionUser).length) {
+      singleVendor.createdBy = {
+        id: sessionUser.id,
+        firstName: sessionUser.firstName,
+        lastName: sessionUser.lastName,
+        email: sessionUser.email
+      }
+    }
 
     let id
     let fileAttachContainer = {}
@@ -180,6 +189,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
 const mapStateToProps = (state: any, ownProps: ISearchProps) => {
 
+
   let singleVendor = [{
     vendorName: "",
     description: "",
@@ -195,7 +205,9 @@ const mapStateToProps = (state: any, ownProps: ISearchProps) => {
     bscContact: {},
     maturityLevel: {},
     processStage: {},
-    events: []
+    events: [],
+    createdBy:{},
+    modifiedBy:{}
   }]
 
   const result = {

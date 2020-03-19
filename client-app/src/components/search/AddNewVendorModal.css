@@ -5,9 +5,9 @@
     right: auto;
     bottom: auto;
     border: 1px solid #ccc;
-    background: #fff;
+    background: #FFFFFF;
     overflow: auto;
-    border-radius: 7px;
+    border-radius: 10px;
     outline: none;
     padding: 0 20px 20px;
     margin-right: -50%;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.15);
   }
   
   .img {
@@ -167,7 +167,23 @@
     text-align: right;
   }
   .cancel-button {
-    margin-right: 18px;
+   margin-right: 18px;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 14px;
+   line-height: 17px;
+   text-align: center;
+   color: #0095DA;
+
+  }
+  .btn-primary {
+    border: 1px solid #0095DA;    
+    background-color: #0095DA;
+    font-size: 12px;
+    font-weight: bold;
+    background: linear-gradient(180deg, #0095DA 35.27%, #0079D0 100%);
+    border-radius: 8px;
+    padding: 20px 36px;
   }
 
   .custom-formLabel {
@@ -176,7 +192,12 @@
     font-size: 12px;
     line-height: 15px;
     margin-bottom: 12px;
-    color: #8392A5;
+    color: #5A6573;
+  }
+
+  textarea.form-control {
+    height: auto;
+    border-radius: 6px;
   }
   .duplicateDomain {
     color: red;
@@ -201,3 +222,17 @@
       height: 25rem;
     }
   }
+
+ .input-text-full {
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #A3AFBF;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.css-yk16xz-control {
+  height: 50px; 
+}
+.css-1hwfws3 {
+  height: 50px;
+}
