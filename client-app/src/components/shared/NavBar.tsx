@@ -39,7 +39,7 @@ class navBar extends React.Component<INavBarDispProps & RouteComponentProps<any>
                 {showButton ?
                     <>
                         <Navbar className="rectangle">
-                            <Navbar.Brand href="#">
+                            <Navbar.Brand href="/search">
                                 <img className="logo" src={logo} />
                             </Navbar.Brand>
                             <Nav>

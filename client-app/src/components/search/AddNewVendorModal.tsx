@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as Modal from 'react-modal'
 import { Row, Col, Button, Form } from 'react-bootstrap';
 import url from 'url'
+import psl from 'psl'
 import Select from 'react-select';
 import { businessUnitOptions, maturityLevelOptions, processStageOptions } from '.././shared'
 import './AddNewVendorModal.css';
@@ -63,25 +64,21 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
 
         event.preventDefault();
 
-        if (this.state.phone !== '') {
-            let isValid = isPossiblePhoneNumber(this.state.phone)
-
-            if (!isValid) {
-                this.setState({ isValidPh: isValid })
-                return
-            }
-
-        }
-
         let domainExist;
-        if (!this.props.isEdit && this.props.vendors.length) {
+        if (this.props.vendors.length) {
             let urlObj = url.parse(event.currentTarget.website.value);
+            let domain = urlObj.hostname;
+            domain = psl.parse(domain).domain;
             domainExist = this.props.vendors.filter(v => {
-                return v.domain === urlObj.hostname.toLowerCase()
+                return v.domain === domain.toLowerCase()
             })
-
             if (domainExist.length) {
-                this.setState({ domainError: true })
+                if (this.props.isEdit && (this.state.vendor[0].id === domainExist[0].id)) {
+                    this.setState({ domainError: false })
+                } else {
+                    this.setState({ domainError: true })
+                    return
+                }
             }
         }
 
@@ -166,7 +163,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     type="text"
                                     name="vendorName"
                                     value={vendor.vendorName}
-                                    className="input-text-full mb-4"                                    
+                                    className="input-text-full mb-4"
                                     onChange={(e) => this.handleInputChange(e, 'vendorName')}
                                 />
                             </Col>
@@ -176,18 +173,25 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 <Form.Control
                                     required
                                     type="url"
+                                    pattern="https?://.*"
                                     className="input-text-full mb-4"
-                                    name="website" 
+                                    name="website"
                                     value={vendor.website}
                                     onChange={(e) => this.handleInputChange(e, 'website')}
                                 />
-                                {this.state.domainError ? (<span className="duplicateDomain">Duplicate found. Please edit original entry</span>) : null}
+                                <>
+                                    {this.state.domainError ?
+                                        (<Row className="duplicateDomain">Duplicate found. Please edit original entry</Row>) :
+                                        null
+                                    }
+                                </>
                             </Col>
 
+
                             <Col xs={6}>
-                                <div style={{padding: "40px 0px"}}>
+                                <div style={{ padding: "40px 0px" }}>
                                     <img src={uploadIcon} onClick={() => this.fileInput.click()}
-                                        style={{ height: '30px', width: '30px',  marginRight: '10px' }} />
+                                        style={{ height: '24px', width: '30px', marginRight: '10px' }} />
                                     <Form.Label className="formLabel custom-formLabel">UPLOAD LOGO</Form.Label >
                                     <input style={{ display: 'none' }}
                                         type="file"
@@ -202,7 +206,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
 
                             <Col xs={12}>
                                 <Form.Label className="formLabel custom-formLabel">COMPANY DESCRIPTION</Form.Label>
-                                <Form.Control required as="textarea"
+                                <Form.Control as="textarea"
                                     className="mb-4"
                                     name="description"
                                     rows="3"
@@ -213,7 +217,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                             </Col>
                             <Col xs={12}>
                                 <Form.Label className="formLabel custom-formLabel">FOCUS AREAS*</Form.Label>
-                                <Form.Control type="text"
+                                <Form.Control required type="text"
                                     name="keyFocusArea"
                                     className="input-text-full mb-4"
                                     value={vendor.keyFocusArea}

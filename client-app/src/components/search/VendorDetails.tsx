@@ -240,7 +240,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                                     </Row>
                                     <Row>
                                         <div className="lastUpdated mt-4">LAST UPDATED
-                                            <span style={{ marginLeft: '6px', marginRight: '6px' }}>&#58;</span>
+                                            <span style={{marginRight: '6px' }}>&#58;</span>
                                             {
                                                 Object.entries(vendor[0].modifiedBy).length ?
                                                     (<span>{this.getDateAndYear(vendor[0].modifiedAt)} By {vendor[0].modifiedBy.firstName + ' ' + vendor[0].modifiedBy.lastName}</span>)

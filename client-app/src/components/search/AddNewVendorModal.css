@@ -201,6 +201,9 @@
   }
   .duplicateDomain {
     color: red;
+    margin: 0px auto;
+    min-width: 350px;
+    margin-bottom: 10px;
   }
   .PhoneInputInput {
     width: 100%;

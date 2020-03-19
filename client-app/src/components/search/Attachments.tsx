@@ -149,29 +149,20 @@ class attachments extends React.Component<IAttachmentsProps, IAttachmentsState> 
                     {
                       a.uploadDate !== undefined ?
                         <div className="fileDelete">
-                          {/* <DeleteIcon onClick={() => this.deleteFile(a.fileName)} /> */}
-
-                          <span style={{ marginRight: '14px' }}>
+                          <div className="uploadedUserName">
                             {a.firstName + ' ' + a.lastName}
                             <span style={{ marginRight: '5px', marginLeft: '5px' }}>&#183;</span>{this.getDateAndYear(a.uploadDate)}
-                          </span>
-                          {/* <Dropdown>
-                        <Dropdown.Toggle id="questionOptions"> */}
-                          <img src={ellipsisIcon} style={{ width: '30px', height: '8px' }} />
-                          {/* </Dropdown.Toggle>
-                        <Dropdown.Menu className="qoptionsMenu">
-                          <Dropdown.Item eventKey="1">
-                            <img src="" className="iconDelete" />Delete
-                          </Dropdown.Item>
-                        </Dropdown.Menu>
-                      </Dropdown> */}
+                          </div>
+                          <div>
+                            <img src={ellipsisIcon} style={{ width: '20px', height: '6px' }} />
+                          </div>
                         </div> : null
                     }
 
                   </div>
                 )
               }))
-              : (<div className="empty">There are no attachments for this idea</div>)
+              : (<div className="empty">There are no attachments for this partner</div>)
           }
         </div>
 

@@ -19,6 +19,7 @@ import { VendorDetails } from './VendorDetails'
 import { businessUnitOptions } from '.././shared'
 import { AddNewVendorModal } from './AddNewVendorModal'
 import * as sel from '../shared/Selectors'
+import psl from 'psl'
 import '../../css/login.css';
 
 interface ISearchProps {
@@ -87,8 +88,9 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
 
     let urlObj = url.parse(singleVendor.website);
-    let domain = urlObj.hostname
-    singleVendor['domain'] = domain;
+    let domain = urlObj.hostname;        
+        domain = psl.parse(domain).domain;
+    singleVendor['domain'] = domain.toLowerCase();
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (Object.entries(sessionUser).length) {
       singleVendor.createdBy = {
