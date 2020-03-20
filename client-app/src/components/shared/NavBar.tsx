@@ -39,7 +39,7 @@ class navBar extends React.Component<INavBarDispProps & RouteComponentProps<any>
                 {showButton ?
                     <>
                         <Navbar className="rectangle">
-                            <Navbar.Brand href="#">
+                            <Navbar.Brand href="/search">
                                 <img className="logo" src={logo} />
                             </Navbar.Brand>
                             <Nav>
@@ -77,10 +77,10 @@ export const LogOut = (props) => {
 
     return (
         <>
-            <Button variant="outline-info" className="btn btn-outline-primary mr-sm-3" onClick={handleLogout}>LOGOUT</Button>
+            <Button variant="outline-info" className="mr-sm-3" onClick={handleLogout}>LOGOUT</Button>
             <Col className="user-section">
                 <div className="userName">{localStoreCurrUser ? (localStoreCurrUser.firstName + ' ' + localStoreCurrUser.lastName) : ''}</div>
-                <div className="designation">{localStoreCurrUser.username}</div>
+                <div className="designation">{localStoreCurrUser ? localStoreCurrUser.title : ''}</div>
             </Col>
         </>
     )

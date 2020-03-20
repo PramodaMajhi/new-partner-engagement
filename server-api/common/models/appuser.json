@@ -39,6 +39,12 @@
     },
     "inviteLink": {
       "type": "string"
+    },
+    "businessUnit": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
     }
   },
   "validations": [],

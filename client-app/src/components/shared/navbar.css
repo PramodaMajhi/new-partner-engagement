@@ -15,17 +15,18 @@
     color: #A3AFBF;
 }
 .btn-outline-info {
-    color:  #0079D0;
-    border-color: #0079D0;
+    color:  #0095DA;
+    border-color: #0095DA;
     font-weight: bold;
+    font-size: 14px !important;
 }
 .btn-outline-info:hover {
-    color: #fff;
-    color:  #0079D0 !important;
-    border-color: #0079D0 !important;;
+    color: #fff;   
+    border-color: #0095DA !important;
+    background-color: #0095DA !important;
 }
 .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active, .show > .btn-outline-info.dropdown-toggle {
     color: #fff;
-    background-color:#0079D0 !important;
-    border-color: #0079D0 !important;
+    background-color:#0095DA !important;
+    border-color: #0095DA !important;
 }

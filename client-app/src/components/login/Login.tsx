@@ -106,7 +106,7 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
           <img src={iconBSCLogo} style={{ width: '147px', height: '57px' }} />
         </Row>
         <Row className="justify-content-center" id="loginPageTitle">
-          <h1 className="heading">Welcome to the Partner Transparency Tool</h1>
+          <h1 className="heading">Welcome to the Partner Intelligence Tool</h1>
 
         </Row>
         <Row className="justify-content-center">

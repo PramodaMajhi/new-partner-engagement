@@ -43,16 +43,16 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
         const { vendors, search } = this.props
 
         return <div className="container pt-3">
-            <div className="patientList ai-ml-container">
-                <Row className="mt-4">
+            <div className="patientList search-table-container">
+                <Row className="">
                     <Table className="patientTable">
                         <TableHead>
                             <TableRow className="tableHeader">
-                                <TableCell className="patientTable" style={{ minWidth: '360px' }}>PARTNER NAME &amp; KEY FOCUS AREAS</TableCell>
-                                <TableCell className="patientTable">PROCESS STAGE</TableCell>
-                                <TableCell className="patientTable">FUNCTIONAL AREAS</TableCell>
-                                <TableCell className="patientTable">COMPANY CONTACTS</TableCell>
-                                {/* <TableCell className="patientTable">BSC CONTACTS</TableCell> */}
+                                <TableCell className="patientTable">PARTNER NAME</TableCell>
+                                <TableCell className="patientTable">FOCUS AREAS</TableCell>
+                                <TableCell className="patientTable">BSC BUSINESS UNITS</TableCell>
+                                {/* <TableCell className="patientTable">COMPANY CONTACTS</TableCell>
+                                <TableCell className="patientTable">BSC CONTACTS</TableCell> */}
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -62,48 +62,33 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
 
                                     <TableRow className="patientRow" key={i}>
                                         <Link to={`/vendor-details/${vendor.id}`} >
-                                            <TableCell align="right" className="patientCol " style={{ minWidth: '360px' }}>
+                                            <TableCell align="right" className="patientCol ">
                                                 <Row className="patient-name-spec">
-                                                    <Col xs={4}>
-                                                        {/* <img src={vendor.profileLogo || 'http://via.placeholder.com/50x50'}
-                                                            style={{ height: '50px', width: '50px' }} /> */}
-
-
-                                                        <div className="profile-Img" 
-                                                             style={{ background: `url(${vendor.profileLogo || profileLarge})` }}>
+                                                    <div>
+                                                        <div className="profile-Img"
+                                                            style={{ background: `url(${vendor.profileLogo || profileLarge})` }}>
                                                         </div>
-
-
-
-                                                    </Col>
-                                                    <Col xs={8}>
+                                                    </div>
+                                                    <div>
                                                         <Highlighter
                                                             highlightClassName="YourHighlightClass"
                                                             searchWords={[search]}
                                                             autoEscape={true}
                                                             textToHighlight={vendor.vendorName}
                                                         />
-                                                        {/* <div>{vendor.keyFocusArea}</div> */}
-                                                        <div className="key-focus-area">
-                                                        <Highlighter
-                                                            highlightClassName="YourHighlightClass"
-                                                            searchWords={[search]}
-                                                            autoEscape={true}
-                                                            textToHighlight={vendor.keyFocusArea}
-                                                        /> </div>
-                                                    </Col>
+                                                    </div>
                                                 </Row>
                                             </TableCell>
-                                        </Link>
-                                        <TableCell align="right" className="patientCol">
-                                            {<Highlighter
+                                        </Link>                                       
+                                        <TableCell>
+                                            <Highlighter
                                                 highlightClassName="YourHighlightClass"
                                                 searchWords={[search]}
                                                 autoEscape={true}
-                                                textToHighlight={vendor.processStage ? vendor.processStage.label : null}
+                                                textToHighlight={vendor.keyFocusArea}
                                             />
-                                            }
                                         </TableCell>
+
                                         <TableCell align="right" className="patientCol">
                                             {vendor.businessUnit ? vendor.businessUnit.map(b => {
                                                 return <div key={b.value} className="mb-2">
@@ -116,15 +101,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                                 </div>
                                             }) : null
                                             }
-                                        </TableCell>
-                                        <TableCell align="right" className="patientCol">
-                                            <Highlighter
-                                                highlightClassName="YourHighlightClass"
-                                                searchWords={[search]}
-                                                autoEscape={true}
-                                                textToHighlight={vendor.vendorContact.name}
-                                            />
-                                        </TableCell>
+                                        </TableCell>                                        
                                     </TableRow>)
                             })}
 

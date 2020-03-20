@@ -68,13 +68,15 @@
   }
   
   .dropMsg {
+    font-size: 14px;
+    text-transform: uppercase;
     font-weight: 600;
-    color: #4e5063;
+    color: #8392A5;
   }
   
   .finePrint {
-    font-size: .7rem;
-    color: #4e5063;
+    font-size: 12px;
+    color: #8392A5;
   }
   
   .stdButton {
