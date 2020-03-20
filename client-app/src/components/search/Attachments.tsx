@@ -154,7 +154,7 @@ class attachments extends React.Component<IAttachmentsProps, IAttachmentsState> 
                             <span style={{ marginRight: '5px', marginLeft: '5px' }}>&#183;</span>{this.getDateAndYear(a.uploadDate)}
                           </div>
                           <div>
-                            <img src={ellipsisIcon} style={{ width: '20px', height: '6px' }} />
+                            {/* <img src={ellipsisIcon} style={{ width: '20px', height: '6px' }} /> */}
                           </div>
                         </div> : null
                     }

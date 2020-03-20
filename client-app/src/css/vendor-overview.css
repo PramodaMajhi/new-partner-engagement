@@ -302,9 +302,9 @@
 }
 .rectangle {	        
     background-color: #FFFFFF;
-    box-shadow: 0px 4px 12px -1px rgba(163,175,191,.14);
+    box-shadow: 0px 4px 12px -1px rgba(0,0,0,.10);
     justify-content: space-between;
-    padding: 0px 40px;
+    padding: 0px 40px 20px;
     margin: 12px auto;
 }
 
@@ -322,7 +322,8 @@
 }
 
 .logo {
-    width: 70%;
+    width: 116px;
+    height: auto;
 }
 
 @media screen and (max-width:992px) {
@@ -436,13 +437,21 @@ margin-left: 6px;
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;    
-    color: #0095DA;
+    color: #0095DA !important;
 }
+.domain a {
+    color: #0095da;
+    text-decoration: none;
+    background-color: transparent;
+}
+
 .lastUpdated {
+    font-weight: bold;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     color: #8392A5;
+    text-transform: uppercase;
 }
 .tab-content {
     margin-top: 25px;

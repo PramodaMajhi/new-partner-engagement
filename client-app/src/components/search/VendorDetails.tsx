@@ -160,6 +160,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
         if (profileImg.length) {
             this.fileUpload(singleVendor.id, profileImg);
         }
+        
     }
 
 
@@ -173,8 +174,8 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                 profileLogo: `${imageLogoUrl}/attachments/${containerName}/download/${profileImg[0].name}`
             }
             await startMerge('vendors', vendorObj)
-        }
-        // this.props.dispatch(startGet('vendors'));
+            this.props.dispatch(startGet('vendors'));
+        }         
     }
 
 
@@ -236,15 +237,15 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                                         </div>
                                     </Row>
                                     <Row>
-                                        <div className="description mt-4">{vendor[0].description}</div>
+                                        <div className="description mt-3 mb-3">{vendor[0].description}</div>
                                     </Row>
                                     <Row>
-                                        <div className="lastUpdated mt-4">LAST UPDATED
+                                        <div className="lastUpdated mb-3">LAST UPDATED
                                             <span style={{marginRight: '6px' }}>&#58;</span>
                                             {
                                                 Object.entries(vendor[0].modifiedBy).length ?
-                                                    (<span>{this.getDateAndYear(vendor[0].modifiedAt)} By {vendor[0].modifiedBy.firstName + ' ' + vendor[0].modifiedBy.lastName}</span>)
-                                                    : <span>{this.getDateAndYear(vendor[0].createdAt)} By {vendor[0].createdBy.firstName + ' ' + vendor[0].createdBy.lastName}</span>
+                                                    (<span style={{fontWeight:400}}>{this.getDateAndYear(vendor[0].modifiedAt)} By {vendor[0].modifiedBy.firstName + ' ' + vendor[0].modifiedBy.lastName}</span>)
+                                                    : <span style={{fontWeight:400}}>{this.getDateAndYear(vendor[0].createdAt)} By {vendor[0].createdBy.firstName + ' ' + vendor[0].createdBy.lastName}</span>
                                             }
 
                                         </div>

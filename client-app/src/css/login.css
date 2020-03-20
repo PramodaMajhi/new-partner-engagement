@@ -160,6 +160,10 @@
   max-width: 1140px;
   margin: 0 auto;
 }
+.search-table-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
 .MuiTableCell-head {
   width: 14%;
@@ -395,6 +399,6 @@ a:hover {
   border: 1px solid #0095DA;
   border-radius: 6px !important;
   background-color: #0095DA;
-  font-size: 12px;
+  font-size: 14px !important;
   font-weight: bold;
 }

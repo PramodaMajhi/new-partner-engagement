@@ -77,7 +77,7 @@ export const LogOut = (props) => {
 
     return (
         <>
-            <Button variant="outline-info" className="btn btn-outline-primary mr-sm-3" onClick={handleLogout}>LOGOUT</Button>
+            <Button variant="outline-info" className="mr-sm-3" onClick={handleLogout}>LOGOUT</Button>
             <Col className="user-section">
                 <div className="userName">{localStoreCurrUser ? (localStoreCurrUser.firstName + ' ' + localStoreCurrUser.lastName) : ''}</div>
                 <div className="designation">{localStoreCurrUser ? localStoreCurrUser.title : ''}</div>

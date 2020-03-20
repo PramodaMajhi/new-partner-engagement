@@ -179,7 +179,7 @@
   .btn-primary {
     border: 1px solid #0095DA;    
     background-color: #0095DA;
-    font-size: 12px;
+    font-size: 14px !important;
     font-weight: bold;
     background: linear-gradient(180deg, #0095DA 35.27%, #0079D0 100%);
     border-radius: 8px;
@@ -238,4 +238,7 @@
 }
 .css-1hwfws3 {
   height: 50px;
+}
+.edit-logo {
+  display: flex;
 }

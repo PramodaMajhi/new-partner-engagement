@@ -43,8 +43,8 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
         const { vendors, search } = this.props
 
         return <div className="container pt-3">
-            <div className="patientList ai-ml-container">
-                <Row className="mt-4">
+            <div className="patientList search-table-container">
+                <Row className="">
                     <Table className="patientTable">
                         <TableHead>
                             <TableRow className="tableHeader">
