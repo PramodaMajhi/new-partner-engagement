@@ -155,7 +155,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
                 margin: '0 auto',
                 maxWidth: 1140,
               }}
-              hintText="Partner name, contact, or focus area" />
+              hintText="Partner name, focus area or business unit" />
           </div>
         </div>
         <div className="container">
