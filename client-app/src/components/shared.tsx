@@ -10,8 +10,16 @@ export interface IOption {
     { value: '1', label: 'Dev Ops' },
     { value: '2', label: 'Finance' },
     { value: '3', label: 'Innovation' },
-    { value: '4', label: 'HR' }    
+    { value: '4', label: 'HR' },
+    { value: '5', label: 'Altais, Digital Experience' },
+    { value: '6', label: 'Enterprise Architecture' },
+    { value: '7', label: 'Health Reimagined' },
+    { value: '8', label: 'Product' },
+    { value: '9', label: 'Wellvolution' },
+    { value: '10', label: 'Other' },                                    
+
   ]
+
 
   export const maturityLevelOptions = [    
     { value: '0', label: 'Seed' },

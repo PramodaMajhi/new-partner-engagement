@@ -234,11 +234,17 @@
     border-radius: 6px;
 }
 .css-yk16xz-control {
-  height: 50px; 
+  min-height: 50px; 
 }
 .css-1hwfws3 {
-  height: 50px;
+  min-height: 50px; 
 }
 .edit-logo {
   display: flex;
+}
+.required-text {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 200;
+  margin-left: 5px;
 }

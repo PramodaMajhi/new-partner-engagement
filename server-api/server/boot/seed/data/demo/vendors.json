@@ -6,7 +6,7 @@
         "imageUrl": "http://lorempixel.com/640/480/cats",
         "website": "https://marlin.biz",
         "domain": "marlin.com",
-        "keyFocusArea": "Providers: Clinical Tools",
+        "keyFocusArea": "shared decision making, Medi-Cal, SDOH",
         "businessUnit": [
             {
                 "value": "0",
@@ -57,18 +57,7 @@
                 "uploadDate": "2020-03-19T02:53:47.585Z"
             }
         ],
-        "events": [
-            {
-                "name": "Sedrick Schaefer",
-                "date": "2019-07-17T18:58:25.856Z",
-                "text": "Made initial contact with O'Keefe Inc at HIMMS. Spoke with Rogers Welch regarding their offering in Providers: Clinical Tools."
-            },
-            {
-                "name": "Godfrey Fritsch",
-                "date": "2019-12-11T22:38:57.147Z",
-                "text": "Followed up with Rogers Welch and experienced their product offering demo. Looks good! Recommended them to go through vendor assessment."
-            }
-        ],
+        "events": [],
         "createdBy": {
             "id": "5cd208f5e4c057af4d1a5d84",
             "firstName": "Fabian",
@@ -92,7 +81,7 @@
         "imageUrl": "",
         "website": "http://google.com",
         "domain": "google.com",
-        "keyFocusArea": "IOT",
+        "keyFocusArea": "AI / ML, AR / VR",
         "businessUnit": [
             {
                 "value": "0",
@@ -145,7 +134,7 @@
         "imageUrl": "",
         "website": "https://graniteonehealth.org/",
         "domain": "graniteonehealth.org",
-        "keyFocusArea": "Personalized Consumer Digital Experience",
+        "keyFocusArea": "robotics",
         "businessUnit": [
             {
                 "value": "3",

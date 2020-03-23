@@ -182,6 +182,11 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
     render() {
         const { vendor, events } = this.props;
         const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
+
+        let isLimitedUser = false
+        if(sessionUser.userType === 'limited') {
+            isLimitedUser = true
+        } 
         //  console.log(vendor)
         // console.log(vendor[0].vendorName);
         const totalNotes = events.length;
@@ -286,7 +291,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                                     value={this.state.notes}
                                     onChange={this.notesOnChange}
                                     placeholder="Write a note..." />
-                                <Button type="submit" className="btn btn-primary mb-4" style={{ width: '100%' }}>POST</Button>
+                                <Button type="submit" className="btn btn-primary mb-4" style={{ width: '100%' }} disabled={isLimitedUser}>POST</Button>
                             </Form>
 
                             {
@@ -325,7 +330,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                     </svg>
                     <span className="tabText">Attachments</span></span>}>
                     <Col className="mt-5">
-                        <Attachments vendor={vendor} />
+                        <Attachments vendor={vendor} isLimitedUser={isLimitedUser}/>
                     </Col>
                 </Tab>
 

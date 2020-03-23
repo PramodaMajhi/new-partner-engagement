@@ -26,7 +26,7 @@ interface IAddNewVendorModalState {
     businessUnit?: any,
     processStage?: any,
     selectedFile?: [],
-    businessUnitError?: boolean,
+    isFileVerified?: boolean,
     maturityError?: boolean,
     domainError?: boolean,
     phone?: string,
@@ -38,6 +38,7 @@ interface IAddNewVendorModalState {
 }
 
 const acceptedFileTypes = 'image/x-png, image/png, image/jpg, image/jpeg, image/gif'
+const acceptedFileTypesArray = acceptedFileTypes.split(",").map((item) => { return item.trim() })
 
 export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNewVendorModalState> {
     fileInput: HTMLInputElement;
@@ -48,7 +49,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
             businessUnit: null,
             processStage: {},
             selectedFile: [],
-            businessUnitError: false,
+            isFileVerified: false,
             maturityError: false,
             domainError: false,
             phone: '',
@@ -109,7 +110,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     handleFuncAreaChange = (businessUnit) => {
         this.setState({ businessUnit: businessUnit });
         if (businessUnit === null) {
-            this.setState({ businessUnitError: true })
+            this.setState({ isFileVerified: true })
         }
 
         this.state.vendor[0].businessUnit = businessUnit
@@ -121,6 +122,12 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
         this.setState({ selectedFile: event.target.files });
         let reader = new FileReader();
         let file = event.target.files[0];
+        const currentFileType = file.type
+        if (!acceptedFileTypesArray.includes(currentFileType)) {
+            this.setState({ isFileVerified: true })
+            return false
+        }
+
         reader.onload = () => {
             this.setState({ imagePreviewUrl: reader.result });
         }
@@ -200,7 +207,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                     <Form onSubmit={this.addVendor}>
                         <Row>
                             <Col xs={12}>
-                                <Form.Label className="formLabel custom-formLabel">COMPANY NAME*</Form.Label>
+                                <Form.Label className="formLabel custom-formLabel">COMPANY NAME<span className="required-text">(Required)</span></Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
@@ -212,7 +219,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                             </Col>
 
                             <Col xs={6}>
-                                <Form.Label className="formLabel custom-formLabel">COMPANY WEBSITE*</Form.Label>
+                                <Form.Label className="formLabel custom-formLabel">COMPANY WEBSITE<span className="required-text">(Required)</span></Form.Label>
                                 <Form.Control
                                     required
                                     type="url"
@@ -228,8 +235,13 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                         null
                                     }
                                 </>
+                                <>
+                                    {this.state.isFileVerified ?
+                                        (<Row className="duplicateDomain">Uploaded file is not a valid image. Only JPG, PNG and GIF files are allowed.</Row>) :
+                                        null
+                                    }
+                                </>
                             </Col>
-
 
                             <Col xs={6}>
                                 <div style={{ padding: "40px 0px" }}>
@@ -245,18 +257,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                             </Col>
 
                             <Col xs={12}>
-                                <Form.Label className="formLabel custom-formLabel">COMPANY DESCRIPTION</Form.Label>
-                                <Form.Control as="textarea"
-                                    className="mb-4"
-                                    name="description"
-                                    rows="3"
-                                    placeholder="Write a brief description of what the company does..."
-                                    value={vendor.description}
-                                    onChange={(e) => this.handleInputChange(e, 'description')}
-                                />
-                            </Col>
-                            <Col xs={12}>
-                                <Form.Label className="formLabel custom-formLabel">FOCUS AREAS*</Form.Label>
+                                <Form.Label className="formLabel custom-formLabel">FOCUS AREAS<span className="required-text">(Required)</span></Form.Label>
                                 <Form.Control required type="text"
                                     name="keyFocusArea"
                                     className="input-text-full mb-4"
@@ -274,7 +275,18 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                     lassNamePrefix="assignSelect"
                                     name="businessUnit"
                                     className="mb-4"
-                                    style={{ borderColor: this.state.businessUnitError ? "#b94a48" : "#aaa" }}
+                                    style={{ borderColor: this.state.isFileVerified ? "#b94a48" : "#aaa" }}
+                                />
+                            </Col>
+                            <Col xs={12}>
+                                <Form.Label className="formLabel custom-formLabel">COMPANY DESCRIPTION</Form.Label>
+                                <Form.Control as="textarea"
+                                    className="mb-4"
+                                    name="description"
+                                    rows="4"
+                                    placeholder="Write a brief description of what the company does..."
+                                    value={vendor.description}
+                                    onChange={(e) => this.handleInputChange(e, 'description')}
                                 />
                             </Col>
                         </Row>
