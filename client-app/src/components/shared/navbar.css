@@ -1,3 +1,9 @@
+@media screen and (max-width:992px) {
+    .user-section {
+        display: none;
+    }
+  }
+
 .user-section {
     text-align: end;
 }
@@ -29,4 +35,56 @@
     color: #fff;
     background-color:#0095DA !important;
     border-color: #0095DA !important;
+}
+.rectangle {	        
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 12px -1px rgba(0,0,0,.10);
+    justify-content: space-between;
+    padding: 0px 40px 20px;
+    margin: 12px auto;
+}
+
+.rectangle .nav {
+    max-width: 1110px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.rectangle .nav img {
+    width: 48px;
+    height: 48px;
+    margin-top: 16px;
+}
+
+.logo {
+    width: 116px;
+    height: auto;
+}
+
+@media screen and (max-width:992px) {
+    .nav > img, .user{
+        display: none;
+    }
+
+    .logo {
+        width: 72px;
+        margin: auto;
+    }
+}
+
+.rectangle .logo img {
+    width: 36px;
+    height: 46px;
+}
+
+.user {
+    margin: 28px 0 0 14px;
+}
+
+.user:after {
+    content: 'Fabian Bond';
+    color: #1c2d41;
+    font-weight: 800;
+    font-size: 18px;
 }

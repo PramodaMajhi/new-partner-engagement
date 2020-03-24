@@ -88,8 +88,8 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
 
     let urlObj = url.parse(singleVendor.website);
-    let domain = urlObj.hostname;        
-        domain = psl.parse(domain).domain;
+    let domain = urlObj.hostname;
+    domain = psl.parse(domain).domain;
     singleVendor['domain'] = domain.toLowerCase();
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (Object.entries(sessionUser).length) {
@@ -160,18 +160,18 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
         </div>
         <div className="container">
 
-          <Row>
-            <Col className="search-result-section browse-text" >
+          <div className="partner-action">
+            <div className="browse-text" >
               <span className="browse">All Partners</span> <span className="arrow"></span>
               {
                 <span className="browse-search-text"> {'(' + vendors.length + ')'}</span>
               }
-            </Col>
-            <Col className="search-result-section browse-text addPartner" onClick={this.openModal}>
+            </div>
+            <div className="browse-text addPartner" onClick={this.openModal}>
               {
                 sessionUser.userType !== 'limited' ? '+ ADD NEW PARTNER' : ''
               }
-            </Col>
+            </div>
             {
               this.state.showModal &&
               (<AddNewVendorModal close={this.closeModal}
@@ -180,7 +180,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
                 singleVendor={singleVendor}
                 isEdit={false} />)
             }
-          </Row>
+          </div>
           <VendorSearchList vendors={vendors} search={searchVal} />
 
         </div>
@@ -208,8 +208,8 @@ const mapStateToProps = (state: any, ownProps: ISearchProps) => {
     maturityLevel: {},
     processStage: {},
     events: [],
-    createdBy:{},
-    modifiedBy:{}
+    createdBy: {},
+    modifiedBy: {}
   }]
 
   const result = {

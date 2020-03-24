@@ -213,7 +213,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                     <Row className="row-padding">
                         <Col md={8}>
                             <Row>
-                                <Col xs={2}>
+                                <Col xs={2} className="mobile-view">
                                     {/* <div>
                                         <img src={profileLarge} style={{ height: '60px', width: '60px' }} />
                                     </div> */}
@@ -221,7 +221,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                                         style={{ background: `url(${vendor[0].profileLogo || profileLarge})` }}>
                                     </div>
                                 </Col>
-                                <Col xs={10}>
+                                <Col xs={10} className="mobile-column">
                                     <Row>
                                         <div className="vendorName">
                                             {vendor[0].vendorName}

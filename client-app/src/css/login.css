@@ -44,7 +44,7 @@
 }
 
 .form-group .form-control {
-    width: 459px;
+    max-width: 459px;
     margin: auto;
     height: 50px;
     background: #FFFFFF;
@@ -77,7 +77,7 @@
 }
 .btn-block {
   display: inline-block;
-  width: 459px;
+  max-width: 459px;
 }
 
 .login-error {
@@ -286,19 +286,18 @@ tr {
 .search_option:hover {
   box-shadow: 0 6px 24px -1px rgba(131,146,165,0.35);
   transition: all 0.3s;
-  border-color: #0079D0;
+  border-color: #0095da;
   cursor: pointer;
 }
 .browse-text {
   font-size: 18px;
   font-weight: bold;
-  margin: 70px auto 30px;
 }
 .browse, .browse-text .arrow {
   color: #8392a5;
 }
 .browse-search-text {
-  color: #3480c7;
+  color: #0095da;
 }
 .browse:hover {
   cursor: pointer;
@@ -401,4 +400,26 @@ a:hover {
   background-color: #0095DA;
   font-size: 14px !important;
   font-weight: bold;
+}
+
+
+@media screen and (max-width: 992px) { 
+  .mobile-view {
+    display: none !important;
+  }
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .mobile-column {
+    min-width: 100%;
+  }
+
+}
+
+.partner-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
 }

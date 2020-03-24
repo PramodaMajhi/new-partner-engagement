@@ -219,10 +219,10 @@
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
-  @media screen and (max-width: 1024px) {
-    .treatment.treatmentSetModal {
-      width: 90%;
-      height: 25rem;
+  @media screen and (max-width: 992px) {
+    .treatmentSetModal {
+      width: 100% !important;
+      height: auto;
     }
   }
 
