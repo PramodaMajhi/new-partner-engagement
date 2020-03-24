@@ -47,7 +47,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                 <Row className="">
                     <Table className="patientTable">
                         <TableHead>
-                            <TableRow className="tableHeader">
+                            <TableRow className="tableHeader mobile-view">
                                 <TableCell className="patientTable">PARTNER NAME</TableCell>
                                 <TableCell className="patientTable">FOCUS AREAS</TableCell>
                                 <TableCell className="patientTable">BSC BUSINESS UNITS</TableCell>
@@ -80,7 +80,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                                 </Row>
                                             </TableCell>
                                         </Link>                                       
-                                        <TableCell>
+                                        <TableCell className="mobile-view">
                                             <Highlighter
                                                 highlightClassName="YourHighlightClass"
                                                 searchWords={[search]}
@@ -89,7 +89,7 @@ export class VendorSearchList extends React.Component<IVendorListProps & RouteCo
                                             />
                                         </TableCell>
 
-                                        <TableCell align="right" className="patientCol">
+                                        <TableCell align="right" className="patientCol mobile-view">
                                             {vendor.businessUnit ? vendor.businessUnit.map(b => {
                                                 return <div key={b.value} className="mb-2">
                                                     <Highlighter
