@@ -32,7 +32,8 @@ interface ISearchState {
   searchString?: string,
   toggle?: boolean,
   showModal?: boolean,
-  profileImage?: []
+  profileImage?: [],
+  width?: Number,
 }
 
 
@@ -44,12 +45,17 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       searchString: "",
       toggle: false,
       showModal: false,
-      profileImage: []
+      profileImage: [],
+      width: 1140
     };
   }
 
   componentDidMount() {
     this.props.dispatch(startGet('vendors'))
+    window.addEventListener("resize", () => {
+      this.setState({ width: window.innerWidth });
+    });
+    // alert(window.innerWidth);
   }
   componentWillReceiveProps(nextProps: ISearchProps) {
     if ((this.props.vendors && nextProps.vendors &&
@@ -135,6 +141,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
   render() {
     const { vendors, searchVal, singleVendor } = this.props
+    const { width } = this.state
 
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (Object.entries(sessionUser).length === 0) {
@@ -155,7 +162,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
                 margin: '0 auto',
                 maxWidth: 1140,
               }}
-              hintText="Partner name, focus area or business unit" />
+              hintText={width < 992 ? "Search partners" : "Partner name, focus area or business unit"} />
           </div>
         </div>
         <div className="container">
