@@ -1,0 +1,28 @@
+version: '3.3'
+services:    
+    mongo:
+        image: bsc-docker-all.artifactory.bsc.bscal.com/mongo
+        ports:
+            - "27017:27017"
+        volumes:
+            -  ./data:/data/db
+        restart: always    
+    server-api:
+        build: 
+            context: ./server-api
+            dockerfile: Dockerfile
+        expose: 
+            - 3001
+        environment:
+             - DATABASE_URL=mongodb://mongo:27017/vendor-db
+        restart: always
+        links:
+            - mongo  
+    client-app:
+        build: 
+            context: ./client-app
+            dockerfile: Dockerfile
+        ports:
+            - 3000:3000
+        environment:
+            - REACT_APP_API_URL=http://server-api:3001/api
