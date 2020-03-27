@@ -26,5 +26,7 @@ const normalize = (str) => {
         return ''
     }
     // remove special characters, replace groups of spaces with a single space and convert to upper case
-    return str.replace(/[^\w\s]/g, '').replace(/\s+/g, ' ').toLowerCase()
+    // return str.replace(/[^\w\s]/g, '').replace(/\s+/g, ' ').toLowerCase()
+    // allowing everything in the search
+    return str.replace(/\s+/g, ' ').toLowerCase()
 }

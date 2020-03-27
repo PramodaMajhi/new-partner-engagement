@@ -193,7 +193,7 @@ class attachments extends React.Component<IAttachmentsProps, IAttachmentsState> 
                         </svg>
                   DRAG YOUR ATTACHMENT HERE, OR <span style={{ color: '#0095DA' }}>BROWSE</span>
                       </div>
-                      <div className="finePrint">{`(Limit of ${CONF.VENDOR_FILES_ATTACH.MAX_FILES} files, .pptx, .docx, .xlsx, .pdf, images, ${CONF.VENDOR_FILES_ATTACH.MAX_FILE_SIZE_TEXT} max each)`}</div>
+                      <div className="finePrint">{`(Files  .pptx, .docx, .xlsx, .pdf, images, ${CONF.VENDOR_FILES_ATTACH.MAX_FILE_SIZE_TEXT} max each)`}</div>
                     </div>
                   </section>
                 )}

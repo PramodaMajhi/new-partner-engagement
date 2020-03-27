@@ -77,10 +77,11 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     addVendor = (event) => {
 
         event.preventDefault();
-
+        let strUrl = event.currentTarget.website.value;
+        strUrl = strUrl.replace(/\s/g,'');
         let domainExist;
         if (this.props.vendors.length) {
-            let urlObj = url.parse(event.currentTarget.website.value);
+            let urlObj = url.parse(strUrl);
             let domain = urlObj.hostname;
             domain = psl.parse(domain).domain;
             domainExist = this.props.vendors.filter(v => {
