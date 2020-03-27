@@ -6,6 +6,7 @@ import * as currentUserModel from '../../models/currentUser';
 import { logout } from '../../actions/logout';
 import { LOGOUT, ACCESS_TOKEN } from '../../actions/types';
 import { resetLoginInfo } from './LoginUtil';
+import { GADataLayer } from '../../utils'
 // import { Redirect } from 'react-router'
 // import { SessionTimedOut } from './SessionTimedOut'
 
@@ -31,6 +32,12 @@ class LogoutDisp extends React.Component<any & RouteComponentProps, {}> {
         // TODO: call logout api once backend auth is working
         await this.props.dispatch(logout(this.props.accessToken, this.onLogout));
         await this.props.dispatch({ type: ACCESS_TOKEN, payload: null });
+        // GA tag
+        let dataLayer = GADataLayer();
+        dataLayer.push({
+            'event': 'virtualPageView',
+            'pageName': 'logout'
+        });
     }
 
     componentDidMount() {

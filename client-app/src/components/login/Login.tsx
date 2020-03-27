@@ -6,8 +6,9 @@ import { Row, Col, Button } from 'react-bootstrap';
 import iconBSCLogo from '../../img/logo_bsc@2x.png';
 import * as currentUserModel from '../../models/currentUser';
 import { login } from '../../actions/login';
-
+import ReactGA from 'react-ga'
 import '../../css/login.css';
+import { GADataLayer } from '../../utils'
 
 
 const loginJsonSchema = {
@@ -74,7 +75,14 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
     this.onChangeInput = this.onChangeInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-
+  componentDidMount() {
+    // GA tag
+    let dataLayer = GADataLayer();
+    dataLayer.push({
+      'event': 'virtualPageView',
+      'pageName': 'login'
+    });
+  }
   onSubmit = ({ formData }) => {
     this.props.dispatch(login(formData));
   }

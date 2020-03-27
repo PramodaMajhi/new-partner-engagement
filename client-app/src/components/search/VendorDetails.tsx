@@ -9,6 +9,7 @@ import { startGet, startGetAttachments } from '../../actions/get'
 import { startMerge } from '../../actions/merge'
 import { startUpload } from "../../actions/upload"
 import { IFile } from '../../models/types'
+import { GADataLayer } from '../../utils'
 import ReactTimeAgo from 'react-time-ago'
 import Select from 'react-select';
 import { processStageOptions } from '.././shared'
@@ -24,6 +25,9 @@ import { Attachments } from './Attachments';
 import { AddNewVendorModal } from './AddNewVendorModal'
 import { businessUnitOptions } from '.././shared'
 import url from 'url'
+import ReactGA from 'react-ga'
+
+
 
 interface IVendorDetailState {
     showButton?: boolean,
@@ -44,7 +48,12 @@ interface IVendorDetailProps {
     dispatch?: (name: any) => any,
 }
 
-
+// GA global window variable
+// declare global {
+//     interface Window {
+//         dataLayer: any
+//     }
+// }
 
 class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentProps, IVendorDetailState> {
 
@@ -64,6 +73,18 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
             id: this.props.vendor[0].id
         }
         this.props.dispatch(startGet("attachments", filter))
+        // ReactGA.pageview('view-profile');    
+        // window.dataLayer = window.dataLayer || [];
+        // window.dataLayer.push({
+        //     'event': 'virtualPageView',
+        //     'pageName': 'view-profile'
+        // });
+
+        let dataLayer = GADataLayer();
+        dataLayer.push({
+            'event': 'virtualPageView',
+            'pageName': 'view-profile'
+        });
     }
 
     componentWillReceiveProps(nextProps: IVendorDetailProps) {
@@ -108,6 +129,13 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                 this.setState({ notes: '' })
                 this.props.dispatch(startGet('vendors'));
             }).catch(err => { throw new Error(err); });
+
+        // GA tag
+        let dataLayer = GADataLayer();
+        dataLayer.push({
+            'event': 'virtualPageView',
+            'pageName': 'add-note'
+        });
 
 
     }
@@ -160,7 +188,16 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
         if (profileImg.length) {
             this.fileUpload(singleVendor.id, profileImg);
         }
-        
+
+        // GA tag
+        let dataLayer = GADataLayer();
+        dataLayer.push({
+            'event': 'eventTracker',
+            'eventCategory': 'Partner Records Add or Edit',
+            'eventAction': 'Partner Record Edit',
+            'eventLabel': 'Success'
+        });
+
     }
 
 
@@ -175,7 +212,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
             }
             await startMerge('vendors', vendorObj)
             this.props.dispatch(startGet('vendors'));
-        }         
+        }
     }
 
 
@@ -184,9 +221,9 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
         const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
 
         let isLimitedUser = false
-        if(sessionUser.userType === 'limited') {
+        if (sessionUser.userType === 'limited') {
             isLimitedUser = true
-        } 
+        }
         //  console.log(vendor)
         // console.log(vendor[0].vendorName);
         const totalNotes = events.length;
@@ -246,11 +283,11 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                                     </Row>
                                     <Row>
                                         <div className="lastUpdated mb-3">LAST UPDATED
-                                            <span style={{marginRight: '6px' }}>&#58;</span>
+                                            <span style={{ marginRight: '6px' }}>&#58;</span>
                                             {
                                                 Object.entries(vendor[0].modifiedBy).length ?
-                                                    (<span style={{fontWeight:400}}>{this.getDateAndYear(vendor[0].modifiedAt)} By {vendor[0].modifiedBy.firstName + ' ' + vendor[0].modifiedBy.lastName}</span>)
-                                                    : <span style={{fontWeight:400}}>{this.getDateAndYear(vendor[0].createdAt)} By {vendor[0].createdBy.firstName + ' ' + vendor[0].createdBy.lastName}</span>
+                                                    (<span style={{ fontWeight: 400 }}>{this.getDateAndYear(vendor[0].modifiedAt)} By {vendor[0].modifiedBy.firstName + ' ' + vendor[0].modifiedBy.lastName}</span>)
+                                                    : <span style={{ fontWeight: 400 }}>{this.getDateAndYear(vendor[0].createdAt)} By {vendor[0].createdBy.firstName + ' ' + vendor[0].createdBy.lastName}</span>
                                             }
 
                                         </div>
@@ -330,7 +367,7 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
                     </svg>
                     <span className="tabText">Attachments</span></span>}>
                     <Col className="mt-5">
-                        <Attachments vendor={vendor} isLimitedUser={isLimitedUser}/>
+                        <Attachments vendor={vendor} isLimitedUser={isLimitedUser} />
                     </Col>
                 </Tab>
 

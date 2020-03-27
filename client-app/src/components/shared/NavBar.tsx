@@ -9,6 +9,7 @@ import { logout } from '../../actions/logout';
 import { LOGOUT, ACCESS_TOKEN } from '../../actions/types';
 import { resetLoginInfo } from '../../components/login/LoginUtil';
 import * as currentUserModel from '../../models/currentUser';
+import { GADataLayer } from '../../utils'
 
 interface INavBarDispProps {
     email?: string,
@@ -24,6 +25,12 @@ class navBar extends React.Component<INavBarDispProps & RouteComponentProps<any>
         // TODO: call logout api once backend auth is working
         await this.props.dispatch(logout(this.props.accessToken, this.onLogout));
         await this.props.dispatch({ type: ACCESS_TOKEN, payload: null });
+         // GA tag
+         let dataLayer = GADataLayer();
+         dataLayer.push({
+             'event': 'virtualPageView',
+             'pageName': 'logout'
+         });
     }
 
     onLogout = () => {

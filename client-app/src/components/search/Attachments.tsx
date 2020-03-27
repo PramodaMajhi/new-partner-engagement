@@ -7,7 +7,7 @@ import { startGet } from "../../actions/get"
 import { startMerge } from "../../actions/merge"
 import { startUpload } from "../../actions/upload"
 import { CONF } from '../../conf'
-import { copyMap, mapToList } from '../../utils'
+import { GADataLayer } from '../../utils'
 import { IFile } from '../../models/types'
 import { PhaseEnum } from '.././shared'
 import './attachments.css'
@@ -54,6 +54,14 @@ class attachments extends React.Component<IAttachmentsProps, IAttachmentsState> 
     this.setState({ files: files });
     this.uploadFiles();
 
+  }
+
+  componentDidMount() {
+    // let dataLayer = GADataLayer();
+    // dataLayer.push({
+    //   'event': 'virtualPageView',
+    //   'pageName': 'view-attachment'
+    // });
   }
 
   getDateAndYear = (date) => {
@@ -106,7 +114,12 @@ class attachments extends React.Component<IAttachmentsProps, IAttachmentsState> 
     setTimeout(() => {
       this.setState({ showUploadProgress: false })
     }, 1000)
+    let dataLayer = GADataLayer();
 
+    dataLayer.push({
+      'event': 'virtualPageView',
+      'pageName': 'file-attached'
+    });
 
   }
 
