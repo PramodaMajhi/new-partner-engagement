@@ -25,7 +25,7 @@ const App: React.FC = () => {
     <MuiThemeProvider>
       <Provider store={store}>
         <div className="topMargin">          
-          <Router basename={'/'}>
+          <Router basename={'partnerengage'}>
             <Routes />
           </Router>
         </div>
