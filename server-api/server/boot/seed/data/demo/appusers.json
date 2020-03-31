@@ -54,5 +54,47 @@
         "title":"Sr.Manager, Product Strategy",
         "emailVerified": true,
         "termsAccepted": true
+    },
+    {
+        "id": "5cd208f5e4c057af4d1a5d88",
+        "firstName": "Lul",
+        "lastName": "Lin",
+        "userType": "champion",
+        "realm": "string",
+        "username": "Lululin",
+        "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
+        "email": "lulu.lin@blueshieldca.com",
+        "businessUnit":"HIT",
+        "title":"Sr.Manager, Product Strategy",
+        "emailVerified": true,
+        "termsAccepted": true
+    },    
+    {
+        "id": "5cd208f5e4c057af4d1a5d89",
+        "firstName": "Brandon",
+        "lastName": "Ward",
+        "userType": "champion",
+        "realm": "string",
+        "username": "Brandonward",
+        "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
+        "email": "brandon.ward@blueshieldca.com",
+        "businessUnit":"HIT",
+        "title":"Sr.Interaction Designer, Product Strategy",
+        "emailVerified": true,
+        "termsAccepted": true
+    },
+    {
+        "id": "5cd208f5e4c057af4d1a5d90",
+        "firstName": "Praveen",
+        "lastName": "Kondapalli",
+        "userType": "champion",
+        "realm": "string",
+        "username": "PKondapalli",
+        "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
+        "email": "praveen.kondapalli@blueshieldca.com",
+        "businessUnit":"IT",
+        "title":"Consultant, Quality Engineering",
+        "emailVerified": true,
+        "termsAccepted": true
     }
 ]

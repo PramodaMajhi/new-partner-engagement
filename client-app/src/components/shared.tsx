@@ -6,16 +6,16 @@ export interface IOption {
     
   
   export const businessUnitOptions = [    
-    { value: '0', label: 'Health Innovation Technology' },
-    { value: '1', label: 'Dev Ops' },
-    { value: '2', label: 'Finance' },
-    { value: '3', label: 'Innovation' },
-    { value: '4', label: 'HR' },
-    { value: '5', label: 'Altais, Digital Experience' },
-    { value: '6', label: 'Enterprise Architecture' },
-    { value: '7', label: 'Health Reimagined' },
+    { value: '0', label: 'Altais' },
+    { value: '1', label: 'Digital Experience' },
+    { value: '2', label: 'Enterprise Architecture' },
+    { value: '3', label: 'Finance' },
+    { value: '4', label: 'Health Innovation Technology' },
+    { value: '5', label: 'Health Reimagined' },
+    { value: '6', label: 'Innovation' },
+    { value: '7', label: 'Market(Sales)' },
     { value: '8', label: 'Product' },
-    { value: '9', label: 'Wellvolution' },
+    { value: '9', label: 'Wellvolution' },    
     { value: '10', label: 'Other' },                                    
 
   ]
@@ -46,3 +46,5 @@ export interface IOption {
     Uploading: 3,
     Complete: 4
   }
+
+  

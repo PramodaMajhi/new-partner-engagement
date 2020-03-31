@@ -7,14 +7,14 @@ export const getLocalDateTime = () => {
 // but this is not yet supported by TypeScript and we're trying to avoid running Babel after Typescript
 export const copyMap = (m) => {
   const map2 = new Map()
-  m.forEach((v,k)=>map2.set(k, v))
+  m.forEach((v, k) => map2.set(k, v))
   return map2
 }
 
 // take a list of T. Call fn(T):K on each item to extract the key.
 // make a map<K,T> mapping the keys to the values
-export const listToMap = <T, K> (list: T[], fn: (T) => K) : Map<K,T>  => {
-  const map = new Map<K,T>()
+export const listToMap = <T, K>(list: T[], fn: (T) => K): Map<K, T> => {
+  const map = new Map<K, T>()
   list.forEach(item => {
     const key = fn(item)
     map.set(key, item)
@@ -35,7 +35,7 @@ export const listToMap = <T, K> (list: T[], fn: (T) => K) : Map<K,T>  => {
 
 // take a list of T. Call fn(T):S on each item to obtain a sub-value
 // make a set<S>
-export const listToSet = <T, S> (list: T[], fn: (T) => S) : Set<S>  => {
+export const listToSet = <T, S>(list: T[], fn: (T) => S): Set<S> => {
   const set = new Set<S>()
   list.forEach(item => {
     const s = fn(item)
@@ -44,7 +44,7 @@ export const listToSet = <T, S> (list: T[], fn: (T) => S) : Set<S>  => {
   return set
 }
 
-export const mapToList = <K, V> (map: Map<K, V>): V[] => {
+export const mapToList = <K, V>(map: Map<K, V>): V[] => {
   let list = Array.from(map.values())
   return list
 }
@@ -82,15 +82,27 @@ export const getError = (e) => {
   return e.toString()
 }
 
-  // If string is longer than maxLength, truncate it around maxLength characters,
-  // but try to truncate at a word boundary
-  export const createGlimpse = (str: string, maxLength) => {
-    if (!str || str.length < maxLength) {
-      return str
-    }
-    let spaceIdx = str.indexOf(' ', maxLength - 10)
-    if (spaceIdx <= maxLength) {
-      return str.substr(0, spaceIdx) + " ..."
-    }
-    return str.substr(0, maxLength) + "..."
+// If string is longer than maxLength, truncate it around maxLength characters,
+// but try to truncate at a word boundary
+export const createGlimpse = (str: string, maxLength) => {
+  if (!str || str.length < maxLength) {
+    return str
   }
+  let spaceIdx = str.indexOf(' ', maxLength - 10)
+  if (spaceIdx <= maxLength) {
+    return str.substr(0, spaceIdx) + " ..."
+  }
+  return str.substr(0, maxLength) + "..."
+}
+
+// GA global window variable
+declare global {
+  interface Window {
+    dataLayer: any
+  }
+}
+
+export const GADataLayer = () => {
+  window.dataLayer = window.dataLayer || [];
+  return window.dataLayer
+}

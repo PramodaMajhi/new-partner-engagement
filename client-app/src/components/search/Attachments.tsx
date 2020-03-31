@@ -7,7 +7,7 @@ import { startGet } from "../../actions/get"
 import { startMerge } from "../../actions/merge"
 import { startUpload } from "../../actions/upload"
 import { CONF } from '../../conf'
-import { copyMap, mapToList } from '../../utils'
+import { GADataLayer } from '../../utils'
 import { IFile } from '../../models/types'
 import { PhaseEnum } from '.././shared'
 import './attachments.css'
@@ -54,6 +54,14 @@ class attachments extends React.Component<IAttachmentsProps, IAttachmentsState> 
     this.setState({ files: files });
     this.uploadFiles();
 
+  }
+
+  componentDidMount() {
+    // let dataLayer = GADataLayer();
+    // dataLayer.push({
+    //   'event': 'virtualPageView',
+    //   'pageName': 'view-attachment'
+    // });
   }
 
   getDateAndYear = (date) => {
@@ -106,7 +114,12 @@ class attachments extends React.Component<IAttachmentsProps, IAttachmentsState> 
     setTimeout(() => {
       this.setState({ showUploadProgress: false })
     }, 1000)
+    let dataLayer = GADataLayer();
 
+    dataLayer.push({
+      'event': 'virtualPageView',
+      'pageName': 'file-attached'
+    });
 
   }
 
@@ -180,7 +193,7 @@ class attachments extends React.Component<IAttachmentsProps, IAttachmentsState> 
                         </svg>
                   DRAG YOUR ATTACHMENT HERE, OR <span style={{ color: '#0095DA' }}>BROWSE</span>
                       </div>
-                      <div className="finePrint">{`(Limit of ${CONF.VENDOR_FILES_ATTACH.MAX_FILES} files, .pptx, .docx, .xlsx, .pdf, images, ${CONF.VENDOR_FILES_ATTACH.MAX_FILE_SIZE_TEXT} max each)`}</div>
+                      <div className="finePrint">{`(Files  .pptx, .docx, .xlsx, .pdf, images, ${CONF.VENDOR_FILES_ATTACH.MAX_FILE_SIZE_TEXT} max each)`}</div>
                     </div>
                   </section>
                 )}

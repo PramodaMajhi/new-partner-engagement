@@ -8,6 +8,7 @@ import AutoComplete from 'material-ui/AutoComplete';
 import iconBSCLogo from '../../img/BSC-Logo-Lrg@2x.png';
 import * as currentUserModel from '../../models/currentUser';
 import { login } from '../../actions/login';
+import { GADataLayer } from '../../utils'
 import { startGet } from '../../actions/get'
 import { setValues } from '../../actions/values'
 import { startInsert, createAttachment } from "../../actions/insert"
@@ -21,7 +22,7 @@ import { AddNewVendorModal } from './AddNewVendorModal'
 import * as sel from '../shared/Selectors'
 import psl from 'psl'
 import '../../css/login.css';
-
+import ReactGA from 'react-ga'
 interface ISearchProps {
   vendors?: any,
   searchVal?: string,
@@ -55,7 +56,12 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     window.addEventListener("resize", () => {
       this.setState({ width: window.innerWidth });
     });
-    // alert(window.innerWidth);
+    // GA tag
+    let dataLayer =  GADataLayer();
+        dataLayer.push({
+            'event': 'virtualPageView',
+            'pageName': 'search'
+        });
   }
   componentWillReceiveProps(nextProps: ISearchProps) {
     if ((this.props.vendors && nextProps.vendors &&
@@ -119,6 +125,14 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     await createAttachment('attachments', fileAttachContainer)(this.props.dispatch)
     this.setState({ profileImage: profileImg })
     this.fileUpload(fileAttachContainer, profileImg);
+    // GA tag
+    let dataLayer = GADataLayer();
+    dataLayer.push({
+      'event': 'eventTracker',
+      'eventCategory': 'Partner Records Add or Edit',
+      'eventAction': 'Partner Record Add',
+      'eventLabel': 'Success'
+  });
   }
 
   fileUpload = async (containerName, profileImg) => {

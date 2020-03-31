@@ -11,7 +11,8 @@ import uploadIcon from '../../img/Upload@2x.png'
 import PhoneInput, { isPossiblePhoneNumber } from 'react-phone-number-input/input'
 import 'react-phone-number-input/style.css'
 import profileLarge from '../../img/profile-lg@2x.png';
-
+import ReactGA from 'react-ga'
+import { GADataLayer } from '../../utils'
 interface IAddNewVendorModalProps {
     vendors?: any,
     singleVendor?: any,
@@ -64,15 +65,23 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     }
     componentDidMount() {
         Modal.setAppElement('body')
+        // ReactGA.modalview('edit-profile');
+        // GA tag
+        let dataLayer = GADataLayer();
+        dataLayer.push({
+            'event': 'virtualPageView',
+            'pageName': 'view-profile-modal'
+        });
     }
 
     addVendor = (event) => {
 
         event.preventDefault();
-
+        let strUrl = event.currentTarget.website.value;
+        strUrl = strUrl.replace(/\s/g,'');
         let domainExist;
         if (this.props.vendors.length) {
-            let urlObj = url.parse(event.currentTarget.website.value);
+            let urlObj = url.parse(strUrl);
             let domain = urlObj.hostname;
             domain = psl.parse(domain).domain;
             domainExist = this.props.vendors.filter(v => {
