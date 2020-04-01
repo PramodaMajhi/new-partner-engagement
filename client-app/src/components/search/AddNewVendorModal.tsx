@@ -82,8 +82,9 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
         let domainExist;
         if (this.props.vendors.length) {
             let urlObj = url.parse(strUrl);
-            let domain = urlObj.hostname;
+            let domain = urlObj.hostname.trim();
             domain = psl.parse(domain).domain;
+
             domainExist = this.props.vendors.filter(v => {
                 return v.domain === domain.toLowerCase()
             })
@@ -229,10 +230,22 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
 
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">COMPANY WEBSITE<span className="required-text">(Required)</span></Form.Label>
+                                {
+                                    // The pattern works in all scenarios below
+                                    // "yahoo.com";
+                                    // "www.yahoo.com";
+                                    // "http://www.yahoo.com";
+                                    // "yahoo.org";
+                                    // "somesite.org"
+                                    // "www.somesite.org"
+                                    // "http://somesite.org"
+                                    // "https://www.somesite.org"
+                                    // "somesite.org?case=1"
+                                }
                                 <Form.Control
                                     required
-                                    type="url"
-                                    pattern="https?://.*"
+                                    type="input"
+                                    pattern="^(?:https?://|s?ftps?://)?(?!www | www\.)[A-Za-z0-9_-]+\.+[A-Za-z0-9.\/%&=\?_:;-]+$"
                                     className="input-text-full mb-4"
                                     name="website"
                                     value={vendor.website}
@@ -266,7 +279,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                             </Col>
 
                             <Col xs={12}>
-                                <Form.Label className="formLabel custom-formLabel">FOCUS AREAS<span className="required-text">(Required)</span></Form.Label>
+                                <Form.Label className="formLabel custom-formLabel">BSC FOCUS AREAS<span className="required-text">(Required)</span></Form.Label>
                                 <Form.Control required type="text"
                                     name="keyFocusArea"
                                     className="input-text-full mb-4"

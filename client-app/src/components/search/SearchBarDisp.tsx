@@ -23,6 +23,7 @@ import * as sel from '../shared/Selectors'
 import psl from 'psl'
 import '../../css/login.css';
 import ReactGA from 'react-ga'
+import { CONF } from '../../conf'
 interface ISearchProps {
   vendors?: any,
   searchVal?: string,
@@ -57,11 +58,11 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       this.setState({ width: window.innerWidth });
     });
     // GA tag
-    let dataLayer =  GADataLayer();
-        dataLayer.push({
-            'event': 'virtualPageView',
-            'pageName': 'search'
-        });
+    let dataLayer = GADataLayer();
+    dataLayer.push({
+      'event': 'virtualPageView',
+      'pageName': 'search'
+    });
   }
   componentWillReceiveProps(nextProps: ISearchProps) {
     if ((this.props.vendors && nextProps.vendors &&
@@ -98,11 +99,13 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
   addVendor = async (singleVendor, profileImg) => {
 
-
-    let urlObj = url.parse(singleVendor.website);
-    let domain = urlObj.hostname;
-    domain = psl.parse(domain).domain;
-    singleVendor['domain'] = domain.toLowerCase();
+    let strUrl = singleVendor.website;
+    strUrl = strUrl.replace(/\s/g, '');
+    let urlObj = url.parse(strUrl);
+    let domain = urlObj.hostname.trim();
+    domain = psl.parse(domain).domain.toLowerCase();
+    singleVendor['domain'] = domain;
+    singleVendor['website'] = strUrl;
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (Object.entries(sessionUser).length) {
       singleVendor.createdBy = {
@@ -132,17 +135,17 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       'eventCategory': 'Partner Records Add or Edit',
       'eventAction': 'Partner Record Add',
       'eventLabel': 'Success'
-  });
+    });
   }
 
   fileUpload = async (containerName, profileImg) => {
     await startUpload(containerName.name, profileImg)(this.props.dispatch)
-    let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api'
+    // let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/partnerengage-api/api'
 
     if (profileImg.length) {
       let vendorObj = {
         id: containerName.name,
-        profileLogo: `${imageLogoUrl}/attachments/${containerName.name}/download/${profileImg[0].name}`
+        profileLogo: `${CONF.APP_API_URL.API_URL}/attachments/${containerName.name}/download/${profileImg[0].name}`
       }
       await startMerge('vendors', vendorObj)
     }

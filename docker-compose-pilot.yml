@@ -11,10 +11,11 @@ services:
         build: 
             context: ./server-api
             dockerfile: Dockerfile
-        expose: 
-            - 3001
+        ports: 
+            - 17002:3001
         environment:
              - DATABASE_URL=mongodb://mongo:27017/vendor-db
+             - "SEED_DATA=false"             
         restart: always
         links:
             - mongo  
@@ -25,4 +26,4 @@ services:
         ports:
             - 20000:3000
         environment:
-            - REACT_APP_API_URL=http://server-api:3001/api
+            - REACT_APP_API_URL=https://10.35.64.125/partnerengage-api/api            

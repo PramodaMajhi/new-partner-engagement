@@ -1,12 +1,12 @@
 // import { IFile } from '../models/types'
-
-let API_ROOT = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api/'
+import { CONF } from '../conf'
+let API_ROOT = CONF.APP_API_URL.API_URL
 
 
 // upload a single file as an attachment to a list item
 export const upload = (container, file: any, fd:any, callback: (percent) => void) => {
   let promise = new Promise((resolve, reject) => {
-    const url = API_ROOT+`attachments/${container}/upload`
+    const url = API_ROOT+`/attachments/${container}/upload`
 
     let xhr = new XMLHttpRequest()
 

@@ -11,6 +11,9 @@ export const CONF = {
             'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
             'image/*'
         ],
-    },     
+    },  
+    APP_API_URL:{
+        API_URL: process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/partnerengage-api/api'
+    }   
 }
 

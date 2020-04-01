@@ -1,8 +1,9 @@
 import axios from 'axios';
+import { CONF } from '../conf'
 
 const apiClient = () => {
   const defaultOptions = {
-    baseURL: process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api',
+    baseURL: CONF.APP_API_URL.API_URL,
     headers: {
         'Content-Type': 'application/json',
       }  

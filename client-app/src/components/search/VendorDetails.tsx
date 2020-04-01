@@ -26,7 +26,7 @@ import { AddNewVendorModal } from './AddNewVendorModal'
 import { businessUnitOptions } from '.././shared'
 import url from 'url'
 import ReactGA from 'react-ga'
-
+import { CONF } from '../../conf'
 
 
 interface IVendorDetailState {
@@ -203,12 +203,10 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 
     fileUpload = async (containerName, profileImg) => {
         await startUpload(containerName, profileImg)(this.props.dispatch)
-        let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api'
-
         if (profileImg.length) {
             let vendorObj = {
                 id: containerName,
-                profileLogo: `${imageLogoUrl}/attachments/${containerName}/download/${profileImg[0].name}`
+                profileLogo: `${CONF.APP_API_URL.API_URL}/attachments/${containerName}/download/${profileImg[0].name}`
             }
             await startMerge('vendors', vendorObj)
             this.props.dispatch(startGet('vendors'));

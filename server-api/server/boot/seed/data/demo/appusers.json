@@ -96,5 +96,33 @@
         "title":"Consultant, Quality Engineering",
         "emailVerified": true,
         "termsAccepted": true
+    },    
+    {
+        "id": "5cd208f5e4c057af4d1a5d91",
+        "firstName": "Maggie",
+        "lastName": "Neitzel",
+        "userType": "champion",
+        "realm": "string",
+        "username": "MNeitzel",
+        "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
+        "email": "maggie.neitzel@blueshieldca.com",
+        "businessUnit":"Innovation",
+        "title":"Innovation Consultant, Principal",
+        "emailVerified": true,
+        "termsAccepted": true
+    },
+    {
+        "id": "5cd208f5e4c057af4d1a5d92",
+        "firstName": "Adler",
+        "lastName": "Chang",
+        "userType": "champion",
+        "realm": "string",
+        "username": "Achang",
+        "password": "$2a$10$CM1DbZOW8BBfjIAk2kzb3eevXbU54M58kvuQWJECv6Bo1IM/M7Xp6",
+        "email": "adler.chang@blueshieldca.com",
+        "businessUnit":"Innovation",
+        "title":"Innovation Consultant, Consultant",
+        "emailVerified": true,
+        "termsAccepted": true
     }
 ]
