@@ -254,7 +254,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 />
                                 <>
                                     {this.state.domainError ?
-                                        (<Row className="duplicateDomain">Duplicate found. Please edit original entry</Row>) :
+                                        (<Row className="duplicateDomain">Partner already exists with same website.</Row>) :
                                         null
                                     }
                                 </>
