@@ -75,24 +75,23 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
   handleChange = (newValue: any) => {
     this.setState({ searchString: newValue, toggle: true });
     this.props.dispatch(setValues({ searchVal: newValue }))
+
+    // Search for GA
+    let dataLayer = GADataLayer();
+    const searchEventAction = this.props.vendors.length ? 'Success' : 'Failure'
+    dataLayer.push({
+      'event': 'eventTracker',
+      'eventCategory': 'Partner Record Search',
+      'eventAction': searchEventAction,
+      'eventLabel': newValue
+    });
+
   }
   onRequestSearch = (newValue: any) => {
     console.log("on-search-requested" + newValue);
   }
 
-  handlePushSearch = (search) => {
-    this.props.dispatch(setValues({ searchVal: search }))
-    // const filteredVendor = this.state.vendors.filter(v => {
-    //   return v.businessUnit === search;
-    // })
-    // this.setState({ vendors: filteredVendor });
 
-  }
-
-  handleBrowse = () => {
-    this.props.dispatch(setValues({ searchVal: '' }))
-    this.props.history.push('/');
-  }
 
   closeModal = () => {
     this.setState({ showModal: false, })
