@@ -9,7 +9,7 @@ import { startGet, startGetAttachments } from '../../actions/get'
 import { startMerge } from '../../actions/merge'
 import { startUpload } from "../../actions/upload"
 import { IFile } from '../../models/types'
-import { GADataLayer } from '../../utils'
+import { GADataLayer,domainAndUrl } from '../../utils'
 import ReactTimeAgo from 'react-time-ago'
 import Select from 'react-select';
 import { processStageOptions } from '.././shared'
@@ -26,8 +26,8 @@ import { AddNewVendorModal } from './AddNewVendorModal'
 import { businessUnitOptions } from '.././shared'
 import url from 'url'
 import ReactGA from 'react-ga'
-
-
+import { CONF } from '../../conf'
+import psl from 'psl'
 
 interface IVendorDetailState {
     showButton?: boolean,
@@ -168,10 +168,15 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 
 
     editVendor = async (singleVendor, profileImg) => {
-        let urlObj = url.parse(singleVendor.website);
-        let domain = urlObj.hostname
+
+        const website = singleVendor.website;
+        const values = domainAndUrl(website);
+        const strUrl = values[0];
+        const domain = values[1];
+
         singleVendor['domain'] = domain;
         singleVendor['modifiedAt'] = new Date();
+        singleVendor['website'] = strUrl;
         const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
         if (Object.entries(sessionUser).length) {
             singleVendor.modifiedBy = {
@@ -203,12 +208,10 @@ class vendorDetails extends React.Component<IVendorDetailProps & RouteComponentP
 
     fileUpload = async (containerName, profileImg) => {
         await startUpload(containerName, profileImg)(this.props.dispatch)
-        let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api'
-
         if (profileImg.length) {
             let vendorObj = {
                 id: containerName,
-                profileLogo: `${imageLogoUrl}/attachments/${containerName}/download/${profileImg[0].name}`
+                profileLogo: `${CONF.APP_API_URL.API_URL}/attachments/${containerName}/download/${profileImg[0].name}`
             }
             await startMerge('vendors', vendorObj)
             this.props.dispatch(startGet('vendors'));

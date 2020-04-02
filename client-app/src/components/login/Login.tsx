@@ -93,8 +93,17 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
 
   render() {
 
+    if (this.props.loginError) {
+      // Login failure for GA
+      let dataLayer = GADataLayer();
+      dataLayer.push({
+        'event': 'eventTracker',
+        'eventCategory': 'Log In',
+        'eventAction': 'Log In Failure',
+        'eventLabel': "Request failed with status code 401"
+      });
+    }
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
-
     if (this.props.loggedinUser) {
       localStorage.setItem("loggedinUser", JSON.stringify(this.props.loggedinUser))
       localStorage.setItem("accessToken", JSON.stringify(this.props.accessToken))
@@ -104,6 +113,14 @@ class LoginDisp extends React.Component<ILoginDispProps & RouteComponentProps, {
       const termsAccepted = (this.props.loggedinUser && this.props.loggedinUser.termsAccepted)
         || (sessionUser.termsAccepted);
       if (termsAccepted) {
+        // Login success for GA
+        let dataLayer = GADataLayer();
+        dataLayer.push({
+          'event': 'eventTracker',
+          'eventCategory': 'Log In',
+          'eventAction': 'Log In Success',
+          'eventLabel': this.props.loggedinUser.id
+        });
         this.props.history.push('/search');
       }
     }

@@ -12,7 +12,7 @@ import PhoneInput, { isPossiblePhoneNumber } from 'react-phone-number-input/inpu
 import 'react-phone-number-input/style.css'
 import profileLarge from '../../img/profile-lg@2x.png';
 import ReactGA from 'react-ga'
-import { GADataLayer } from '../../utils'
+import { GADataLayer, domainAndUrl } from '../../utils'
 interface IAddNewVendorModalProps {
     vendors?: any,
     singleVendor?: any,
@@ -77,16 +77,18 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     addVendor = (event) => {
 
         event.preventDefault();
-        let strUrl = event.currentTarget.website.value;
-        strUrl = strUrl.replace(/\s/g,'');
+
+        const website = event.currentTarget.website.value;
+        const vendorName = event.currentTarget.vendorName.value;
+        const values = domainAndUrl(website);
+        const domain = values[1];
         let domainExist;
         if (this.props.vendors.length) {
-            let urlObj = url.parse(strUrl);
-            let domain = urlObj.hostname;
-            domain = psl.parse(domain).domain;
+            
             domainExist = this.props.vendors.filter(v => {
-                return v.domain === domain.toLowerCase()
+                return v.domain === domain || v.vendorName === vendorName
             })
+
             if (domainExist.length) {
                 if (this.props.isEdit && (this.state.vendor[0].id === domainExist[0].id)) {
                     this.setState({ domainError: false })
@@ -229,10 +231,22 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
 
                             <Col xs={6}>
                                 <Form.Label className="formLabel custom-formLabel">COMPANY WEBSITE<span className="required-text">(Required)</span></Form.Label>
+                                {
+                                    // The pattern works in all scenarios below
+                                    // "yahoo.com";
+                                    // "www.yahoo.com";
+                                    // "http://www.yahoo.com";
+                                    // "yahoo.org";
+                                    // "somesite.org"
+                                    // "www.somesite.org"
+                                    // "http://somesite.org"
+                                    // "https://www.somesite.org"
+                                    // "somesite.org?case=1"
+                                }
                                 <Form.Control
                                     required
-                                    type="url"
-                                    pattern="https?://.*"
+                                    type="input"
+                                    pattern="^(?:https?://|s?ftps?://)?(?!www | www\.)[A-Za-z0-9_-]+\.+[A-Za-z0-9.\/%&=\?_:;-]+$"
                                     className="input-text-full mb-4"
                                     name="website"
                                     value={vendor.website}
@@ -240,7 +254,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                                 />
                                 <>
                                     {this.state.domainError ?
-                                        (<Row className="duplicateDomain">Duplicate found. Please edit original entry</Row>) :
+                                        (<Row className="duplicateDomain">Partner already exists with same website.</Row>) :
                                         null
                                     }
                                 </>
@@ -266,7 +280,7 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
                             </Col>
 
                             <Col xs={12}>
-                                <Form.Label className="formLabel custom-formLabel">FOCUS AREAS<span className="required-text">(Required)</span></Form.Label>
+                                <Form.Label className="formLabel custom-formLabel">BSC FOCUS AREAS<span className="required-text">(Required)</span></Form.Label>
                                 <Form.Control required type="text"
                                     name="keyFocusArea"
                                     className="input-text-full mb-4"

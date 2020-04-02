@@ -1,7 +1,7 @@
 'use strict';
 const logger = require("../logger");
 
-module.exports = (app, cb) => {    
+module.exports = (app, cb) => {       
    
     let appusers = [];
     appusers = require('./data/demo/appusers');        

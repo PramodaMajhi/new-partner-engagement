@@ -8,7 +8,7 @@ import AutoComplete from 'material-ui/AutoComplete';
 import iconBSCLogo from '../../img/BSC-Logo-Lrg@2x.png';
 import * as currentUserModel from '../../models/currentUser';
 import { login } from '../../actions/login';
-import { GADataLayer } from '../../utils'
+import { GADataLayer, domainAndUrl } from '../../utils'
 import { startGet } from '../../actions/get'
 import { setValues } from '../../actions/values'
 import { startInsert, createAttachment } from "../../actions/insert"
@@ -23,6 +23,8 @@ import * as sel from '../shared/Selectors'
 import psl from 'psl'
 import '../../css/login.css';
 import ReactGA from 'react-ga'
+import { CONF } from '../../conf'
+
 interface ISearchProps {
   vendors?: any,
   searchVal?: string,
@@ -57,11 +59,11 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       this.setState({ width: window.innerWidth });
     });
     // GA tag
-    let dataLayer =  GADataLayer();
-        dataLayer.push({
-            'event': 'virtualPageView',
-            'pageName': 'search'
-        });
+    let dataLayer = GADataLayer();
+    dataLayer.push({
+      'event': 'virtualPageView',
+      'pageName': 'search'
+    });
   }
   componentWillReceiveProps(nextProps: ISearchProps) {
     if ((this.props.vendors && nextProps.vendors &&
@@ -73,24 +75,23 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
   handleChange = (newValue: any) => {
     this.setState({ searchString: newValue, toggle: true });
     this.props.dispatch(setValues({ searchVal: newValue }))
+
+    // Search for GA
+    let dataLayer = GADataLayer();
+    const searchEventAction = this.props.vendors.length ? 'Success' : 'Failure'
+    dataLayer.push({
+      'event': 'eventTracker',
+      'eventCategory': 'Partner Record Search',
+      'eventAction': searchEventAction,
+      'eventLabel': newValue
+    });
+
   }
   onRequestSearch = (newValue: any) => {
-    console.log("on-search-requested" + newValue);
+    //  console.log("on-search-requested" + newValue);
   }
 
-  handlePushSearch = (search) => {
-    this.props.dispatch(setValues({ searchVal: search }))
-    // const filteredVendor = this.state.vendors.filter(v => {
-    //   return v.businessUnit === search;
-    // })
-    // this.setState({ vendors: filteredVendor });
 
-  }
-
-  handleBrowse = () => {
-    this.props.dispatch(setValues({ searchVal: '' }))
-    this.props.history.push('/');
-  }
 
   closeModal = () => {
     this.setState({ showModal: false, })
@@ -98,11 +99,14 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
   addVendor = async (singleVendor, profileImg) => {
 
+    const website = singleVendor.website;
 
-    let urlObj = url.parse(singleVendor.website);
-    let domain = urlObj.hostname;
-    domain = psl.parse(domain).domain;
-    singleVendor['domain'] = domain.toLowerCase();
+    const values = domainAndUrl(website);
+    const strUrl = values[0];
+    const domain = values[1];
+
+    singleVendor['domain'] = domain;
+    singleVendor['website'] = strUrl;
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));
     if (Object.entries(sessionUser).length) {
       singleVendor.createdBy = {
@@ -118,7 +122,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     await startInsert('vendors', singleVendor)(this.props.dispatch)
       .then(_id => {
         id = _id
-        console.log("generated", id);
+       // console.log("generated", id);
         fileAttachContainer["name"] = id
       })
 
@@ -132,17 +136,17 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
       'eventCategory': 'Partner Records Add or Edit',
       'eventAction': 'Partner Record Add',
       'eventLabel': 'Success'
-  });
+    });
   }
 
   fileUpload = async (containerName, profileImg) => {
     await startUpload(containerName.name, profileImg)(this.props.dispatch)
-    let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/api'
+    // let imageLogoUrl = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : 'http://localhost:3001/partnerengage-api/api'
 
     if (profileImg.length) {
       let vendorObj = {
         id: containerName.name,
-        profileLogo: `${imageLogoUrl}/attachments/${containerName.name}/download/${profileImg[0].name}`
+        profileLogo: `${CONF.APP_API_URL.API_URL}/attachments/${containerName.name}/download/${profileImg[0].name}`
       }
       await startMerge('vendors', vendorObj)
     }

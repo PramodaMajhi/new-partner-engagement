@@ -4,7 +4,7 @@ export const login = (user: any) => {
   
   // Add time-to-live (in seconds) for accesstoken - 30 minutes
   user['ttl'] = 60*30 ; // process.env.REACT_APP_TTL_ACCESS_TOKEN ? parseInt(process.env.REACT_APP_TTL_ACCESS_TOKEN): 60*30;
-  user.email = user.email.toLowerCase();  // email address case insensitive
+  user.email = user.email.trim().toLowerCase();  // email address case insensitive
 
   return (dispatch: any) => {
     const promise = apiClient.post('/appusers/login', JSON.stringify(user))   
