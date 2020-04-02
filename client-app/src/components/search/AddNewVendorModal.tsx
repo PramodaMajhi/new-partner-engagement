@@ -12,7 +12,7 @@ import PhoneInput, { isPossiblePhoneNumber } from 'react-phone-number-input/inpu
 import 'react-phone-number-input/style.css'
 import profileLarge from '../../img/profile-lg@2x.png';
 import ReactGA from 'react-ga'
-import { GADataLayer } from '../../utils'
+import { GADataLayer, domainAndUrl } from '../../utils'
 interface IAddNewVendorModalProps {
     vendors?: any,
     singleVendor?: any,
@@ -77,17 +77,18 @@ export class VendorModal extends React.Component<IAddNewVendorModalProps, IAddNe
     addVendor = (event) => {
 
         event.preventDefault();
-        let strUrl = event.currentTarget.website.value;
-        strUrl = strUrl.replace(/\s/g,'');
+
+        const website = event.currentTarget.website.value;
+        const vendorName = event.currentTarget.vendorName.value;
+        const values = domainAndUrl(website);
+        const domain = values[1];
         let domainExist;
         if (this.props.vendors.length) {
-            let urlObj = url.parse(strUrl);
-            let domain = urlObj.hostname.trim();
-            domain = psl.parse(domain).domain;
-
+            
             domainExist = this.props.vendors.filter(v => {
-                return v.domain === domain.toLowerCase()
+                return v.domain === domain || v.vendorName === vendorName
             })
+
             if (domainExist.length) {
                 if (this.props.isEdit && (this.state.vendor[0].id === domainExist[0].id)) {
                     this.setState({ domainError: false })

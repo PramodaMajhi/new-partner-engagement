@@ -8,7 +8,7 @@ import AutoComplete from 'material-ui/AutoComplete';
 import iconBSCLogo from '../../img/BSC-Logo-Lrg@2x.png';
 import * as currentUserModel from '../../models/currentUser';
 import { login } from '../../actions/login';
-import { GADataLayer } from '../../utils'
+import { GADataLayer, domainAndUrl } from '../../utils'
 import { startGet } from '../../actions/get'
 import { setValues } from '../../actions/values'
 import { startInsert, createAttachment } from "../../actions/insert"
@@ -24,6 +24,7 @@ import psl from 'psl'
 import '../../css/login.css';
 import ReactGA from 'react-ga'
 import { CONF } from '../../conf'
+
 interface ISearchProps {
   vendors?: any,
   searchVal?: string,
@@ -99,11 +100,12 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
   addVendor = async (singleVendor, profileImg) => {
 
-    let strUrl = singleVendor.website;
-    strUrl = strUrl.replace(/\s/g, '');
-    let urlObj = url.parse(strUrl);
-    let domain = urlObj.hostname.trim();
-    domain = psl.parse(domain).domain.toLowerCase();
+    const website = singleVendor.website;
+
+    const values = domainAndUrl(website);
+    const strUrl = values[0];
+    const domain = values[1];
+
     singleVendor['domain'] = domain;
     singleVendor['website'] = strUrl;
     const sessionUser = JSON.parse(localStorage.getItem("loggedinUser"));

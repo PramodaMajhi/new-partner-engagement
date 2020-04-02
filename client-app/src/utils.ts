@@ -1,3 +1,6 @@
+import url from 'url'
+import psl from 'psl'
+
 export const getLocalDateTime = () => {
   let d = new Date()
   return d.toLocaleDateString() + " " + d.toLocaleTimeString()
@@ -105,4 +108,24 @@ declare global {
 export const GADataLayer = () => {
   window.dataLayer = window.dataLayer || [];
   return window.dataLayer
+}
+
+export const domainAndUrl = (inputUrl) => {
+    
+  let hostname
+  let domain
+  let strUrl = inputUrl.replace(/\s/g, '');
+  strUrl = (strUrl.indexOf('://') === -1) ? 'http://' + strUrl : strUrl;
+  let urlObj = url.parse(strUrl);
+  if (urlObj.hostname != null) {
+    hostname = urlObj.hostname;
+  }
+
+  if (hostname) {
+      domain = psl.parse(hostname).domain;
+    if (domain != null) {
+      domain = domain.toLowerCase()
+    }
+  }
+  return [strUrl, domain];
 }
