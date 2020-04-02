@@ -88,7 +88,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
 
   }
   onRequestSearch = (newValue: any) => {
-    console.log("on-search-requested" + newValue);
+    //  console.log("on-search-requested" + newValue);
   }
 
 
@@ -122,7 +122,7 @@ class searchBarDisp extends React.Component<ISearchProps & RouteComponentProps, 
     await startInsert('vendors', singleVendor)(this.props.dispatch)
       .then(_id => {
         id = _id
-        console.log("generated", id);
+       // console.log("generated", id);
         fileAttachContainer["name"] = id
       })
 
