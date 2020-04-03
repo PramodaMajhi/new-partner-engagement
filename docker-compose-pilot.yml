@@ -26,4 +26,4 @@ services:
         ports:
             - 20000:3000
         environment:
-            - REACT_APP_API_URL=https://10.35.64.125/partnerengage-api/api            
+            - REACT_APP_API_URL=https://innovation.bsc.bscal.com/partnerengage-api/api            

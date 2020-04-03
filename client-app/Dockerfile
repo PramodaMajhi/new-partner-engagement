@@ -4,7 +4,7 @@ FROM bsc-docker-all.artifactory.bsc.bscal.com/node:10
 #Create app directory
 WORKDIR /usr/src/apps/client-app
 
-ENV REACT_APP_API_URL=https://10.35.64.125/partnerengage-api/api
+ENV REACT_APP_API_URL=https://innovation.bsc.bscal.com/partnerengage-api/api
 
 COPY package*.json ./
 
